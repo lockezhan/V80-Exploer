@@ -1,0 +1,167 @@
+/*
+
+AMD Vivado v2024.1.2 (64-bit) [Major: 2024, Minor: 1]
+SW Build: 5164865 on Thu Sep  5 14:36:28 MDT 2024
+IP Build: 5164407 on Fri Sep  6 08:18:11 MDT 2024
+IP Build: 5164407 on Fri Sep  6 08:18:11 MDT 2024
+
+Process ID (PID): 16847
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Jul 17 15:11:36 CST 2025
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Ubuntu
+OS Version: 5.15.0-141-generic
+OS Architecture: amd64
+Available processors (cores): 128
+LSB Release Description: Ubuntu 22.04.5 LTS
+
+Display: localhost:11.0
+Screen size: 2560x1440
+Local screen bounds: x = 0, y = 0, width = 2560, height = 1440
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.1 64-bit
+JavaFX version: 21.0.1
+Java home: 	/opt/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12
+Java executable: 	/opt/Xilinx/Vivado/2024.1/tps/lnx64/jre21.0.1_12/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	bjut316-v80
+User home directory: /home/bjut316-v80
+User working directory: /home/bjut316-v80/wulingjie/AVED-4/hw/amd_v80_gen5x8_24.1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2024.1
+RDI_DATADIR: /opt/Xilinx/SharedData/2024.1/data:/opt/Xilinx/Vivado/2024.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2024.1/bin
+
+Vivado preferences file: /home/bjut316-v80/.Xilinx/Vivado/2024.1/vivado.xml
+Vivado preferences directory: /home/bjut316-v80/.Xilinx/Vivado/2024.1/
+Vivado layouts directory: /home/bjut316-v80/.Xilinx/Vivado/2024.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2024.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/bjut316-v80/wulingjie/AVED-4/hw/amd_v80_gen5x8_24.1/vivado.log
+Vivado journal file: 	/home/bjut316-v80/wulingjie/AVED-4/hw/amd_v80_gen5x8_24.1/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-16847-bjut316v80-X640-G40
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /opt/Xilinx/Vivado/2024.1
+RDI_BASEROOT: /opt/Xilinx/Vivado
+RDI_BINROOT: /opt/Xilinx/Vivado/2024.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /opt/Xilinx/SharedData/2024.1/data:/opt/Xilinx/Vivado/2024.1/data
+RDI_INSTALLROOT: /opt/Xilinx
+RDI_INSTALLVER: 2024.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.1_12
+RDI_LIBDIR: /opt/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu/22:/opt/Xilinx/Vivado/2024.1/lib/lnx64.o/Ubuntu:/opt/Xilinx/Vivado/2024.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /opt/Xilinx/Vitis/2024.1/bin:/opt/Xilinx/Vivado/2024.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /opt/Xilinx/Vivado/2024.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/bjut316-v80/wulingjie/AVED-4/hw/amd_v80_gen5x8_24.1:bjut316v80-X640-G40_1752736276_16807
+RDI_SHARED_DATA: /opt/Xilinx/SharedData/2024.1/data
+RDI_TPS_ROOT: /opt/Xilinx/Vivado/2024.1/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /opt/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@bjut316v80-X640-G40
+XILINX_DSP: /opt/Xilinx/Vivado/2024.1/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2024.1
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2024.1
+XILINX_SDK: /opt/Xilinx/Vitis/2024.1
+XILINX_VITIS: /opt/Xilinx/Vitis/2024.1
+XILINX_VIVADO: /opt/Xilinx/Vivado/2024.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2024.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 1,890 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// WARNING: HEventQueue.dispatchEvent() is taking  1111 ms.
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: source ./src/create_design.tcl 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,953 MB. GUI used memory: 74 MB. Current time: 7/17/25, 3:11:36 PM CST
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 101 MB (+103068kb) [00:00:17]
+// [Engine Memory]: 2,091 MB (+2040609kb) [00:00:17]
+// [GUI Memory]: 125 MB (+19980kb) [00:00:17]
+// WARNING: HEventQueue.dispatchEvent() is taking  1532 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 147 MB (+16671kb) [00:00:21]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// WARNING: HEventQueue.dispatchEvent() is taking  1239 ms.
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: create_project: Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 8220.547 ; gain = 404.180 ; free physical = 245157 ; free virtual = 249963 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bjut316-v80/wulingjie/AVED-4/hw/amd_v80_gen5x8_24.1/src/iprepo'. 
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SAVE_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1209 ms.
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1032 ms.
+// Tcl Message: Wrote  : </home/bjut316-v80/wulingjie/AVED-4/hw/amd_v80_gen5x8_24.1/build/prj.srcs/sources_1/bd/top/top.bd>  
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // u (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,245 MB. GUI used memory: 81 MB. Current time: 7/17/25, 3:11:51 PM CST
+// [Engine Memory]: 2,245 MB (+52214kb) [00:00:28]
+// TclEventType: STOP_PROGRESS_DIALOG
+// WARNING: HEventQueue.dispatchEvent() is taking  1011 ms.
+// Elapsed Time for: 'a.d': 20s
+// HOptionPane Error: 'ERROR: [BD::TCL 103-2012] The following IPs are not found in the IP Catalog: xilinx.com:hls:pl_kernel:*  Resolution: Please add the repository containing the IP(s) to the project.  (Sourcing Tcl script './src/create_design.tcl')'
+// Tcl Message: INFO: [BD::TCL 103-2011] Checking if the following IPs exist in the project's IP catalog:   xilinx.com:ip:versal_cips:* xilinx.com:ip:axi_noc:* xilinx.com:hls:pl_kernel:* xilinx.com:ip:smartconnect:* xilinx.com:ip:hw_discovery:* xilinx.com:ip:shell_utils_uuid_rom:* xilinx.com:ip:smbus:* xilinx.com:ip:cmd_queue:* xilinx.com:ip:proc_sys_reset:* xilinx.com:ip:clk_wizard:* xilinx.com:ip:axi_gpio:* xilinx.com:ip:util_vector_logic:* xilinx.com:ip:xlconcat:* xilinx.com:ip:util_reduced_logic:*  . 
+// Tcl Message: ERROR: [BD::TCL 103-2012] The following IPs are not found in the IP Catalog:   xilinx.com:hls:pl_kernel:*  Resolution: Please add the repository containing the IP(s) to the project. 
+// Tcl Message: ## if { $bCheckIPsPassed != 1 } { ##   common::send_gid_msg -ssname BD::TCL -id 2023 -severity "WARNING" "Will not continue with creation of design due to the error(s) above." ##   return 3 ## } 
+// Tcl Message: invalid command name "create_root_design"     while executing "create_root_design """     (procedure "do_aved_create_design" line 19)     invoked from within "do_aved_create_design"     (file "./src/create_design.tcl" line 68) 
+// TclEventType: STOP_PROGRESS_DIALOG
+selectButton("OptionPane.button", "OK", "Sourcing Tcl script './src/create_design.tcl'"); // JButton (OptionPane.button)
+closeMainWindow("prj - [/home/bjut316-v80/wulingjie/AVED-4/hw/amd_v80_gen5x8_24.1/build/prj.xpr] - Vivado 2024.1.2"); // F (MainFrame)
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'

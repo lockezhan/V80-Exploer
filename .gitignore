@@ -1,0 +1,74 @@
+# Object files
+*.o
+*.a
+*.swp
+*.swo
+*.elf
+*.d
+
+#includes specifics for perforce + any other non public
+output/
+
+# VS Code settings
+.vscode/
+
+#Deploy folder - pending discussion
+#deploy/
+
+#__pycache__folder in scripts
+__pycache__/
+
+#Ignore deb/rpm packages
+*.deb
+*.rpm
+*.zip
+
+# Vitis Build files
+.Xil
+
+# Test sources
+CMocka/
+componentTest/
+**/AMC/src/test/
+**/AMI/test/
+**/AMI/api/build/
+
+# Generated BSP
+amc_bsp/
+.metadata/
+.analytics
+IDE.log
+
+# Others
+.nfs*
+
+# --- Project additions: Vivado/Vitis artifacts and large outputs ---
+# Logs and journals
+*.jou
+*.log
+
+# Vivado/Vitis generated caches and runs
+*.runs/
+*.cache/
+*.gen/
+.Xil/
+*.dcp
+*.xsa
+*.xpr.user
+
+# Bitstreams and hardware images
+*.bit
+*.hwh
+*.pdi
+
+# Build outputs
+build/
+build_*/
+build-vivado/
+build_vivado/
+deploy/output/
+deploy/package/
+
+# Temp files
+*.tmp
+*.bak
