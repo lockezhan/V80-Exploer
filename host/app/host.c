@@ -23,7 +23,7 @@
 
 // 设备配置
 #define DEVICE_NAME    "/dev/qdmaa1001-MM-0"
-#define MAXSIZE        1024
+#define MAXSIZE        10240000
 #define BUFFER_SIZE    (MAXSIZE * sizeof(double))
 
 // 默认参数
@@ -344,9 +344,13 @@ int main(int argc, char **argv)
 
     printf("Done.\n");
 
+
+    
+
 cleanup:
     if (host_buf) free(host_buf);
     if (dev_fd >= 0) close(dev_fd);
     if (bar_dev) ami_dev_delete(&bar_dev);
     return 0;
 }
+
