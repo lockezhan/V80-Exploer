@@ -1,0 +1,867 @@
+
+
+================================================================
+== Vitis HLS Report for 'twoNorm_23'
+================================================================
+* Date:           Fri Jan  9 14:23:06 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.190 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                       |                             |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |                Instance               |            Module           |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +---------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_twoNorm_23_Pipeline_twoNorm_fu_55  |twoNorm_23_Pipeline_twoNorm  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +---------------------------------------+-----------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 59
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.57>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%nrm_loc = alloca i64 1"   --->   Operation 60 'alloca' 'nrm_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%muxLogicCE_to_n_3 = muxlogic"   --->   Operation 61 'muxlogic' 'muxLogicCE_to_n_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.57ns)   --->   "%n_3 = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %n"   --->   Operation 62 'read' 'n_3' <Predicate = true> <Delay = 0.57> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 1.06>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 63 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [2/2] (1.06ns)   --->   "%call_ln0 = call void @twoNorm.23_Pipeline_twoNorm, i32 %n_3, i512 %temp, i64 %nrm_loc"   --->   Operation 64 'call' 'call_ln0' <Predicate = true> <Delay = 1.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 65 [1/2] (0.00ns)   --->   "%call_ln0 = call void @twoNorm.23_Pipeline_twoNorm, i32 %n_3, i512 %temp, i64 %nrm_loc"   --->   Operation 65 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.91>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%MuxLogicAddr_to_nrm_loc_load = muxlogic i64 %nrm_loc"   --->   Operation 66 'muxlogic' 'MuxLogicAddr_to_nrm_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%nrm_loc_load = load i64 %nrm_loc"   --->   Operation 67 'load' 'nrm_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%empty_224 = wait i32 @_ssdm_op_Wait"   --->   Operation 68 'wait' 'empty_224' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%muxLogicI0_to_res = muxlogic i64 %nrm_loc_load"   --->   Operation 69 'muxlogic' 'muxLogicI0_to_res' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [56/56] (0.91ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 70 'dsqrt' 'res' <Predicate = true> <Delay = 0.91> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.41>
+ST_5 : Operation 71 [55/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 71 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 1.41>
+ST_6 : Operation 72 [54/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 72 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.41>
+ST_7 : Operation 73 [53/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 73 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 1.41>
+ST_8 : Operation 74 [52/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 74 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 1.41>
+ST_9 : Operation 75 [51/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 75 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 1.41>
+ST_10 : Operation 76 [50/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 76 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 1.41>
+ST_11 : Operation 77 [49/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 77 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 1.41>
+ST_12 : Operation 78 [48/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 78 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 1.41>
+ST_13 : Operation 79 [47/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 79 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 1.41>
+ST_14 : Operation 80 [46/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 80 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 1.41>
+ST_15 : Operation 81 [45/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 81 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 1.41>
+ST_16 : Operation 82 [44/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 82 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 1.41>
+ST_17 : Operation 83 [43/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 83 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 1.41>
+ST_18 : Operation 84 [42/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 84 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 1.41>
+ST_19 : Operation 85 [41/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 85 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 1.41>
+ST_20 : Operation 86 [40/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 86 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 1.41>
+ST_21 : Operation 87 [39/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 87 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 1.41>
+ST_22 : Operation 88 [38/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 88 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 1.41>
+ST_23 : Operation 89 [37/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 89 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 1.41>
+ST_24 : Operation 90 [36/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 90 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 1.41>
+ST_25 : Operation 91 [35/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 91 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 1.41>
+ST_26 : Operation 92 [34/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 92 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 1.41>
+ST_27 : Operation 93 [33/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 93 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 1.41>
+ST_28 : Operation 94 [32/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 94 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 1.41>
+ST_29 : Operation 95 [31/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 95 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 1.41>
+ST_30 : Operation 96 [30/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 96 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 1.41>
+ST_31 : Operation 97 [29/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 97 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 1.41>
+ST_32 : Operation 98 [28/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 98 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 1.41>
+ST_33 : Operation 99 [27/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 99 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 1.41>
+ST_34 : Operation 100 [26/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 100 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 1.41>
+ST_35 : Operation 101 [25/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 101 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 1.41>
+ST_36 : Operation 102 [24/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 102 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 1.41>
+ST_37 : Operation 103 [23/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 103 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 1.41>
+ST_38 : Operation 104 [22/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 104 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 1.41>
+ST_39 : Operation 105 [21/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 105 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 1.41>
+ST_40 : Operation 106 [20/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 106 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 1.41>
+ST_41 : Operation 107 [19/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 107 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 1.41>
+ST_42 : Operation 108 [18/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 108 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 1.41>
+ST_43 : Operation 109 [17/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 109 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 1.41>
+ST_44 : Operation 110 [16/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 110 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 1.41>
+ST_45 : Operation 111 [15/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 111 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 1.41>
+ST_46 : Operation 112 [14/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 112 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 1.41>
+ST_47 : Operation 113 [13/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 113 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 1.41>
+ST_48 : Operation 114 [12/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 114 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 1.41>
+ST_49 : Operation 115 [11/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 115 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 1.41>
+ST_50 : Operation 116 [10/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 116 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 1.41>
+ST_51 : Operation 117 [9/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 117 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 1.41>
+ST_52 : Operation 118 [8/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 118 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 1.41>
+ST_53 : Operation 119 [7/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 119 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 1.41>
+ST_54 : Operation 120 [6/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 120 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 1.41>
+ST_55 : Operation 121 [5/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 121 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 1.41>
+ST_56 : Operation 122 [4/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 122 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 1.41>
+ST_57 : Operation 123 [3/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 123 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 1.41>
+ST_58 : Operation 124 [2/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 124 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 1.22>
+ST_59 : Operation 125 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %n, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 125 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 126 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %temp, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 126 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 127 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %dPrimalInfeasRes, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 127 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 128 [1/56] (0.09ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 128 'dsqrt' 'res' <Predicate = true> <Delay = 0.09> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_59 : Operation 129 [1/1] (0.00ns)   --->   "%bitcast_ln262 = bitcast i64 %res" [./basic_helper.hpp:262]   --->   Operation 129 'bitcast' 'bitcast_ln262' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 130 [1/1] (0.38ns) (share mux size 2)   --->   "%muxLogicData_to_write_ln262 = muxlogic i64 %bitcast_ln262"   --->   Operation 130 'muxlogic' 'muxLogicData_to_write_ln262' <Predicate = true> <Delay = 0.38>
+ST_59 : Operation 131 [1/1] (0.74ns) (share mux size 2)   --->   "%write_ln262 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %dPrimalInfeasRes, i64 %bitcast_ln262" [./basic_helper.hpp:262]   --->   Operation 131 'write' 'write_ln262' <Predicate = true> <Delay = 0.74> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.88> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_59 : Operation 132 [1/1] (0.00ns)   --->   "%ret_ln263 = ret" [./basic_helper.hpp:263]   --->   Operation 132 'ret' 'ret_ln263' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ temp]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ n]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ dPrimalInfeasRes]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+nrm_loc                      (alloca       ) [ 001110000000000000000000000000000000000000000000000000000000]
+muxLogicCE_to_n_3            (muxlogic     ) [ 000000000000000000000000000000000000000000000000000000000000]
+n_3                          (read         ) [ 001100000000000000000000000000000000000000000000000000000000]
+empty                        (wait         ) [ 000000000000000000000000000000000000000000000000000000000000]
+call_ln0                     (call         ) [ 000000000000000000000000000000000000000000000000000000000000]
+MuxLogicAddr_to_nrm_loc_load (muxlogic     ) [ 000000000000000000000000000000000000000000000000000000000000]
+nrm_loc_load                 (load         ) [ 000001111111111111111111111111111111111111111111111111111111]
+empty_224                    (wait         ) [ 000000000000000000000000000000000000000000000000000000000000]
+muxLogicI0_to_res            (muxlogic     ) [ 000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0            (specinterface) [ 000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0            (specinterface) [ 000000000000000000000000000000000000000000000000000000000000]
+specinterface_ln0            (specinterface) [ 000000000000000000000000000000000000000000000000000000000000]
+res                          (dsqrt        ) [ 000000000000000000000000000000000000000000000000000000000000]
+bitcast_ln262                (bitcast      ) [ 000000000000000000000000000000000000000000000000000000000000]
+muxLogicData_to_write_ln262  (muxlogic     ) [ 000000000000000000000000000000000000000000000000000000000000]
+write_ln262                  (write        ) [ 000000000000000000000000000000000000000000000000000000000000]
+ret_ln263                    (ret          ) [ 000000000000000000000000000000000000000000000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="temp">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="temp"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="n">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="n"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="dPrimalInfeasRes">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dPrimalInfeasRes"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i32P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="twoNorm.23_Pipeline_twoNorm"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="llvm.sqrt.f64"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_14"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i64P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1004" name="nrm_loc_fu_38">
+<pin_list>
+<pin id="39" dir="0" index="0" bw="1" slack="0"/>
+<pin id="40" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="nrm_loc/1 "/>
+</bind>
+</comp>
+
+<comp id="42" class="1004" name="n_3_read_fu_42">
+<pin_list>
+<pin id="43" dir="0" index="0" bw="32" slack="0"/>
+<pin id="44" dir="0" index="1" bw="32" slack="0"/>
+<pin id="45" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="n_3/1 "/>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="write_ln262_write_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="0" slack="0"/>
+<pin id="50" dir="0" index="1" bw="64" slack="0"/>
+<pin id="51" dir="0" index="2" bw="64" slack="0"/>
+<pin id="52" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln262/59 "/>
+</bind>
+</comp>
+
+<comp id="55" class="1004" name="grp_twoNorm_23_Pipeline_twoNorm_fu_55">
+<pin_list>
+<pin id="56" dir="0" index="0" bw="0" slack="0"/>
+<pin id="57" dir="0" index="1" bw="32" slack="1"/>
+<pin id="58" dir="0" index="2" bw="512" slack="0"/>
+<pin id="59" dir="0" index="3" bw="64" slack="1"/>
+<pin id="60" dir="1" index="4" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/2 "/>
+</bind>
+</comp>
+
+<comp id="63" class="1004" name="grp_fu_63">
+<pin_list>
+<pin id="64" dir="0" index="0" bw="64" slack="0"/>
+<pin id="65" dir="0" index="1" bw="64" slack="0"/>
+<pin id="66" dir="1" index="2" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="dsqrt(518) " fcode="dsqrt"/>
+<opset="res/4 "/>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="muxLogicCE_to_n_3_fu_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="muxlogic(592) " fcode="muxlogic"/>
+<opset="muxLogicCE_to_n_3/1 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="MuxLogicAddr_to_nrm_loc_load_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="64" slack="3"/>
+<pin id="72" dir="1" index="1" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="muxlogic(592) " fcode="muxlogic"/>
+<opset="MuxLogicAddr_to_nrm_loc_load/4 "/>
+</bind>
+</comp>
+
+<comp id="73" class="1004" name="nrm_loc_load_load_fu_73">
+<pin_list>
+<pin id="74" dir="0" index="0" bw="64" slack="3"/>
+<pin id="75" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="nrm_loc_load/4 "/>
+</bind>
+</comp>
+
+<comp id="77" class="1004" name="muxLogicI0_to_res_fu_77">
+<pin_list>
+<pin id="78" dir="0" index="0" bw="64" slack="0"/>
+<pin id="79" dir="1" index="1" bw="64" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="muxlogic(592) " fcode="muxlogic"/>
+<opset="muxLogicI0_to_res/4 "/>
+</bind>
+</comp>
+
+<comp id="81" class="1004" name="bitcast_ln262_fu_81">
+<pin_list>
+<pin id="82" dir="0" index="0" bw="64" slack="0"/>
+<pin id="83" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitcast(44) " fcode="bitcast"/>
+<opset="bitcast_ln262/59 "/>
+</bind>
+</comp>
+
+<comp id="86" class="1004" name="muxLogicData_to_write_ln262_fu_86">
+<pin_list>
+<pin id="87" dir="0" index="0" bw="64" slack="0"/>
+<pin id="88" dir="1" index="1" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="muxlogic(592) " fcode="muxlogic"/>
+<opset="muxLogicData_to_write_ln262/59 "/>
+</bind>
+</comp>
+
+<comp id="90" class="1005" name="nrm_loc_reg_90">
+<pin_list>
+<pin id="91" dir="0" index="0" bw="64" slack="1"/>
+<pin id="92" dir="1" index="1" bw="64" slack="1"/>
+</pin_list>
+<bind>
+<opset="nrm_loc "/>
+</bind>
+</comp>
+
+<comp id="97" class="1005" name="n_3_reg_97">
+<pin_list>
+<pin id="98" dir="0" index="0" bw="32" slack="1"/>
+<pin id="99" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="n_3 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="41"><net_src comp="6" pin="0"/><net_sink comp="38" pin=0"/></net>
+
+<net id="46"><net_src comp="8" pin="0"/><net_sink comp="42" pin=0"/></net>
+
+<net id="47"><net_src comp="2" pin="0"/><net_sink comp="42" pin=1"/></net>
+
+<net id="53"><net_src comp="36" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="54"><net_src comp="4" pin="0"/><net_sink comp="48" pin=1"/></net>
+
+<net id="61"><net_src comp="12" pin="0"/><net_sink comp="55" pin=0"/></net>
+
+<net id="62"><net_src comp="0" pin="0"/><net_sink comp="55" pin=2"/></net>
+
+<net id="67"><net_src comp="14" pin="0"/><net_sink comp="63" pin=0"/></net>
+
+<net id="76"><net_src comp="73" pin="1"/><net_sink comp="63" pin=1"/></net>
+
+<net id="80"><net_src comp="73" pin="1"/><net_sink comp="77" pin=0"/></net>
+
+<net id="84"><net_src comp="63" pin="2"/><net_sink comp="81" pin=0"/></net>
+
+<net id="85"><net_src comp="81" pin="1"/><net_sink comp="48" pin=2"/></net>
+
+<net id="89"><net_src comp="81" pin="1"/><net_sink comp="86" pin=0"/></net>
+
+<net id="93"><net_src comp="38" pin="1"/><net_sink comp="90" pin=0"/></net>
+
+<net id="94"><net_src comp="90" pin="1"/><net_sink comp="55" pin=3"/></net>
+
+<net id="95"><net_src comp="90" pin="1"/><net_sink comp="70" pin=0"/></net>
+
+<net id="96"><net_src comp="90" pin="1"/><net_sink comp="73" pin=0"/></net>
+
+<net id="100"><net_src comp="42" pin="2"/><net_sink comp="97" pin=0"/></net>
+
+<net id="101"><net_src comp="97" pin="1"/><net_sink comp="55" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: dPrimalInfeasRes | {59 }
+ - Input state : 
+	Port: twoNorm.23 : temp | {2 3 }
+	Port: twoNorm.23 : n | {1 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+		muxLogicI0_to_res : 1
+		res : 1
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+		bitcast_ln262 : 1
+		muxLogicData_to_write_ln262 : 2
+		write_ln262 : 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------------------------|---------|---------|---------|---------|
+| Operation|            Functional Unit            |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|---------------------------------------|---------|---------|---------|---------|
+|   call   | grp_twoNorm_23_Pipeline_twoNorm_fu_55 |    12   |  13.119 |   3436  |   4036  |
+|----------|---------------------------------------|---------|---------|---------|---------|
+|   read   |             n_3_read_fu_42            |    0    |    0    |    0    |    0    |
+|----------|---------------------------------------|---------|---------|---------|---------|
+|   write  |        write_ln262_write_fu_48        |    0    |    0    |    0    |    0    |
+|----------|---------------------------------------|---------|---------|---------|---------|
+|   dsqrt  |               grp_fu_63               |    0    |    0    |    0    |    0    |
+|----------|---------------------------------------|---------|---------|---------|---------|
+|          |        muxLogicCE_to_n_3_fu_68        |    0    |    0    |    0    |    0    |
+| muxlogic |   MuxLogicAddr_to_nrm_loc_load_fu_70  |    0    |    0    |    0    |    0    |
+|          |        muxLogicI0_to_res_fu_77        |    0    |    0    |    0    |    0    |
+|          |   muxLogicData_to_write_ln262_fu_86   |    0    |    0    |    0    |    0    |
+|----------|---------------------------------------|---------|---------|---------|---------|
+|   Total  |                                       |    12   |  13.119 |   3436  |   4036  |
+|----------|---------------------------------------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++--------------+--------+
+|              |   FF   |
++--------------+--------+
+|  n_3_reg_97  |   32   |
+|nrm_loc_reg_90|   64   |
++--------------+--------+
+|     Total    |   96   |
++--------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |   12   |   13   |  3436  |  4036  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |   96   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |   12   |   13   |  3532  |  4036  |
++-----------+--------+--------+--------+--------+

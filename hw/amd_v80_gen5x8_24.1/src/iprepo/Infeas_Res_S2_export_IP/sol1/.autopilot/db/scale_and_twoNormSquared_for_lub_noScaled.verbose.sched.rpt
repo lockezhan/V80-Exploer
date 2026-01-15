@@ -1,0 +1,122 @@
+
+
+================================================================
+== Vitis HLS Report for 'scale_and_twoNormSquared_for_lub_noScaled'
+================================================================
+* Date:           Fri Jan  9 14:26:30 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.509 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 2, States = { 1 2 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%muxLogicCE_to_nCols_read = muxlogic"   --->   Operation 3 'muxlogic' 'muxLogicCE_to_nCols_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%nCols_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %nCols" [./Compute_Dual_Infeasibility.hpp:53]   --->   Operation 4 'read' 'nCols_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [2/2] (0.00ns)   --->   "%call_ln60 = call void @twoNormSquared.5, i512 %primalInfeasBound_edotfifo_lb, i32 %nCols_read, i64 %pBoundLbResSq" [./Compute_Dual_Infeasibility.hpp:60]   --->   Operation 5 'call' 'call_ln60' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 6 [2/2] (0.00ns)   --->   "%call_ln61 = call void @twoNormSquared.6, i512 %primalInfeasBound_edotfifo_ub, i32 %nCols_read, i64 %pBoundUbResSq" [./Compute_Dual_Infeasibility.hpp:61]   --->   Operation 6 'call' 'call_ln61' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.09>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln58 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_3" [./Compute_Dual_Infeasibility.hpp:58]   --->   Operation 7 'specdataflowpipeline' 'specdataflowpipeline_ln58' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %primalInfeasBound_edotfifo_lb, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %primalInfeasBound_edotfifo_ub, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/2] (0.09ns)   --->   "%call_ln60 = call void @twoNormSquared.5, i512 %primalInfeasBound_edotfifo_lb, i32 %nCols_read, i64 %pBoundLbResSq" [./Compute_Dual_Infeasibility.hpp:60]   --->   Operation 10 'call' 'call_ln60' <Predicate = true> <Delay = 0.09> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 11 [1/2] (0.09ns)   --->   "%call_ln61 = call void @twoNormSquared.6, i512 %primalInfeasBound_edotfifo_ub, i32 %nCols_read, i64 %pBoundUbResSq" [./Compute_Dual_Infeasibility.hpp:61]   --->   Operation 11 'call' 'call_ln61' <Predicate = true> <Delay = 0.09> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%ret_ln63 = ret" [./Compute_Dual_Infeasibility.hpp:63]   --->   Operation 12 'ret' 'ret_ln63' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 0.091ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln60', ./Compute_Dual_Infeasibility.hpp:60) to 'twoNormSquared.5' [11]  (0.091 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

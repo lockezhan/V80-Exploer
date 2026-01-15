@@ -1,0 +1,4 @@
+dict set slaves control {ports {y {type i_ap_none width 64} dSlackPos {type i_ap_none width 64} dSlackNeg {type i_ap_none width 64} aty {type i_ap_none width 64} colScale0 {type i_ap_none width 64} x {type i_ap_none width 64} ax {type i_ap_none width 64} colScale1 {type i_ap_none width 64} rowScale {type i_ap_none width 64} hasLower {type i_ap_none width 64} hasUpper {type i_ap_none width 64} dPrimalInfeasRes_val {type o_ap_vld width 64} dDualInfeasRes_val {type o_ap_vld width 64} nRows {type i_ap_none width 32} nCols {type i_ap_none width 32} problem_nEqs {type i_ap_none width 32} ifScaled {type i_ap_none width 32} inverse_dScale {type i_ap_none width 64} inverse_pScale {type i_ap_none width 64} ap_start {type ap_ctrl width 1} ap_done {type ap_ctrl width 1} ap_ready {type ap_ctrl width 1} ap_idle {type ap_ctrl width 1}} mems {} has_ctrl 1}
+set datawidth 32
+set addrwidth 64
+set intr_clr_mode TOW

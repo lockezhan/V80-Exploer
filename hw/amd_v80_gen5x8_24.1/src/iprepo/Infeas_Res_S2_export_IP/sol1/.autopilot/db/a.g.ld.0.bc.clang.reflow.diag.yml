@@ -1,0 +1,2541 @@
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            'y'
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            dSlackPos
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            dSlackNeg
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            aty
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            colScale0
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            x
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            ax
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            colScale1
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            rowScale
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            hasLower
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            hasUpper
+  - String:          ''' for cosimulation.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 422, Column: 27 }
+Function:        _Z4edivRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_S4_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_422_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 397, Column: 27 }
+Function:        _Z7projPosiRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_397_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 125, Column: 27 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_125_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 130, Column: 31 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_130_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 373, Column: 27 }
+Function:        _Z7projNegiRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_373_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 184, Column: 27 }
+Function:        _Z16scaleVector_2outdRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_S4_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_184_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 278, Column: 27 }
+Function:        _Z4edotRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_S4_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_278_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 309, Column: 27 }
+Function:        _Z11axpy_2fusedRN3hls6streamINS_6vectorIdLm8EEELi0EEEdS4_S4_S4_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_309_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 164, Column: 27 }
+Function:        _Z11scaleVectordRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_164_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 414, Column: 0 }
+Function:        _Z4edivRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_S4_i
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_422_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:422:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ediv
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 389, Column: 0 }
+Function:        _Z7projPosiRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_i
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_397_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:397:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          projPos
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        final_accum
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:141:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_143_4
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:143:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_143_4
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:143:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_143_4
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:143:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_143_4
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:143:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_125_2
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:125:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_3
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:130:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_3
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:130:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_3
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:130:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_130_3
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:130:31'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '6'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        init_loop
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:111:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_113_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:113:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_113_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:113:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_113_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:113:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_113_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:113:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          twoNormSquared
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 366, Column: 0 }
+Function:        _Z7projNegiRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_i
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_373_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:373:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          projNeg
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 178, Column: 0 }
+Function:        _Z16scaleVector_2outdRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_S4_i
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_184_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:184:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          scaleVector_2out
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 270, Column: 0 }
+Function:        _Z4edotRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_S4_i
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_278_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:278:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          edot
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 300, Column: 0 }
+Function:        _Z11axpy_2fusedRN3hls6streamINS_6vectorIdLm8EEELi0EEEdS4_S4_S4_i
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_309_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:309:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          axpy_2fused
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./basic_helper.hpp, Line: 158, Column: 0 }
+Function:        _Z11scaleVectordRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_i
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_164_1
+  - String:          ''' ('
+  - LoopLoc:         './basic_helper.hpp:164:27'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          scaleVector
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayIdLm8EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<double, 8ul>::_S_ref(double const (&) [8], unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./basic_helper.hpp, Line: 158, Column: 0 }
+Function:        _Z11scaleVectordRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'scaleVector(double, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 158, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./basic_helper.hpp, Line: 300, Column: 0 }
+Function:        _Z11axpy_2fusedRN3hls6streamINS_6vectorIdLm8EEELi0EEEdS4_S4_S4_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'axpy_2fused(hls::stream<hls::vector<double, 8ul>, 0>&, double, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 300, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./basic_helper.hpp, Line: 270, Column: 0 }
+Function:        _Z4edotRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_S4_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'edot(hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 270, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./basic_helper.hpp, Line: 248, Column: 0 }
+Function:        _Z7twoNormRN3hls6streamINS_6vectorIdLm8EEELi0EEEiRNS0_IdLi0EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'twoNorm(hls::stream<hls::vector<double, 8ul>, 0>&, int, hls::stream<double, 0>&)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 248, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./basic_helper.hpp, Line: 178, Column: 0 }
+Function:        _Z16scaleVector_2outdRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_S4_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'scaleVector_2out(double, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 178, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./basic_helper.hpp, Line: 366, Column: 0 }
+Function:        _Z7projNegiRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'projNeg(int, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 366, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+Function:        _Z14twoNormSquaredRN3hls6streamINS_6vectorIdLm8EEELi0EEEiddRd
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'twoNormSquared(hls::stream<hls::vector<double, 8ul>, 0>&, int, double, double, double&)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 99, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./basic_helper.hpp, Line: 389, Column: 0 }
+Function:        _Z7projPosiRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'projPos(int, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 389, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./basic_helper.hpp, Line: 414, Column: 0 }
+Function:        _Z4edivRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_S4_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<double, 8ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ediv(hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 414, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 37, Column: 24 }
+Function:        _Z39scale_and_twoNormSquared_for_lub_ScaledPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEES5_RdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            temp_lb
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 37, Column: 33 }
+Function:        _Z39scale_and_twoNormSquared_for_lub_ScaledPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEES5_RdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            temp_ub
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 36, Column: 39 }
+Function:        _Z39scale_and_twoNormSquared_for_lub_ScaledPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEES5_RdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            colScale_fifo_ub
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 36, Column: 21 }
+Function:        _Z39scale_and_twoNormSquared_for_lub_ScaledPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEES5_RdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            colScale_fifo_lb
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 100, Column: 24 }
+Function:        _Z12Primal_BoundRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_PS2_S5_S5_iRdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalInfeasBound_fifo_ub
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 16, Column: 21 }
+Function:        _Z13Primal_ConstrRN3hls6streamINS_6vectorIdLm8EEELi0EEEPS2_iiiRd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalInfeasBound_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 99, Column: 21 }
+Function:        _Z12Primal_BoundRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_PS2_S5_S5_iRdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalInfeasBound_fifo_lb
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 164, Column: 24 }
+Function:        _Z33Compute_Dual_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_iiiidRNS_6streamIdLi0EEE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalInfeasRay_SVfifo_lb
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 164, Column: 51 }
+Function:        _Z33Compute_Dual_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_iiiidRNS_6streamIdLi0EEE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalInfeasRay_SVfifo_ub
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./basic_helper.hpp, Line: 335, Column: 24 }
+Function:        _Z24scale_and_twoNorm_ScaledPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEERNS3_IdLi0EEEi
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            temp
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./basic_helper.hpp, Line: 447, Column: 24 }
+Function:        _Z31scale_and_twoNormSquared_ScaledPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEERdi
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            temp
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 102, Column: 24 }
+Function:        _Z12Primal_BoundRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_PS2_S5_S5_iRdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalInfeasBound_edotfifo_lb
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 103, Column: 24 }
+Function:        _Z12Primal_BoundRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_PS2_S5_S5_iRdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalInfeasBound_edotfifo_ub
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Primal_Infeasibility.hpp, Line: 74, 
+                   Column: 24 }
+Function:        _Z35Compute_Primal_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_RNS_6streamIdLi0EEEiiid
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            dualInfeasConstr_axpyfifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Primal_Infeasibility.hpp, Line: 59, 
+                   Column: 24 }
+Function:        _Z35Compute_Primal_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_RNS_6streamIdLi0EEEiiid
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            dualInfeasRay_SVfifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Primal_Infeasibility.hpp, Line: 59, 
+                   Column: 46 }
+Function:        _Z35Compute_Primal_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_RNS_6streamIdLi0EEEiiid
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            dualInfeasLbRay_SVfifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Primal_Infeasibility.hpp, Line: 59, 
+                   Column: 70 }
+Function:        _Z35Compute_Primal_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_RNS_6streamIdLi0EEEiiid
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            dualInfeasUbRay_SVfifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Primal_Infeasibility.hpp, Line: 59, 
+                   Column: 94 }
+Function:        _Z35Compute_Primal_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_RNS_6streamIdLi0EEEiiid
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            dualInfeasConstr_SVfifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 164, Column: 78 }
+Function:        _Z33Compute_Dual_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_iiiidRNS_6streamIdLi0EEE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalInfeasConstr_SVfifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./basic_helper.hpp, Line: 334, Column: 21 }
+Function:        _Z24scale_and_twoNorm_ScaledPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEERNS3_IdLi0EEEi
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            colScale_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./basic_helper.hpp, Line: 446, Column: 21 }
+Function:        _Z31scale_and_twoNormSquared_ScaledPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEERdi
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            rowScale_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Primal_Infeasibility.hpp, Line: 58, 
+                   Column: 21 }
+Function:        _Z35Compute_Primal_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_RNS_6streamIdLi0EEEiiid
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            dualInfeasRay_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Primal_Infeasibility.hpp, Line: 58, 
+                   Column: 41 }
+Function:        _Z35Compute_Primal_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_RNS_6streamIdLi0EEEiiid
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            dualInfeasLbRay_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Primal_Infeasibility.hpp, Line: 58, 
+                   Column: 63 }
+Function:        _Z35Compute_Primal_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_RNS_6streamIdLi0EEEiiid
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            dualInfeasUbRay_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Primal_Infeasibility.hpp, Line: 58, 
+                   Column: 85 }
+Function:        _Z35Compute_Primal_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_RNS_6streamIdLi0EEEiiid
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            dualInfeasConstr_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 105, Column: 24 }
+Function:        _Z12Primal_BoundRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_PS2_S5_S5_iRdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            hasLower_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 106, Column: 24 }
+Function:        _Z12Primal_BoundRN3hls6streamINS_6vectorIdLm8EEELi0EEES4_PS2_S5_S5_iRdS6_i
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            hasUpper_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 163, Column: 24 }
+Function:        _Z33Compute_Dual_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_iiiidRNS_6streamIdLi0EEE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalInfeasRay_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./Compute_Dual_Infeasibility.hpp, Line: 163, Column: 46 }
+Function:        _Z33Compute_Dual_Infeasibility_stage2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_iiiidRNS_6streamIdLi0EEE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            primalINfeasConstr_fifo
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            'y'
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            dSlackPos
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            dSlackNeg
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            aty
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            colScale0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            x
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            ax
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            colScale1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            rowScale
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            hasLower
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: Infeasi_Res_S2.cpp, Line: 51, Column: 0 }
+Function:        _Z14Infeasi_Res_S2PN3hls6vectorIdLm8EEES2_S2_S2_S2_S2_S2_S2_S2_S2_S2_RdS3_iiiidd
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            hasUpper
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 73, Column: 5 }
+Function:        _Z20loadDDR_data_specialPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEES5_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem7
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:73:5'
+  - String:          ' '
+  - Function:        'loadDDR_data_special(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 70, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 75, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.11
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.11)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.12
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.12)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.15
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.15)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.16
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.16)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.25
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.25)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.27
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.27)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.28
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.28)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.29
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.29)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.30
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.30)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 60, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 73, Column: 5 }
+Function:        _Z20loadDDR_data_specialPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEES5_i
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 73, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem7
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:73:5'
+  - String:          ' '
+  - Function:        'loadDDR_data_special(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 70, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.11
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.11)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.12
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.12)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.15
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.15)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.16
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.16)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.25
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.25)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.27
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.27)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.28
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.28)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.29
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.29)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.30
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+  - OrigDirection:   read
+  - OrigID:          memseq
+  - ArrayName:       mem
+  - String:          ' '
+  - BundleName:      gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.30)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.27.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.27.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.27.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.28.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.28.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.28.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.29.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.29.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.29.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.30.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem3
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.30.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.30.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem3
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem4
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem4
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.11.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem5
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.11.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.11.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem5
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.12.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem6
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.12.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.12.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem6
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.25.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem8
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.25.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.25.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem8
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.15.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem9
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.15.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.15.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem9
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.16.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem10
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ' '
+  - Function:        'loadDDR_data(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.16.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 55, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 58, Column: 5 }
+Function:        _Z12loadDDR_dataPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEEi.16.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:58:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem10
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 73, Column: 5 }
+Function:        _Z20loadDDR_data_specialPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEES5_i.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem7
+  - String:          ' '
+  - LoopName:        loadDDR_data
+  - String:          ' '
+  - LoopLoc:         './basic_helper.hpp:73:5'
+  - String:          ' '
+  - Function:        'loadDDR_data_special(hls::vector<double, 8ul>*, hls::stream<hls::vector<double, 8ul>, 0>&, hls::stream<hls::vector<double, 8ul>, 0>&, int) (.1)'
+    DebugLoc:        { File: ./basic_helper.hpp, Line: 70, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./basic_helper.hpp, Line: 73, Column: 5 }
+Function:        _Z20loadDDR_data_specialPN3hls6vectorIdLm8EEERNS_6streamIS1_Li0EEES5_i.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        loadDDR_data
+  - String:          '''('
+  - LoopLoc:         './basic_helper.hpp:73:5'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem7
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

@@ -1,0 +1,1259 @@
+
+
+================================================================
+== Synthesis Summary Report of 'Infeasi_Res_S2'
+================================================================
++ General Information: 
+    * Date:           Fri Jan  9 14:33:11 2026
+    * Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+    * Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+    * Solution:       sol1 (Vivado IP Flow Target)
+    * Product family: versalhbm
+    * Target device:  xcv80-lsva4737-2MHP-e-S
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------------+----------+-------------+-------------+-----+
+    |                                   Modules                                  |  Issue |       | Latency | Latency | Iteration|         | Trip |          |            |          |             |             |     |
+    |                                   & Loops                                  |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|    BRAM    |    DSP   |      FF     |     LUT     | URAM|
+    +----------------------------------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------------+----------+-------------+-------------+-----+
+    |+ Infeasi_Res_S2*                                                           |  Timing|  -0.08|        -|        -|         -|        -|     -|  dataflow|  1452 (19%)|  648 (5%)|  176798 (3%)|  182579 (7%)|    -|
+    | + Block_entry_split_proc                                                   |       -|   2.43|        0|    0.000|         -|        0|     -|        no|           -|         -|     66 (~0%)|     74 (~0%)|    -|
+    | + Process_N                                                                |       -|   0.19|        1|    3.333|         -|        1|     -|        no|           -|         -|    131 (~0%)|    390 (~0%)|    -|
+    | + Compute_Primal_Infeasibility_stage2*                                     |  Timing|  -0.00|        -|        -|         -|        -|     -|  dataflow|           -|  264 (2%)|  43365 (~0%)|   40027 (1%)|    -|
+    |  + entry_proc                                                              |       -|   1.67|        0|    0.000|         -|        0|     -|        no|           -|         -|      3 (~0%)|     50 (~0%)|    -|
+    |  + loadDDR_data                                                            |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    139 (~0%)|    452 (~0%)|    -|
+    |   + loadDDR_data_Pipeline_loadDDR_data                                     |       -|   0.67|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    149 (~0%)|    -|
+    |    o loadDDR_data                                                          |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + loadDDR_data_15                                                         |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    139 (~0%)|    452 (~0%)|    -|
+    |   + loadDDR_data_15_Pipeline_loadDDR_data                                  |       -|   0.67|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    149 (~0%)|    -|
+    |    o loadDDR_data                                                          |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + loadDDR_data_16                                                         |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    139 (~0%)|    452 (~0%)|    -|
+    |   + loadDDR_data_16_Pipeline_loadDDR_data                                  |       -|   0.67|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    149 (~0%)|    -|
+    |    o loadDDR_data                                                          |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + loadDDR_data_17                                                         |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    139 (~0%)|    452 (~0%)|    -|
+    |   + loadDDR_data_17_Pipeline_loadDDR_data                                  |       -|   0.67|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    149 (~0%)|    -|
+    |    o loadDDR_data                                                          |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + scaleVector_12                                                          |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3082 (~0%)|   2445 (~0%)|    -|
+    |   + scaleVector_12_Pipeline_scale_vector                                   |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   2980 (~0%)|   2379 (~0%)|    -|
+    |    o scale_vector                                                          |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + scaleVector_13                                                          |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3082 (~0%)|   2437 (~0%)|    -|
+    |   + scaleVector_13_Pipeline_scale_vector                                   |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   2980 (~0%)|   2379 (~0%)|    -|
+    |    o scale_vector                                                          |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + scaleVector_14                                                          |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3081 (~0%)|   2429 (~0%)|    -|
+    |   + scaleVector_14_Pipeline_scale_vector                                   |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   2980 (~0%)|   2379 (~0%)|    -|
+    |    o scale_vector                                                          |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + scaleVector                                                             |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3081 (~0%)|   2437 (~0%)|    -|
+    |   + scaleVector_Pipeline_scale_vector                                      |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   2980 (~0%)|   2379 (~0%)|    -|
+    |    o scale_vector                                                          |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + consumer                                                                |       -|   0.77|        -|        -|         -|        -|     -|        no|           -|         -|     71 (~0%)|    173 (~0%)|    -|
+    |   + consumer_Pipeline_VITIS_LOOP_15_1                                      |       -|   0.77|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    139 (~0%)|    -|
+    |    o VITIS_LOOP_15_1                                                       |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + axpy_2fused                                                             |       -|   0.24|        -|        -|         -|        -|     -|        no|           -|         -|  12837 (~0%)|  14644 (~0%)|    -|
+    |   + axpy_2fused_Pipeline_axpy_2fused                                       |       -|   0.24|        -|        -|         -|        -|     -|        no|           -|         -|  12800 (~0%)|  14586 (~0%)|    -|
+    |    o axpy_2fused                                                           |       -|   2.43|        -|        -|        16|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + scale_and_twoNorm                                                       |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|  72 (~0%)|  11977 (~0%)|  10819 (~0%)|    -|
+    |   + scale_and_twoNorm_Scaled*                                              |  Timing|  -0.00|        -|        -|         -|        -|     -|  dataflow|           -|  60 (~0%)|   8182 (~0%)|   7097 (~0%)|    -|
+    |    + loadDDR_data_22                                                       |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    140 (~0%)|    460 (~0%)|    -|
+    |     + loadDDR_data_22_Pipeline_loadDDR_data                                |       -|   0.67|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    149 (~0%)|    -|
+    |      o loadDDR_data                                                        |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |    + edot                                                                  |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3056 (~0%)|   2461 (~0%)|    -|
+    |     + edot_Pipeline_edot                                                   |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3018 (~0%)|   2395 (~0%)|    -|
+    |      o edot                                                                |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |    + twoNorm_23                                                            |       -|   0.24|        -|        -|         -|        -|     -|        no|           -|  12 (~0%)|   3817 (~0%)|   3597 (~0%)|    -|
+    |     + twoNorm_23_Pipeline_twoNorm                                          |       -|   0.24|        -|        -|         -|        -|     -|        no|           -|  12 (~0%)|   3724 (~0%)|   3395 (~0%)|    -|
+    |      o twoNorm                                                             |      II|   2.43|        -|        -|        66|        7|     -|       yes|           -|         -|            -|            -|    -|
+    |   + scale_and_twoNorm_noScaled*                                            |       -|   0.24|        -|        -|         -|        -|     -|  dataflow|           -|  12 (~0%)|   3785 (~0%)|   3589 (~0%)|    -|
+    |    + twoNorm                                                               |       -|   0.24|        -|        -|         -|        -|     -|        no|           -|  12 (~0%)|   3785 (~0%)|   3589 (~0%)|    -|
+    |     + twoNorm_Pipeline_twoNorm                                             |       -|   0.24|        -|        -|         -|        -|     -|        no|           -|  12 (~0%)|   3724 (~0%)|   3395 (~0%)|    -|
+    |      o twoNorm                                                             |      II|   2.43|        -|        -|        66|        7|     -|       yes|           -|         -|            -|            -|    -|
+    | + Compute_Dual_Infeasibility_stage2*                                       |  Timing|  -0.08|        -|        -|         -|        -|     -|  dataflow|           -|  384 (3%)|   82468 (1%)|   86376 (3%)|    -|
+    |  + entry_proc31                                                            |       -|   1.67|        0|    0.000|         -|        0|     -|        no|           -|         -|      3 (~0%)|     34 (~0%)|    -|
+    |  + loadDDR_data_18                                                         |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    139 (~0%)|    452 (~0%)|    -|
+    |   + loadDDR_data_18_Pipeline_loadDDR_data                                  |       -|   0.67|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    149 (~0%)|    -|
+    |    o loadDDR_data                                                          |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + loadDDR_data_19                                                         |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    139 (~0%)|    452 (~0%)|    -|
+    |   + loadDDR_data_19_Pipeline_loadDDR_data                                  |       -|   0.67|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    149 (~0%)|    -|
+    |    o loadDDR_data                                                          |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + scaleVector_2out                                                        |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3081 (~0%)|   2447 (~0%)|    -|
+    |   + scaleVector_2out_Pipeline_scale_vector                                 |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   2980 (~0%)|   2389 (~0%)|    -|
+    |    o scale_vector                                                          |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + scaleVector_1                                                           |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3081 (~0%)|   2429 (~0%)|    -|
+    |   + scaleVector_1_Pipeline_scale_vector                                    |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   2980 (~0%)|   2379 (~0%)|    -|
+    |    o scale_vector                                                          |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + Primal_Constr*                                                          |  Timing|  -0.08|        -|        -|         -|        -|     -|  dataflow|           -|  96 (~0%)|  22543 (~0%)|  25711 (~0%)|    -|
+    |   + projNeg28                                                              |       -|   0.00|        -|        -|         -|        -|     -|        no|           -|         -|   1524 (~0%)|   1497 (~0%)|    -|
+    |    o projNeg                                                               |       -|   2.43|        -|        -|         3|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |   + scale_and_twoNormSquared29                                             |  Timing|  -0.08|        -|        -|         -|        -|     -|        no|           -|  96 (~0%)|  21012 (~0%)|  23920 (~0%)|    -|
+    |    + scale_and_twoNormSquared_Scaled*                                      |  Timing|  -0.08|        -|        -|         -|        -|     -|  dataflow|           -|  72 (~0%)|  12188 (~0%)|  13653 (~0%)|    -|
+    |     + loadDDR_data_24                                                      |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    140 (~0%)|    460 (~0%)|    -|
+    |      + loadDDR_data_24_Pipeline_loadDDR_data                               |       -|   0.67|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    149 (~0%)|    -|
+    |       o loadDDR_data                                                       |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |     + edot_11                                                              |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3056 (~0%)|   2461 (~0%)|    -|
+    |      + edot_11_Pipeline_edot                                               |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3018 (~0%)|   2395 (~0%)|    -|
+    |       o edot                                                               |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |     + twoNormSquared                                                       |  Timing|  -0.08|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   8846 (~0%)|  10150 (~0%)|    -|
+    |      + twoNormSquared_Pipeline_accum_loop                                  |       -|   0.13|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   7819 (~0%)|   7720 (~0%)|    -|
+    |       o accum_loop                                                         |       -|   2.43|        -|        -|        14|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |    + scale_and_twoNormSquared_noScaled*                                    |  Timing|  -0.08|        -|        -|         -|        -|     -|  dataflow|           -|  24 (~0%)|   8814 (~0%)|  10142 (~0%)|    -|
+    |     + twoNormSquared_10                                                    |  Timing|  -0.08|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   8814 (~0%)|  10142 (~0%)|    -|
+    |      + twoNormSquared_10_Pipeline_accum_loop                               |       -|   0.13|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   7819 (~0%)|   7720 (~0%)|    -|
+    |       o accum_loop                                                         |       -|   2.43|        -|        -|        14|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + Primal_Bound*                                                           |  Timing|  -0.08|        -|        -|         -|        -|     -|  dataflow|           -|  192 (1%)|  46993 (~0%)|   51811 (2%)|    -|
+    |   + projNeg_221                                                            |       -|   0.20|        -|        -|         -|        -|     -|        no|           -|         -|   1108 (~0%)|    933 (~0%)|    -|
+    |    + projNeg_221_Pipeline_projNeg                                          |       -|   0.20|        -|        -|         -|        -|     -|        no|           -|         -|   1102 (~0%)|    883 (~0%)|    -|
+    |     o projNeg                                                              |       -|   2.43|        -|        -|         4|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |   + projPos22                                                              |       -|   0.20|        -|        -|         -|        -|     -|        no|           -|         -|   1108 (~0%)|    933 (~0%)|    -|
+    |    + projPos22_Pipeline_projPos                                            |       -|   0.20|        -|        -|         -|        -|     -|        no|           -|         -|   1102 (~0%)|    883 (~0%)|    -|
+    |     o projPos                                                              |       -|   2.43|        -|        -|         4|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |   + loadDDR_data_2023                                                      |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    155 (~0%)|    212 (~0%)|    -|
+    |    o loadDDR_data                                                          |       -|   2.43|        -|        -|        13|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |   + loadDDR_data_2124                                                      |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    155 (~0%)|    212 (~0%)|    -|
+    |    o loadDDR_data                                                          |       -|   2.43|        -|        -|        13|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |   + edot_325                                                               |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3055 (~0%)|   2445 (~0%)|    -|
+    |    + edot_325_Pipeline_edot                                                |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3018 (~0%)|   2395 (~0%)|    -|
+    |     o edot                                                                 |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |   + edot_426                                                               |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3055 (~0%)|   2445 (~0%)|    -|
+    |    + edot_426_Pipeline_edot                                                |       -|   0.28|        -|        -|         -|        -|     -|        no|           -|  48 (~0%)|   3018 (~0%)|   2395 (~0%)|    -|
+    |     o edot                                                                 |       -|   2.43|        -|        -|         7|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |   + scale_and_twoNormSquared_for_lub27                                     |  Timing|  -0.08|        -|        -|         -|        -|     -|        no|           -|  96 (~0%)|  38186 (~0%)|   42923 (1%)|    -|
+    |    + scale_and_twoNormSquared_for_lub_Scaled*                              |  Timing|  -0.08|        -|        -|         -|        -|     -|  dataflow|           -|  48 (~0%)|  20546 (~0%)|  22410 (~0%)|    -|
+    |     + loadDDR_data_special                                                 |  Timing|  -0.00|        -|        -|         -|        -|     -|        no|           -|         -|    140 (~0%)|    484 (~0%)|    -|
+    |      + loadDDR_data_special_Pipeline_loadDDR_data                          |       -|   0.67|        -|        -|         -|        -|     -|        no|           -|         -|     34 (~0%)|    157 (~0%)|    -|
+    |       o loadDDR_data                                                       |       -|   2.43|        -|        -|         2|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |     + ediv_7                                                               |       -|   0.53|        -|        -|         -|        -|     -|        no|           -|         -|   1211 (~0%)|    229 (~0%)|    -|
+    |      + ediv_7_Pipeline_ediv                                                |       -|   0.53|        -|        -|         -|        -|     -|        no|           -|         -|   1173 (~0%)|    163 (~0%)|    -|
+    |       o ediv                                                               |       -|   2.43|        -|        -|        60|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |     + ediv                                                                 |       -|   0.53|        -|        -|         -|        -|     -|        no|           -|         -|   1211 (~0%)|    229 (~0%)|    -|
+    |      + ediv_Pipeline_ediv                                                  |       -|   0.53|        -|        -|         -|        -|     -|        no|           -|         -|   1173 (~0%)|    163 (~0%)|    -|
+    |       o ediv                                                               |       -|   2.43|        -|        -|        60|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |     + twoNormSquared_8                                                     |  Timing|  -0.08|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   8846 (~0%)|  10150 (~0%)|    -|
+    |      + twoNormSquared_8_Pipeline_accum_loop                                |       -|   0.13|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   7819 (~0%)|   7720 (~0%)|    -|
+    |       o accum_loop                                                         |       -|   2.43|        -|        -|        14|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |     + twoNormSquared_9                                                     |  Timing|  -0.08|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   8846 (~0%)|  10150 (~0%)|    -|
+    |      + twoNormSquared_9_Pipeline_accum_loop                                |       -|   0.13|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   7819 (~0%)|   7720 (~0%)|    -|
+    |       o accum_loop                                                         |       -|   2.43|        -|        -|        14|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |    + scale_and_twoNormSquared_for_lub_noScaled*                            |  Timing|  -0.08|        -|        -|         -|        -|     -|  dataflow|           -|  48 (~0%)|  17630 (~0%)|  20316 (~0%)|    -|
+    |     + twoNormSquared_5                                                     |  Timing|  -0.08|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   8814 (~0%)|  10142 (~0%)|    -|
+    |      + twoNormSquared_5_Pipeline_accum_loop                                |       -|   0.13|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   7819 (~0%)|   7720 (~0%)|    -|
+    |       o accum_loop                                                         |       -|   2.43|        -|        -|        14|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |     + twoNormSquared_6                                                     |  Timing|  -0.08|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   8814 (~0%)|  10142 (~0%)|    -|
+    |      + twoNormSquared_6_Pipeline_accum_loop                                |       -|   0.13|        -|        -|         -|        -|     -|        no|           -|  24 (~0%)|   7819 (~0%)|   7720 (~0%)|    -|
+    |       o accum_loop                                                         |       -|   2.43|        -|        -|        14|        1|     -|       yes|           -|         -|            -|            -|    -|
+    |  + add3_Sqrt                                                               |       -|   0.24|       69|  229.977|         -|       69|     -|        no|           -|         -|    800 (~0%)|   1374 (~0%)|    -|
+    | + Block_entry_split_split_split_split_split_split_split_split_split_proc1  |       -|   1.80|        0|    0.000|         -|        0|     -|        no|           -|         -|    130 (~0%)|    154 (~0%)|    -|
+    +----------------------------------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+------------+----------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++--------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface    | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|              |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++--------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem1  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem10 | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem2  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem3  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem4  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem5  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem6  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem7  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem8  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
+| m_axi_gmem9  | READ_ONLY  | 512 -> 512 | 64            | 0       | slave  | 0        | 0         | 64           | 16           | 64          | 16          | BRAM=132          |
++--------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 8             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+---------------------------+--------+-------+--------+----------------------------------------+----------------------------------------------------------------------+
+| Interface     | Register                  | Offset | Width | Access | Description                            | Bit Fields                                                           |
++---------------+---------------------------+--------+-------+--------+----------------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL                      | 0x00   | 32    | RW     | Control signals                        | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER                      | 0x04   | 32    | RW     | Global Interrupt Enable Register       | 0=Enable                                                             |
+| s_axi_control | IP_IER                    | 0x08   | 32    | RW     | IP Interrupt Enable Register           | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR                    | 0x0c   | 32    | RW     | IP Interrupt Status Register           | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | y_1                       | 0x10   | 32    | W      | Data signal of y                       |                                                                      |
+| s_axi_control | y_2                       | 0x14   | 32    | W      | Data signal of y                       |                                                                      |
+| s_axi_control | dSlackPos_1               | 0x1c   | 32    | W      | Data signal of dSlackPos               |                                                                      |
+| s_axi_control | dSlackPos_2               | 0x20   | 32    | W      | Data signal of dSlackPos               |                                                                      |
+| s_axi_control | dSlackNeg_1               | 0x28   | 32    | W      | Data signal of dSlackNeg               |                                                                      |
+| s_axi_control | dSlackNeg_2               | 0x2c   | 32    | W      | Data signal of dSlackNeg               |                                                                      |
+| s_axi_control | aty_1                     | 0x34   | 32    | W      | Data signal of aty                     |                                                                      |
+| s_axi_control | aty_2                     | 0x38   | 32    | W      | Data signal of aty                     |                                                                      |
+| s_axi_control | colScale0_1               | 0x40   | 32    | W      | Data signal of colScale0               |                                                                      |
+| s_axi_control | colScale0_2               | 0x44   | 32    | W      | Data signal of colScale0               |                                                                      |
+| s_axi_control | x_1                       | 0x4c   | 32    | W      | Data signal of x                       |                                                                      |
+| s_axi_control | x_2                       | 0x50   | 32    | W      | Data signal of x                       |                                                                      |
+| s_axi_control | ax_1                      | 0x58   | 32    | W      | Data signal of ax                      |                                                                      |
+| s_axi_control | ax_2                      | 0x5c   | 32    | W      | Data signal of ax                      |                                                                      |
+| s_axi_control | colScale1_1               | 0x64   | 32    | W      | Data signal of colScale1               |                                                                      |
+| s_axi_control | colScale1_2               | 0x68   | 32    | W      | Data signal of colScale1               |                                                                      |
+| s_axi_control | rowScale_1                | 0x70   | 32    | W      | Data signal of rowScale                |                                                                      |
+| s_axi_control | rowScale_2                | 0x74   | 32    | W      | Data signal of rowScale                |                                                                      |
+| s_axi_control | hasLower_1                | 0x7c   | 32    | W      | Data signal of hasLower                |                                                                      |
+| s_axi_control | hasLower_2                | 0x80   | 32    | W      | Data signal of hasLower                |                                                                      |
+| s_axi_control | hasUpper_1                | 0x88   | 32    | W      | Data signal of hasUpper                |                                                                      |
+| s_axi_control | hasUpper_2                | 0x8c   | 32    | W      | Data signal of hasUpper                |                                                                      |
+| s_axi_control | dPrimalInfeasRes_val_1    | 0x94   | 32    | R      | Data signal of dPrimalInfeasRes_val    |                                                                      |
+| s_axi_control | dPrimalInfeasRes_val_2    | 0x98   | 32    | R      | Data signal of dPrimalInfeasRes_val    |                                                                      |
+| s_axi_control | dPrimalInfeasRes_val_ctrl | 0x9c   | 32    | R      | Control signal of dPrimalInfeasRes_val | 0=dPrimalInfeasRes_val_ap_vld                                        |
+| s_axi_control | dDualInfeasRes_val_1      | 0xac   | 32    | R      | Data signal of dDualInfeasRes_val      |                                                                      |
+| s_axi_control | dDualInfeasRes_val_2      | 0xb0   | 32    | R      | Data signal of dDualInfeasRes_val      |                                                                      |
+| s_axi_control | dDualInfeasRes_val_ctrl   | 0xb4   | 32    | R      | Control signal of dDualInfeasRes_val   | 0=dDualInfeasRes_val_ap_vld                                          |
+| s_axi_control | nRows                     | 0xc4   | 32    | W      | Data signal of nRows                   |                                                                      |
+| s_axi_control | nCols                     | 0xcc   | 32    | W      | Data signal of nCols                   |                                                                      |
+| s_axi_control | problem_nEqs              | 0xd4   | 32    | W      | Data signal of problem_nEqs            |                                                                      |
+| s_axi_control | ifScaled                  | 0xdc   | 32    | W      | Data signal of ifScaled                |                                                                      |
+| s_axi_control | inverse_dScale_1          | 0xe4   | 32    | W      | Data signal of inverse_dScale          |                                                                      |
+| s_axi_control | inverse_dScale_2          | 0xe8   | 32    | W      | Data signal of inverse_dScale          |                                                                      |
+| s_axi_control | inverse_pScale_1          | 0xf0   | 32    | W      | Data signal of inverse_pScale          |                                                                      |
+| s_axi_control | inverse_pScale_2          | 0xf4   | 32    | W      | Data signal of inverse_pScale          |                                                                      |
++---------------+---------------------------+--------+-------+--------+----------------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------------------+-----------+--------------------+
+| Argument             | Direction | Datatype           |
++----------------------+-----------+--------------------+
+| y                    | in        | vector<double, 8>* |
+| dSlackPos            | in        | vector<double, 8>* |
+| dSlackNeg            | in        | vector<double, 8>* |
+| aty                  | in        | vector<double, 8>* |
+| colScale0            | in        | vector<double, 8>* |
+| x                    | in        | vector<double, 8>* |
+| ax                   | in        | vector<double, 8>* |
+| colScale1            | in        | vector<double, 8>* |
+| rowScale             | in        | vector<double, 8>* |
+| hasLower             | in        | vector<double, 8>* |
+| hasUpper             | in        | vector<double, 8>* |
+| dPrimalInfeasRes_val | out       | double&            |
+| dDualInfeasRes_val   | out       | double&            |
+| nRows                | in        | int                |
+| nCols                | in        | int                |
+| problem_nEqs         | in        | int                |
+| ifScaled             | in        | int                |
+| inverse_dScale       | in        | double             |
+| inverse_pScale       | in        | double             |
++----------------------+-----------+--------------------+
+
+* SW-to-HW Mapping
++----------------------+---------------+-----------+----------+-----------------------------------------------------+
+| Argument             | HW Interface  | HW Type   | HW Usage | HW Info                                             |
++----------------------+---------------+-----------+----------+-----------------------------------------------------+
+| y                    | m_axi_gmem0   | interface |          | channel=0                                           |
+| y                    | s_axi_control | register  | offset   | name=y_1 offset=0x10 range=32                       |
+| y                    | s_axi_control | register  | offset   | name=y_2 offset=0x14 range=32                       |
+| dSlackPos            | m_axi_gmem1   | interface |          | channel=0                                           |
+| dSlackPos            | s_axi_control | register  | offset   | name=dSlackPos_1 offset=0x1c range=32               |
+| dSlackPos            | s_axi_control | register  | offset   | name=dSlackPos_2 offset=0x20 range=32               |
+| dSlackNeg            | m_axi_gmem2   | interface |          | channel=0                                           |
+| dSlackNeg            | s_axi_control | register  | offset   | name=dSlackNeg_1 offset=0x28 range=32               |
+| dSlackNeg            | s_axi_control | register  | offset   | name=dSlackNeg_2 offset=0x2c range=32               |
+| aty                  | m_axi_gmem3   | interface |          | channel=0                                           |
+| aty                  | s_axi_control | register  | offset   | name=aty_1 offset=0x34 range=32                     |
+| aty                  | s_axi_control | register  | offset   | name=aty_2 offset=0x38 range=32                     |
+| colScale0            | m_axi_gmem4   | interface |          | channel=0                                           |
+| colScale0            | s_axi_control | register  | offset   | name=colScale0_1 offset=0x40 range=32               |
+| colScale0            | s_axi_control | register  | offset   | name=colScale0_2 offset=0x44 range=32               |
+| x                    | m_axi_gmem5   | interface |          | channel=0                                           |
+| x                    | s_axi_control | register  | offset   | name=x_1 offset=0x4c range=32                       |
+| x                    | s_axi_control | register  | offset   | name=x_2 offset=0x50 range=32                       |
+| ax                   | m_axi_gmem6   | interface |          | channel=0                                           |
+| ax                   | s_axi_control | register  | offset   | name=ax_1 offset=0x58 range=32                      |
+| ax                   | s_axi_control | register  | offset   | name=ax_2 offset=0x5c range=32                      |
+| colScale1            | m_axi_gmem7   | interface |          | channel=0                                           |
+| colScale1            | s_axi_control | register  | offset   | name=colScale1_1 offset=0x64 range=32               |
+| colScale1            | s_axi_control | register  | offset   | name=colScale1_2 offset=0x68 range=32               |
+| rowScale             | m_axi_gmem8   | interface |          | channel=0                                           |
+| rowScale             | s_axi_control | register  | offset   | name=rowScale_1 offset=0x70 range=32                |
+| rowScale             | s_axi_control | register  | offset   | name=rowScale_2 offset=0x74 range=32                |
+| hasLower             | m_axi_gmem9   | interface |          | channel=0                                           |
+| hasLower             | s_axi_control | register  | offset   | name=hasLower_1 offset=0x7c range=32                |
+| hasLower             | s_axi_control | register  | offset   | name=hasLower_2 offset=0x80 range=32                |
+| hasUpper             | m_axi_gmem10  | interface |          | channel=0                                           |
+| hasUpper             | s_axi_control | register  | offset   | name=hasUpper_1 offset=0x88 range=32                |
+| hasUpper             | s_axi_control | register  | offset   | name=hasUpper_2 offset=0x8c range=32                |
+| dPrimalInfeasRes_val | s_axi_control | register  |          | name=dPrimalInfeasRes_val_1 offset=0x94 range=32    |
+| dPrimalInfeasRes_val | s_axi_control | register  |          | name=dPrimalInfeasRes_val_2 offset=0x98 range=32    |
+| dPrimalInfeasRes_val | s_axi_control | register  |          | name=dPrimalInfeasRes_val_ctrl offset=0x9c range=32 |
+| dDualInfeasRes_val   | s_axi_control | register  |          | name=dDualInfeasRes_val_1 offset=0xac range=32      |
+| dDualInfeasRes_val   | s_axi_control | register  |          | name=dDualInfeasRes_val_2 offset=0xb0 range=32      |
+| dDualInfeasRes_val   | s_axi_control | register  |          | name=dDualInfeasRes_val_ctrl offset=0xb4 range=32   |
+| nRows                | s_axi_control | register  |          | name=nRows offset=0xc4 range=32                     |
+| nCols                | s_axi_control | register  |          | name=nCols offset=0xcc range=32                     |
+| problem_nEqs         | s_axi_control | register  |          | name=problem_nEqs offset=0xd4 range=32              |
+| ifScaled             | s_axi_control | register  |          | name=ifScaled offset=0xdc range=32                  |
+| inverse_dScale       | s_axi_control | register  |          | name=inverse_dScale_1 offset=0xe4 range=32          |
+| inverse_dScale       | s_axi_control | register  |          | name=inverse_dScale_2 offset=0xe8 range=32          |
+| inverse_pScale       | s_axi_control | register  |          | name=inverse_pScale_1 offset=0xf0 range=32          |
+| inverse_pScale       | s_axi_control | register  |          | name=inverse_pScale_2 offset=0xf4 range=32          |
++----------------------+---------------+-----------+----------+-----------------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+--------------+-----------------------+
+| HW Interface | Direction | Length   | Width | Loop         | Loop Location         |
++--------------+-----------+----------+-------+--------------+-----------------------+
+| m_axi_gmem0  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
+| m_axi_gmem1  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
+| m_axi_gmem10 | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
+| m_axi_gmem2  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
+| m_axi_gmem3  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
+| m_axi_gmem4  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
+| m_axi_gmem5  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
+| m_axi_gmem6  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
+| m_axi_gmem7  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:73:5 |
+| m_axi_gmem8  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
+| m_axi_gmem9  | read      | variable | 512   | loadDDR_data | basic_helper.hpp:58:5 |
++--------------+-----------+----------+-------+--------------+-----------------------+
+
+* All M_AXI Variable Accesses
++--------------------------------------------------------------------+----------+-----------------------+-----------+--------------+----------+--------------+-----------------------+------------+--------------------------------------------------------------------------------------------------------+
+| HW Interface                                                       | Variable | Access Location       | Direction | Burst Status | Length   | Loop         | Loop Location         | Resolution | Problem                                                                                                |
++--------------------------------------------------------------------+----------+-----------------------+-----------+--------------+----------+--------------+-----------------------+------------+--------------------------------------------------------------------------------------------------------+
+| m_axi_gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4 | mem      | basic_helper.hpp:60:7 | read      | Widen Fail   |          | loadDDR_data | basic_helper.hpp:58:5 | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem5,gmem6,gmem9,gmem10,gmem8,gmem0,gmem1,gmem2,gmem3,gmem4 | mem      | basic_helper.hpp:60:7 | read      | Inferred     | variable | loadDDR_data | basic_helper.hpp:58:5 |            |                                                                                                        |
+| m_axi_gmem7                                                        | mem      | basic_helper.hpp:60:7 | read      | Widen Fail   |          | loadDDR_data | basic_helper.hpp:73:5 | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem7                                                        | mem      | basic_helper.hpp:60:7 | read      | Inferred     | variable | loadDDR_data | basic_helper.hpp:73:5 |            |                                                                                                        |
++--------------------------------------------------------------------+----------+-----------------------+-----------+--------------+----------+--------------+-----------------------+------------+--------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------+-----+--------+----------------+--------+----------+---------+
+| Name                                               | DSP | Pragma | Variable       | Op     | Impl     | Latency |
++----------------------------------------------------+-----+--------+----------------+--------+----------+---------+
+| + Infeasi_Res_S2                                   | 648 |        |                |        |          |         |
+|  + Process_N                                       | 0   |        |                |        |          |         |
+|    add_ln24_fu_38_p2                               |     |        | add_ln24       | add    | fabric   | 0       |
+|    sub_ln24_fu_51_p2                               |     |        | sub_ln24       | sub    | fabric   | 0       |
+|    sub_ln24_1_fu_70_p2                             |     |        | sub_ln24_1     | sub    | fabric   | 0       |
+|    select_ln24_fu_90_p3                            |     |        | select_ln24    | select | auto_sel | 0       |
+|    add_ln25_fu_102_p2                              |     |        | add_ln25       | add    | fabric   | 0       |
+|    sub_ln25_fu_115_p2                              |     |        | sub_ln25       | sub    | fabric   | 0       |
+|    sub_ln25_1_fu_134_p2                            |     |        | sub_ln25_1     | sub    | fabric   | 0       |
+|    select_ln25_fu_154_p3                           |     |        | select_ln25    | select | auto_sel | 0       |
+|  + Compute_Primal_Infeasibility_stage2             | 264 |        |                |        |          |         |
+|   + loadDDR_data                                   | 0   |        |                |        |          |         |
+|     icmp_ln58_fu_100_p2                            |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|     empty_fu_110_p3                                |     |        | empty          | select | auto_sel | 0       |
+|    + loadDDR_data_Pipeline_loadDDR_data            | 0   |        |                |        |          |         |
+|      icmp_ln58_fu_107_p2                           |     |        | icmp_ln58      | setlt  | auto     | 0       |
+|      add_ln58_fu_113_p2                            |     |        | add_ln58       | add    | fabric   | 0       |
+|   + loadDDR_data_15                                | 0   |        |                |        |          |         |
+|     icmp_ln58_fu_100_p2                            |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|     empty_fu_110_p3                                |     |        | empty          | select | auto_sel | 0       |
+|    + loadDDR_data_15_Pipeline_loadDDR_data         | 0   |        |                |        |          |         |
+|      icmp_ln58_fu_107_p2                           |     |        | icmp_ln58      | setlt  | auto     | 0       |
+|      add_ln58_fu_113_p2                            |     |        | add_ln58       | add    | fabric   | 0       |
+|   + loadDDR_data_16                                | 0   |        |                |        |          |         |
+|     icmp_ln58_fu_100_p2                            |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|     empty_fu_110_p3                                |     |        | empty          | select | auto_sel | 0       |
+|    + loadDDR_data_16_Pipeline_loadDDR_data         | 0   |        |                |        |          |         |
+|      icmp_ln58_fu_107_p2                           |     |        | icmp_ln58      | setlt  | auto     | 0       |
+|      add_ln58_fu_113_p2                            |     |        | add_ln58       | add    | fabric   | 0       |
+|   + loadDDR_data_17                                | 0   |        |                |        |          |         |
+|     icmp_ln58_fu_100_p2                            |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|     empty_fu_110_p3                                |     |        | empty          | select | auto_sel | 0       |
+|    + loadDDR_data_17_Pipeline_loadDDR_data         | 0   |        |                |        |          |         |
+|      icmp_ln58_fu_107_p2                           |     |        | icmp_ln58      | setlt  | auto     | 0       |
+|      add_ln58_fu_113_p2                            |     |        | add_ln58       | add    | fabric   | 0       |
+|   + scaleVector_12                                 | 48  |        |                |        |          |         |
+|    + scaleVector_12_Pipeline_scale_vector          | 48  |        |                |        |          |         |
+|      icmp_ln160_fu_157_p2                          |     |        | icmp_ln160     | setlt  | auto     | 0       |
+|      add_ln160_fu_163_p2                           |     |        | add_ln160      | add    | fabric   | 0       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U46             | 6   |        | mul_i          | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U47             | 6   |        | mul_1_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U48             | 6   |        | mul_2_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U49             | 6   |        | mul_3_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U50             | 6   |        | mul_4_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U51             | 6   |        | mul_5_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U52             | 6   |        | mul_6_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U53             | 6   |        | mul_7_i        | dmul   | meddsp   | 4       |
+|   + scaleVector_13                                 | 48  |        |                |        |          |         |
+|    + scaleVector_13_Pipeline_scale_vector          | 48  |        |                |        |          |         |
+|      icmp_ln160_fu_157_p2                          |     |        | icmp_ln160     | setlt  | auto     | 0       |
+|      add_ln160_fu_163_p2                           |     |        | add_ln160      | add    | fabric   | 0       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U64             | 6   |        | mul_i          | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U65             | 6   |        | mul_1_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U66             | 6   |        | mul_2_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U67             | 6   |        | mul_3_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U68             | 6   |        | mul_4_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U69             | 6   |        | mul_5_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U70             | 6   |        | mul_6_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U71             | 6   |        | mul_7_i        | dmul   | meddsp   | 4       |
+|   + scaleVector_14                                 | 48  |        |                |        |          |         |
+|    + scaleVector_14_Pipeline_scale_vector          | 48  |        |                |        |          |         |
+|      icmp_ln160_fu_157_p2                          |     |        | icmp_ln160     | setlt  | auto     | 0       |
+|      add_ln160_fu_163_p2                           |     |        | add_ln160      | add    | fabric   | 0       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U80             | 6   |        | mul_i          | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U81             | 6   |        | mul_1_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U82             | 6   |        | mul_2_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U83             | 6   |        | mul_3_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U84             | 6   |        | mul_4_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U85             | 6   |        | mul_5_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U86             | 6   |        | mul_6_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U87             | 6   |        | mul_7_i        | dmul   | meddsp   | 4       |
+|   + scaleVector                                    | 48  |        |                |        |          |         |
+|    + scaleVector_Pipeline_scale_vector             | 48  |        |                |        |          |         |
+|      icmp_ln160_fu_157_p2                          |     |        | icmp_ln160     | setlt  | auto     | 0       |
+|      add_ln160_fu_163_p2                           |     |        | add_ln160      | add    | fabric   | 0       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U96             | 6   |        | mul_i          | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U97             | 6   |        | mul_1_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U98             | 6   |        | mul_2_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U99             | 6   |        | mul_3_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U100            | 6   |        | mul_4_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U101            | 6   |        | mul_5_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U102            | 6   |        | mul_6_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U103            | 6   |        | mul_7_i        | dmul   | meddsp   | 4       |
+|   + consumer                                       | 0   |        |                |        |          |         |
+|    + consumer_Pipeline_VITIS_LOOP_15_1             | 0   |        |                |        |          |         |
+|      icmp_ln15_fu_70_p2                            |     |        | icmp_ln15      | setlt  | auto     | 0       |
+|      add_ln15_fu_76_p2                             |     |        | add_ln15       | add    | fabric   | 0       |
+|   + axpy_2fused                                    | 0   |        |                |        |          |         |
+|    + axpy_2fused_Pipeline_axpy_2fused              | 0   |        |                |        |          |         |
+|      icmp_ln302_fu_193_p2                          |     |        | icmp_ln302     | setlt  | auto     | 0       |
+|      add_ln302_fu_199_p2                           |     |        | add_ln302      | add    | fabric   | 0       |
+|      dsub_64ns_64ns_64_7_no_dsp_1_U117             |     |        | sub_i          | dsub   | fabric   | 6       |
+|      dadd_64ns_64ns_64_7_no_dsp_1_U125             |     |        | add_i          | dadd   | fabric   | 6       |
+|      dsub_64ns_64ns_64_7_no_dsp_1_U118             |     |        | sub_1_i        | dsub   | fabric   | 6       |
+|      dadd_64ns_64ns_64_7_no_dsp_1_U126             |     |        | add_1_i        | dadd   | fabric   | 6       |
+|      dsub_64ns_64ns_64_7_no_dsp_1_U119             |     |        | sub_2_i        | dsub   | fabric   | 6       |
+|      dadd_64ns_64ns_64_7_no_dsp_1_U127             |     |        | add_2_i        | dadd   | fabric   | 6       |
+|      dsub_64ns_64ns_64_7_no_dsp_1_U120             |     |        | sub_3_i        | dsub   | fabric   | 6       |
+|      dadd_64ns_64ns_64_7_no_dsp_1_U128             |     |        | add_3_i        | dadd   | fabric   | 6       |
+|      dsub_64ns_64ns_64_7_no_dsp_1_U121             |     |        | sub_4_i        | dsub   | fabric   | 6       |
+|      dadd_64ns_64ns_64_7_no_dsp_1_U129             |     |        | add_4_i        | dadd   | fabric   | 6       |
+|      dsub_64ns_64ns_64_7_no_dsp_1_U122             |     |        | sub_5_i        | dsub   | fabric   | 6       |
+|      dadd_64ns_64ns_64_7_no_dsp_1_U130             |     |        | add_5_i        | dadd   | fabric   | 6       |
+|      dsub_64ns_64ns_64_7_no_dsp_1_U123             |     |        | sub_6_i        | dsub   | fabric   | 6       |
+|      dadd_64ns_64ns_64_7_no_dsp_1_U131             |     |        | add_6_i        | dadd   | fabric   | 6       |
+|      dsub_64ns_64ns_64_7_no_dsp_1_U124             |     |        | sub_7_i        | dsub   | fabric   | 6       |
+|      dadd_64ns_64ns_64_7_no_dsp_1_U132             |     |        | add_7_i        | dadd   | fabric   | 6       |
+|   + scale_and_twoNorm                              | 72  |        |                |        |          |         |
+|     icmp_ln353_fu_88_p2                            |     |        | icmp_ln353     | seteq  | auto     | 0       |
+|    + scale_and_twoNorm_Scaled                      | 60  |        |                |        |          |         |
+|     + loadDDR_data_22                              | 0   |        |                |        |          |         |
+|       icmp_ln58_fu_100_p2                          |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|       empty_fu_110_p3                              |     |        | empty          | select | auto_sel | 0       |
+|      + loadDDR_data_22_Pipeline_loadDDR_data       | 0   |        |                |        |          |         |
+|        add_ln58_fu_103_p2                          |     |        | add_ln58       | add    | fabric   | 0       |
+|        icmp_ln58_fu_113_p2                         |     |        | icmp_ln58      | setlt  | auto     | 0       |
+|     + edot                                         | 48  |        |                |        |          |         |
+|      + edot_Pipeline_edot                          | 48  |        |                |        |          |         |
+|        add_ln273_fu_149_p2                         |     |        | add_ln273      | add    | fabric   | 0       |
+|        icmp_ln273_fu_159_p2                        |     |        | icmp_ln273     | setlt  | auto     | 0       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U155          | 6   |        | mul            | dmul   | meddsp   | 4       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U156          | 6   |        | mul_1          | dmul   | meddsp   | 4       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U157          | 6   |        | mul_2          | dmul   | meddsp   | 4       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U158          | 6   |        | mul_3          | dmul   | meddsp   | 4       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U159          | 6   |        | mul_4          | dmul   | meddsp   | 4       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U160          | 6   |        | mul_5          | dmul   | meddsp   | 4       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U161          | 6   |        | mul_6          | dmul   | meddsp   | 4       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U162          | 6   |        | mul_7          | dmul   | meddsp   | 4       |
+|     + twoNorm_23                                   | 12  |        |                |        |          |         |
+|       dsqrt_64ns_64ns_64_56_no_dsp_1_U180          |     |        | res            | dsqrt  | fabric   | 55      |
+|      + twoNorm_23_Pipeline_twoNorm                 | 12  |        |                |        |          |         |
+|        add_ln252_fu_145_p2                         |     |        | add_ln252      | add    | fabric   | 0       |
+|        icmp_ln252_fu_155_p2                        |     |        | icmp_ln252     | setlt  | auto     | 0       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U175          | 6   |        | mul            | dmul   | meddsp   | 4       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U176          | 6   |        | mul4           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U173           |     |        | add            | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U175          | 6   |        | mul7           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U174           |     |        | add8           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U176          | 6   |        | mul1           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U173           |     |        | add1           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U175          | 6   |        | mul2           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U174           |     |        | add2           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U176          | 6   |        | mul3           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U173           |     |        | add3           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U175          | 6   |        | mul5           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U174           |     |        | add4           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U176          | 6   |        | mul6           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U173           |     |        | partial_sum    | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U174           |     |        | nrm_1          | dadd   | fabric   | 6       |
+|    + scale_and_twoNorm_noScaled                    | 12  |        |                |        |          |         |
+|     + twoNorm                                      | 12  |        |                |        |          |         |
+|       dsqrt_64ns_64ns_64_56_no_dsp_1_U203          |     |        | res            | dsqrt  | fabric   | 55      |
+|      + twoNorm_Pipeline_twoNorm                    | 12  |        |                |        |          |         |
+|        add_ln252_fu_145_p2                         |     |        | add_ln252      | add    | fabric   | 0       |
+|        icmp_ln252_fu_155_p2                        |     |        | icmp_ln252     | setlt  | auto     | 0       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U198          | 6   |        | mul            | dmul   | meddsp   | 4       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U199          | 6   |        | mul4           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U196           |     |        | add            | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U198          | 6   |        | mul7           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U197           |     |        | add8           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U199          | 6   |        | mul8           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U196           |     |        | add7           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U198          | 6   |        | mul9           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U197           |     |        | add9           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U199          | 6   |        | mul1           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U196           |     |        | add1           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U198          | 6   |        | mul2           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U197           |     |        | add2           | dadd   | fabric   | 6       |
+|        dmul_64ns_64ns_64_5_med_dsp_1_U199          | 6   |        | mul3           | dmul   | meddsp   | 4       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U196           |     |        | partial_sum    | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U197           |     |        | nrm_1          | dadd   | fabric   | 6       |
+|  + Compute_Dual_Infeasibility_stage2               | 384 |        |                |        |          |         |
+|   + loadDDR_data_18                                | 0   |        |                |        |          |         |
+|     icmp_ln58_fu_100_p2                            |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|     empty_fu_110_p3                                |     |        | empty          | select | auto_sel | 0       |
+|    + loadDDR_data_18_Pipeline_loadDDR_data         | 0   |        |                |        |          |         |
+|      icmp_ln58_fu_107_p2                           |     |        | icmp_ln58      | setlt  | auto     | 0       |
+|      add_ln58_fu_113_p2                            |     |        | add_ln58       | add    | fabric   | 0       |
+|   + loadDDR_data_19                                | 0   |        |                |        |          |         |
+|     icmp_ln58_fu_100_p2                            |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|     empty_fu_110_p3                                |     |        | empty          | select | auto_sel | 0       |
+|    + loadDDR_data_19_Pipeline_loadDDR_data         | 0   |        |                |        |          |         |
+|      icmp_ln58_fu_107_p2                           |     |        | icmp_ln58      | setlt  | auto     | 0       |
+|      add_ln58_fu_113_p2                            |     |        | add_ln58       | add    | fabric   | 0       |
+|   + scaleVector_2out                               | 48  |        |                |        |          |         |
+|    + scaleVector_2out_Pipeline_scale_vector        | 48  |        |                |        |          |         |
+|      icmp_ln180_fu_166_p2                          |     |        | icmp_ln180     | setlt  | auto     | 0       |
+|      add_ln180_fu_172_p2                           |     |        | add_ln180      | add    | fabric   | 0       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U277            | 6   |        | mul_i          | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U278            | 6   |        | mul_1_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U279            | 6   |        | mul_2_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U280            | 6   |        | mul_3_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U281            | 6   |        | mul_4_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U282            | 6   |        | mul_5_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U283            | 6   |        | mul_6_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U284            | 6   |        | mul_7_i        | dmul   | meddsp   | 4       |
+|   + scaleVector_1                                  | 48  |        |                |        |          |         |
+|    + scaleVector_1_Pipeline_scale_vector           | 48  |        |                |        |          |         |
+|      icmp_ln160_fu_157_p2                          |     |        | icmp_ln160     | setlt  | auto     | 0       |
+|      add_ln160_fu_163_p2                           |     |        | add_ln160      | add    | fabric   | 0       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U295            | 6   |        | mul_i          | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U296            | 6   |        | mul_1_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U297            | 6   |        | mul_2_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U298            | 6   |        | mul_3_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U299            | 6   |        | mul_4_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U300            | 6   |        | mul_5_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U301            | 6   |        | mul_6_i        | dmul   | meddsp   | 4       |
+|      dmul_64ns_64ns_64_5_med_dsp_1_U302            | 6   |        | mul_7_i        | dmul   | meddsp   | 4       |
+|   + Primal_Constr                                  | 96  |        |                |        |          |         |
+|    + projNeg28                                     | 0   |        |                |        |          |         |
+|      icmp_ln369_fu_239_p2                          |     |        | icmp_ln369     | setlt  | auto     | 0       |
+|      i_1_fu_245_p2                                 |     |        | i_1            | add    | fabric   | 0       |
+|      icmp_ln376_fu_339_p2                          |     |        | icmp_ln376     | setlt  | auto     | 0       |
+|      xor_ln376_fu_793_p2                           |     |        | xor_ln376      | xor    | auto     | 0       |
+|      icmp_ln377_fu_359_p2                          |     |        | icmp_ln377     | setne  | auto     | 0       |
+|      icmp_ln377_1_fu_689_p2                        |     |        | icmp_ln377_1   | seteq  | auto     | 0       |
+|      or_ln377_fu_798_p2                            |     |        | or_ln377       | or     | auto     | 0       |
+|      dcmp_64ns_64ns_1_1_no_dsp_1_U311              |     |        | tmp_s          | dcmp   | auto     | 0       |
+|      and_ln377_fu_802_p2                           |     |        | and_ln377      | and    | auto     | 0       |
+|      select_ln377_fu_807_p3                        |     |        | select_ln377   | select | auto_sel | 0       |
+|      select_ln376_fu_814_p3                        |     |        | select_ln376   | select | auto_sel | 0       |
+|      icmp_ln376_1_fu_373_p2                        |     |        | icmp_ln376_1   | setlt  | auto     | 0       |
+|      xor_ln376_1_fu_821_p2                         |     |        | xor_ln376_1    | xor    | auto     | 0       |
+|      icmp_ln377_2_fu_399_p2                        |     |        | icmp_ln377_2   | setne  | auto     | 0       |
+|      icmp_ln377_3_fu_702_p2                        |     |        | icmp_ln377_3   | seteq  | auto     | 0       |
+|      or_ln377_1_fu_826_p2                          |     |        | or_ln377_1     | or     | auto     | 0       |
+|      dcmp_64ns_64ns_1_1_no_dsp_1_U312              |     |        | tmp_16         | dcmp   | auto     | 0       |
+|      and_ln377_1_fu_830_p2                         |     |        | and_ln377_1    | and    | auto     | 0       |
+|      select_ln377_1_fu_835_p3                      |     |        | select_ln377_1 | select | auto_sel | 0       |
+|      select_ln376_1_fu_842_p3                      |     |        | select_ln376_1 | select | auto_sel | 0       |
+|      icmp_ln376_2_fu_413_p2                        |     |        | icmp_ln376_2   | setlt  | auto     | 0       |
+|      xor_ln376_2_fu_849_p2                         |     |        | xor_ln376_2    | xor    | auto     | 0       |
+|      icmp_ln377_4_fu_439_p2                        |     |        | icmp_ln377_4   | setne  | auto     | 0       |
+|      icmp_ln377_5_fu_715_p2                        |     |        | icmp_ln377_5   | seteq  | auto     | 0       |
+|      or_ln377_2_fu_854_p2                          |     |        | or_ln377_2     | or     | auto     | 0       |
+|      dcmp_64ns_64ns_1_1_no_dsp_1_U313              |     |        | tmp_18         | dcmp   | auto     | 0       |
+|      and_ln377_2_fu_858_p2                         |     |        | and_ln377_2    | and    | auto     | 0       |
+|      select_ln377_2_fu_863_p3                      |     |        | select_ln377_2 | select | auto_sel | 0       |
+|      select_ln376_2_fu_870_p3                      |     |        | select_ln376_2 | select | auto_sel | 0       |
+|      icmp_ln376_3_fu_453_p2                        |     |        | icmp_ln376_3   | setlt  | auto     | 0       |
+|      xor_ln376_3_fu_877_p2                         |     |        | xor_ln376_3    | xor    | auto     | 0       |
+|      icmp_ln377_6_fu_479_p2                        |     |        | icmp_ln377_6   | setne  | auto     | 0       |
+|      icmp_ln377_7_fu_728_p2                        |     |        | icmp_ln377_7   | seteq  | auto     | 0       |
+|      or_ln377_3_fu_882_p2                          |     |        | or_ln377_3     | or     | auto     | 0       |
+|      dcmp_64ns_64ns_1_1_no_dsp_1_U314              |     |        | tmp_20         | dcmp   | auto     | 0       |
+|      and_ln377_3_fu_886_p2                         |     |        | and_ln377_3    | and    | auto     | 0       |
+|      select_ln377_3_fu_891_p3                      |     |        | select_ln377_3 | select | auto_sel | 0       |
+|      select_ln376_3_fu_898_p3                      |     |        | select_ln376_3 | select | auto_sel | 0       |
+|      icmp_ln376_4_fu_493_p2                        |     |        | icmp_ln376_4   | setlt  | auto     | 0       |
+|      xor_ln376_4_fu_905_p2                         |     |        | xor_ln376_4    | xor    | auto     | 0       |
+|      icmp_ln377_8_fu_519_p2                        |     |        | icmp_ln377_8   | setne  | auto     | 0       |
+|      icmp_ln377_9_fu_741_p2                        |     |        | icmp_ln377_9   | seteq  | auto     | 0       |
+|      or_ln377_4_fu_910_p2                          |     |        | or_ln377_4     | or     | auto     | 0       |
+|      dcmp_64ns_64ns_1_1_no_dsp_1_U315              |     |        | tmp_22         | dcmp   | auto     | 0       |
+|      and_ln377_4_fu_914_p2                         |     |        | and_ln377_4    | and    | auto     | 0       |
+|      select_ln377_4_fu_919_p3                      |     |        | select_ln377_4 | select | auto_sel | 0       |
+|      select_ln376_4_fu_926_p3                      |     |        | select_ln376_4 | select | auto_sel | 0       |
+|      icmp_ln376_5_fu_533_p2                        |     |        | icmp_ln376_5   | setlt  | auto     | 0       |
+|      xor_ln376_5_fu_933_p2                         |     |        | xor_ln376_5    | xor    | auto     | 0       |
+|      icmp_ln377_10_fu_559_p2                       |     |        | icmp_ln377_10  | setne  | auto     | 0       |
+|      icmp_ln377_11_fu_754_p2                       |     |        | icmp_ln377_11  | seteq  | auto     | 0       |
+|      or_ln377_5_fu_938_p2                          |     |        | or_ln377_5     | or     | auto     | 0       |
+|      dcmp_64ns_64ns_1_1_no_dsp_1_U316              |     |        | tmp_24         | dcmp   | auto     | 0       |
+|      and_ln377_5_fu_942_p2                         |     |        | and_ln377_5    | and    | auto     | 0       |
+|      select_ln377_5_fu_947_p3                      |     |        | select_ln377_5 | select | auto_sel | 0       |
+|      select_ln376_5_fu_954_p3                      |     |        | select_ln376_5 | select | auto_sel | 0       |
+|      icmp_ln376_6_fu_573_p2                        |     |        | icmp_ln376_6   | setlt  | auto     | 0       |
+|      xor_ln376_6_fu_961_p2                         |     |        | xor_ln376_6    | xor    | auto     | 0       |
+|      icmp_ln377_12_fu_599_p2                       |     |        | icmp_ln377_12  | setne  | auto     | 0       |
+|      icmp_ln377_13_fu_767_p2                       |     |        | icmp_ln377_13  | seteq  | auto     | 0       |
+|      or_ln377_6_fu_966_p2                          |     |        | or_ln377_6     | or     | auto     | 0       |
+|      dcmp_64ns_64ns_1_1_no_dsp_1_U317              |     |        | tmp_26         | dcmp   | auto     | 0       |
+|      and_ln377_6_fu_970_p2                         |     |        | and_ln377_6    | and    | auto     | 0       |
+|      select_ln377_6_fu_975_p3                      |     |        | select_ln377_6 | select | auto_sel | 0       |
+|      select_ln376_6_fu_982_p3                      |     |        | select_ln376_6 | select | auto_sel | 0       |
+|      icmp_ln376_7_fu_613_p2                        |     |        | icmp_ln376_7   | setlt  | auto     | 0       |
+|      xor_ln376_7_fu_989_p2                         |     |        | xor_ln376_7    | xor    | auto     | 0       |
+|      icmp_ln377_14_fu_639_p2                       |     |        | icmp_ln377_14  | setne  | auto     | 0       |
+|      icmp_ln377_15_fu_780_p2                       |     |        | icmp_ln377_15  | seteq  | auto     | 0       |
+|      or_ln377_7_fu_994_p2                          |     |        | or_ln377_7     | or     | auto     | 0       |
+|      dcmp_64ns_64ns_1_1_no_dsp_1_U318              |     |        | tmp_28         | dcmp   | auto     | 0       |
+|      and_ln377_7_fu_998_p2                         |     |        | and_ln377_7    | and    | auto     | 0       |
+|      select_ln377_7_fu_1003_p3                     |     |        | select_ln377_7 | select | auto_sel | 0       |
+|      select_ln376_7_fu_1010_p3                     |     |        | select_ln376_7 | select | auto_sel | 0       |
+|    + scale_and_twoNormSquared29                    | 96  |        |                |        |          |         |
+|      icmp_ln468_fu_88_p2                           |     |        | icmp_ln468     | seteq  | auto     | 0       |
+|     + scale_and_twoNormSquared_Scaled              | 72  |        |                |        |          |         |
+|      + loadDDR_data_24                             | 0   |        |                |        |          |         |
+|        icmp_ln58_fu_100_p2                         |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|        empty_fu_110_p3                             |     |        | empty          | select | auto_sel | 0       |
+|       + loadDDR_data_24_Pipeline_loadDDR_data      | 0   |        |                |        |          |         |
+|         add_ln58_fu_103_p2                         |     |        | add_ln58       | add    | fabric   | 0       |
+|         icmp_ln58_fu_113_p2                        |     |        | icmp_ln58      | setlt  | auto     | 0       |
+|      + edot_11                                     | 48  |        |                |        |          |         |
+|       + edot_11_Pipeline_edot                      | 48  |        |                |        |          |         |
+|         add_ln273_fu_149_p2                        |     |        | add_ln273      | add    | fabric   | 0       |
+|         icmp_ln273_fu_159_p2                       |     |        | icmp_ln273     | setlt  | auto     | 0       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U333         | 6   |        | mul            | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U334         | 6   |        | mul_1          | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U335         | 6   |        | mul_2          | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U336         | 6   |        | mul_3          | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U337         | 6   |        | mul_4          | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U338         | 6   |        | mul_5          | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U339         | 6   |        | mul_6          | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U340         | 6   |        | mul_7          | dmul   | meddsp   | 4       |
+|      + twoNormSquared                              | 24  |        |                |        |          |         |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres           | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_136       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_137       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_138       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_139       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_140       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_141       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_142       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_143       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_144       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_145       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_146       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_147       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_148       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_149       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_150       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_151       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_152       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_153       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_154       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_155       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_156       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_157       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_158       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_159       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_160       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_161       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U389           |     |        | dres_162       | dadd   | fabric   | 6       |
+|       + twoNormSquared_Pipeline_accum_loop         | 24  |        |                |        |          |         |
+|         add_ln120_fu_828_p2                        |     |        | add_ln120      | add    | fabric   | 0       |
+|         icmp_ln120_fu_838_p2                       |     |        | icmp_ln120     | setlt  | auto     | 0       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U355         | 6   |        | mul            | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U356         | 6   |        | mul_1          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U352          |     |        | new_val_1      | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U357         | 6   |        | mul_2          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U353          |     |        | new_val_2      | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U358         | 6   |        | mul_3          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U354          |     |        | new_val_3      | dadd   | fabric   | 6       |
+|     + scale_and_twoNormSquared_noScaled            | 24  |        |                |        |          |         |
+|      + twoNormSquared_10                           | 24  |        |                |        |          |         |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres           | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_109       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_110       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_111       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_112       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_113       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_114       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_115       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_116       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_117       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_118       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_119       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_120       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_121       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_122       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_123       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_124       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_125       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_126       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_127       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_128       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_129       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_130       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_131       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_132       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_133       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_134       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U442           |     |        | dres_135       | dadd   | fabric   | 6       |
+|       + twoNormSquared_10_Pipeline_accum_loop      | 24  |        |                |        |          |         |
+|         add_ln120_fu_828_p2                        |     |        | add_ln120      | add    | fabric   | 0       |
+|         icmp_ln120_fu_838_p2                       |     |        | icmp_ln120     | setlt  | auto     | 0       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U408         | 6   |        | mul            | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U409         | 6   |        | mul_1          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U405          |     |        | new_val_13     | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U410         | 6   |        | mul_2          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U406          |     |        | new_val_14     | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U411         | 6   |        | mul_3          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U407          |     |        | new_val_15     | dadd   | fabric   | 6       |
+|   + Primal_Bound                                   | 192 |        |                |        |          |         |
+|    + projNeg_221                                   | 0   |        |                |        |          |         |
+|     + projNeg_221_Pipeline_projNeg                 | 0   |        |                |        |          |         |
+|       icmp_ln369_fu_211_p2                         |     |        | icmp_ln369     | setlt  | auto     | 0       |
+|       add_ln369_fu_217_p2                          |     |        | add_ln369      | add    | fabric   | 0       |
+|       icmp_ln377_fu_325_p2                         |     |        | icmp_ln377     | setne  | auto     | 0       |
+|       icmp_ln377_16_fu_331_p2                      |     |        | icmp_ln377_16  | seteq  | auto     | 0       |
+|       or_ln377_fu_657_p2                           |     |        | or_ln377       | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U463             |     |        | tmp_s          | dcmp   | auto     | 0       |
+|       and_ln377_fu_661_p2                          |     |        | and_ln377      | and    | auto     | 0       |
+|       icmp_ln377_17_fu_357_p2                      |     |        | icmp_ln377_17  | setne  | auto     | 0       |
+|       icmp_ln377_18_fu_363_p2                      |     |        | icmp_ln377_18  | seteq  | auto     | 0       |
+|       or_ln377_8_fu_666_p2                         |     |        | or_ln377_8     | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U464             |     |        | tmp_30         | dcmp   | auto     | 0       |
+|       and_ln377_8_fu_670_p2                        |     |        | and_ln377_8    | and    | auto     | 0       |
+|       icmp_ln377_19_fu_389_p2                      |     |        | icmp_ln377_19  | setne  | auto     | 0       |
+|       icmp_ln377_20_fu_395_p2                      |     |        | icmp_ln377_20  | seteq  | auto     | 0       |
+|       or_ln377_9_fu_675_p2                         |     |        | or_ln377_9     | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U465             |     |        | tmp_32         | dcmp   | auto     | 0       |
+|       and_ln377_9_fu_679_p2                        |     |        | and_ln377_9    | and    | auto     | 0       |
+|       icmp_ln377_21_fu_421_p2                      |     |        | icmp_ln377_21  | setne  | auto     | 0       |
+|       icmp_ln377_22_fu_427_p2                      |     |        | icmp_ln377_22  | seteq  | auto     | 0       |
+|       or_ln377_10_fu_684_p2                        |     |        | or_ln377_10    | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U466             |     |        | tmp_34         | dcmp   | auto     | 0       |
+|       and_ln377_10_fu_688_p2                       |     |        | and_ln377_10   | and    | auto     | 0       |
+|       icmp_ln377_23_fu_453_p2                      |     |        | icmp_ln377_23  | setne  | auto     | 0       |
+|       icmp_ln377_24_fu_459_p2                      |     |        | icmp_ln377_24  | seteq  | auto     | 0       |
+|       or_ln377_11_fu_693_p2                        |     |        | or_ln377_11    | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U467             |     |        | tmp_36         | dcmp   | auto     | 0       |
+|       and_ln377_11_fu_697_p2                       |     |        | and_ln377_11   | and    | auto     | 0       |
+|       icmp_ln377_25_fu_485_p2                      |     |        | icmp_ln377_25  | setne  | auto     | 0       |
+|       icmp_ln377_26_fu_491_p2                      |     |        | icmp_ln377_26  | seteq  | auto     | 0       |
+|       or_ln377_12_fu_702_p2                        |     |        | or_ln377_12    | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U468             |     |        | tmp_38         | dcmp   | auto     | 0       |
+|       and_ln377_12_fu_706_p2                       |     |        | and_ln377_12   | and    | auto     | 0       |
+|       icmp_ln377_27_fu_517_p2                      |     |        | icmp_ln377_27  | setne  | auto     | 0       |
+|       icmp_ln377_28_fu_523_p2                      |     |        | icmp_ln377_28  | seteq  | auto     | 0       |
+|       or_ln377_13_fu_711_p2                        |     |        | or_ln377_13    | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U469             |     |        | tmp_40         | dcmp   | auto     | 0       |
+|       and_ln377_13_fu_715_p2                       |     |        | and_ln377_13   | and    | auto     | 0       |
+|       icmp_ln377_29_fu_549_p2                      |     |        | icmp_ln377_29  | setne  | auto     | 0       |
+|       icmp_ln377_30_fu_555_p2                      |     |        | icmp_ln377_30  | seteq  | auto     | 0       |
+|       or_ln377_14_fu_720_p2                        |     |        | or_ln377_14    | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U470             |     |        | tmp_42         | dcmp   | auto     | 0       |
+|       and_ln377_14_fu_724_p2                       |     |        | and_ln377_14   | and    | auto     | 0       |
+|       select_ln380_fu_729_p3                       |     |        | select_ln380   | select | auto_sel | 0       |
+|       select_ln380_1_fu_736_p3                     |     |        | select_ln380_1 | select | auto_sel | 0       |
+|       select_ln380_2_fu_743_p3                     |     |        | select_ln380_2 | select | auto_sel | 0       |
+|       select_ln380_3_fu_750_p3                     |     |        | select_ln380_3 | select | auto_sel | 0       |
+|       select_ln380_4_fu_757_p3                     |     |        | select_ln380_4 | select | auto_sel | 0       |
+|       select_ln380_5_fu_764_p3                     |     |        | select_ln380_5 | select | auto_sel | 0       |
+|       select_ln380_6_fu_771_p3                     |     |        | select_ln380_6 | select | auto_sel | 0       |
+|       select_ln380_7_fu_778_p3                     |     |        | select_ln380_7 | select | auto_sel | 0       |
+|    + projPos22                                     | 0   |        |                |        |          |         |
+|     + projPos22_Pipeline_projPos                   | 0   |        |                |        |          |         |
+|       icmp_ln393_fu_211_p2                         |     |        | icmp_ln393     | setlt  | auto     | 0       |
+|       add_ln393_fu_217_p2                          |     |        | add_ln393      | add    | fabric   | 0       |
+|       icmp_ln401_fu_325_p2                         |     |        | icmp_ln401     | setne  | auto     | 0       |
+|       icmp_ln401_1_fu_331_p2                       |     |        | icmp_ln401_1   | seteq  | auto     | 0       |
+|       or_ln401_fu_657_p2                           |     |        | or_ln401       | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U478             |     |        | tmp_1          | dcmp   | auto     | 0       |
+|       and_ln401_fu_661_p2                          |     |        | and_ln401      | and    | auto     | 0       |
+|       icmp_ln401_2_fu_357_p2                       |     |        | icmp_ln401_2   | setne  | auto     | 0       |
+|       icmp_ln401_3_fu_363_p2                       |     |        | icmp_ln401_3   | seteq  | auto     | 0       |
+|       or_ln401_1_fu_666_p2                         |     |        | or_ln401_1     | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U479             |     |        | tmp_3          | dcmp   | auto     | 0       |
+|       and_ln401_1_fu_670_p2                        |     |        | and_ln401_1    | and    | auto     | 0       |
+|       icmp_ln401_4_fu_389_p2                       |     |        | icmp_ln401_4   | setne  | auto     | 0       |
+|       icmp_ln401_5_fu_395_p2                       |     |        | icmp_ln401_5   | seteq  | auto     | 0       |
+|       or_ln401_2_fu_675_p2                         |     |        | or_ln401_2     | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U480             |     |        | tmp_5          | dcmp   | auto     | 0       |
+|       and_ln401_2_fu_679_p2                        |     |        | and_ln401_2    | and    | auto     | 0       |
+|       icmp_ln401_6_fu_421_p2                       |     |        | icmp_ln401_6   | setne  | auto     | 0       |
+|       icmp_ln401_7_fu_427_p2                       |     |        | icmp_ln401_7   | seteq  | auto     | 0       |
+|       or_ln401_3_fu_684_p2                         |     |        | or_ln401_3     | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U481             |     |        | tmp_7          | dcmp   | auto     | 0       |
+|       and_ln401_3_fu_688_p2                        |     |        | and_ln401_3    | and    | auto     | 0       |
+|       icmp_ln401_8_fu_453_p2                       |     |        | icmp_ln401_8   | setne  | auto     | 0       |
+|       icmp_ln401_9_fu_459_p2                       |     |        | icmp_ln401_9   | seteq  | auto     | 0       |
+|       or_ln401_4_fu_693_p2                         |     |        | or_ln401_4     | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U482             |     |        | tmp_9          | dcmp   | auto     | 0       |
+|       and_ln401_4_fu_697_p2                        |     |        | and_ln401_4    | and    | auto     | 0       |
+|       icmp_ln401_10_fu_485_p2                      |     |        | icmp_ln401_10  | setne  | auto     | 0       |
+|       icmp_ln401_11_fu_491_p2                      |     |        | icmp_ln401_11  | seteq  | auto     | 0       |
+|       or_ln401_5_fu_702_p2                         |     |        | or_ln401_5     | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U483             |     |        | tmp_10         | dcmp   | auto     | 0       |
+|       and_ln401_5_fu_706_p2                        |     |        | and_ln401_5    | and    | auto     | 0       |
+|       icmp_ln401_12_fu_517_p2                      |     |        | icmp_ln401_12  | setne  | auto     | 0       |
+|       icmp_ln401_13_fu_523_p2                      |     |        | icmp_ln401_13  | seteq  | auto     | 0       |
+|       or_ln401_6_fu_711_p2                         |     |        | or_ln401_6     | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U484             |     |        | tmp_12         | dcmp   | auto     | 0       |
+|       and_ln401_6_fu_715_p2                        |     |        | and_ln401_6    | and    | auto     | 0       |
+|       icmp_ln401_14_fu_549_p2                      |     |        | icmp_ln401_14  | setne  | auto     | 0       |
+|       icmp_ln401_15_fu_555_p2                      |     |        | icmp_ln401_15  | seteq  | auto     | 0       |
+|       or_ln401_7_fu_720_p2                         |     |        | or_ln401_7     | or     | auto     | 0       |
+|       dcmp_64ns_64ns_1_1_no_dsp_1_U485             |     |        | tmp_14         | dcmp   | auto     | 0       |
+|       and_ln401_7_fu_724_p2                        |     |        | and_ln401_7    | and    | auto     | 0       |
+|       select_ln404_fu_729_p3                       |     |        | select_ln404   | select | auto_sel | 0       |
+|       select_ln404_1_fu_736_p3                     |     |        | select_ln404_1 | select | auto_sel | 0       |
+|       select_ln404_2_fu_743_p3                     |     |        | select_ln404_2 | select | auto_sel | 0       |
+|       select_ln404_3_fu_750_p3                     |     |        | select_ln404_3 | select | auto_sel | 0       |
+|       select_ln404_4_fu_757_p3                     |     |        | select_ln404_4 | select | auto_sel | 0       |
+|       select_ln404_5_fu_764_p3                     |     |        | select_ln404_5 | select | auto_sel | 0       |
+|       select_ln404_6_fu_771_p3                     |     |        | select_ln404_6 | select | auto_sel | 0       |
+|       select_ln404_7_fu_778_p3                     |     |        | select_ln404_7 | select | auto_sel | 0       |
+|    + loadDDR_data_2023                             | 0   |        |                |        |          |         |
+|      icmp_ln58_fu_111_p2                           |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|      empty_fu_121_p3                               |     |        | empty          | select | auto_sel | 0       |
+|      icmp_ln58_2_fu_155_p2                         |     |        | icmp_ln58_2    | setlt  | auto     | 0       |
+|      add_ln58_fu_161_p2                            |     |        | add_ln58       | add    | fabric   | 0       |
+|    + loadDDR_data_2124                             | 0   |        |                |        |          |         |
+|      icmp_ln58_fu_111_p2                           |     |        | icmp_ln58      | setgt  | auto     | 0       |
+|      empty_fu_121_p3                               |     |        | empty          | select | auto_sel | 0       |
+|      icmp_ln58_1_fu_155_p2                         |     |        | icmp_ln58_1    | setlt  | auto     | 0       |
+|      add_ln58_fu_161_p2                            |     |        | add_ln58       | add    | fabric   | 0       |
+|    + edot_325                                      | 48  |        |                |        |          |         |
+|     + edot_325_Pipeline_edot                       | 48  |        |                |        |          |         |
+|       icmp_ln273_fu_153_p2                         |     |        | icmp_ln273     | setlt  | auto     | 0       |
+|       add_ln273_fu_159_p2                          |     |        | add_ln273      | add    | fabric   | 0       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U501           | 6   |        | mul_i          | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U502           | 6   |        | mul_1_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U503           | 6   |        | mul_2_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U504           | 6   |        | mul_3_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U505           | 6   |        | mul_4_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U506           | 6   |        | mul_5_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U507           | 6   |        | mul_6_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U508           | 6   |        | mul_7_i        | dmul   | meddsp   | 4       |
+|    + edot_426                                      | 48  |        |                |        |          |         |
+|     + edot_426_Pipeline_edot                       | 48  |        |                |        |          |         |
+|       icmp_ln273_fu_153_p2                         |     |        | icmp_ln273     | setlt  | auto     | 0       |
+|       add_ln273_fu_159_p2                          |     |        | add_ln273      | add    | fabric   | 0       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U518           | 6   |        | mul_i          | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U519           | 6   |        | mul_1_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U520           | 6   |        | mul_2_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U521           | 6   |        | mul_3_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U522           | 6   |        | mul_4_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U523           | 6   |        | mul_5_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U524           | 6   |        | mul_6_i        | dmul   | meddsp   | 4       |
+|       dmul_64ns_64ns_64_5_med_dsp_1_U525           | 6   |        | mul_7_i        | dmul   | meddsp   | 4       |
+|    + scale_and_twoNormSquared_for_lub27            | 96  |        |                |        |          |         |
+|      icmp_ln78_fu_100_p2                           |     |        | icmp_ln78      | seteq  | auto     | 0       |
+|     + scale_and_twoNormSquared_for_lub_Scaled      | 48  |        |                |        |          |         |
+|      + loadDDR_data_special                        | 0   |        |                |        |          |         |
+|        icmp_ln73_fu_118_p2                         |     |        | icmp_ln73      | setgt  | auto     | 0       |
+|        empty_fu_128_p3                             |     |        | empty          | select | auto_sel | 0       |
+|       + loadDDR_data_special_Pipeline_loadDDR_data | 0   |        |                |        |          |         |
+|         add_ln73_fu_113_p2                         |     |        | add_ln73       | add    | fabric   | 0       |
+|         icmp_ln73_fu_123_p2                        |     |        | icmp_ln73      | setlt  | auto     | 0       |
+|      + ediv_7                                      | 0   |        |                |        |          |         |
+|       + ediv_7_Pipeline_ediv                       | 0   |        |                |        |          |         |
+|         add_ln416_fu_149_p2                        |     |        | add_ln416      | add    | fabric   | 0       |
+|         icmp_ln416_fu_159_p2                       |     |        | icmp_ln416     | setlt  | auto     | 0       |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U547         |     |        | div            | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U548         |     |        | div_1          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U549         |     |        | div_2          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U550         |     |        | div_3          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U551         |     |        | div_4          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U552         |     |        | div_5          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U553         |     |        | div_6          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U554         |     |        | div_7          | ddiv   | fabric   | 57      |
+|      + ediv                                        | 0   |        |                |        |          |         |
+|       + ediv_Pipeline_ediv                         | 0   |        |                |        |          |         |
+|         add_ln416_fu_149_p2                        |     |        | add_ln416      | add    | fabric   | 0       |
+|         icmp_ln416_fu_159_p2                       |     |        | icmp_ln416     | setlt  | auto     | 0       |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U566         |     |        | div            | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U567         |     |        | div_1          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U568         |     |        | div_2          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U569         |     |        | div_3          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U570         |     |        | div_4          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U571         |     |        | div_5          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U572         |     |        | div_6          | ddiv   | fabric   | 57      |
+|         ddiv_64ns_64ns_64_58_no_dsp_1_U573         |     |        | div_7          | ddiv   | fabric   | 57      |
+|      + twoNormSquared_8                            | 24  |        |                |        |          |         |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres           | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_28        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_29        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_30        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_31        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_32        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_33        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_34        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_35        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_36        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_37        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_38        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_39        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_40        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_41        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_42        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_43        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_44        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_45        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_46        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_47        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_48        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_49        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_50        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_51        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_52        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_53        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U622           |     |        | dres_54        | dadd   | fabric   | 6       |
+|       + twoNormSquared_8_Pipeline_accum_loop       | 24  |        |                |        |          |         |
+|         add_ln120_fu_828_p2                        |     |        | add_ln120      | add    | fabric   | 0       |
+|         icmp_ln120_fu_838_p2                       |     |        | icmp_ln120     | setlt  | auto     | 0       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U588         | 6   |        | mul            | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U589         | 6   |        | mul_1          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U585          |     |        | new_val_4      | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U590         | 6   |        | mul_2          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U586          |     |        | new_val_5      | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U591         | 6   |        | mul_3          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U587          |     |        | new_val_6      | dadd   | fabric   | 6       |
+|      + twoNormSquared_9                            | 24  |        |                |        |          |         |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres           | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_1         | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_2         | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_3         | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_4         | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_5         | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_6         | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_7         | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_8         | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_9         | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_10        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_11        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_12        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_13        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_14        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_15        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_16        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_17        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_18        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_19        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_20        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_21        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_22        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_23        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_24        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_25        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_26        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U664           |     |        | dres_27        | dadd   | fabric   | 6       |
+|       + twoNormSquared_9_Pipeline_accum_loop       | 24  |        |                |        |          |         |
+|         add_ln120_fu_828_p2                        |     |        | add_ln120      | add    | fabric   | 0       |
+|         icmp_ln120_fu_838_p2                       |     |        | icmp_ln120     | setlt  | auto     | 0       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U630         | 6   |        | mul            | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U631         | 6   |        | mul_1          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U627          |     |        | new_val_1      | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U632         | 6   |        | mul_2          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U628          |     |        | new_val_2      | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U633         | 6   |        | mul_3          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U629          |     |        | new_val_3      | dadd   | fabric   | 6       |
+|     + scale_and_twoNormSquared_for_lub_noScaled    | 48  |        |                |        |          |         |
+|      + twoNormSquared_5                            | 24  |        |                |        |          |         |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres           | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_82        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_83        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_84        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_85        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_86        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_87        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_88        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_89        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_90        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_91        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_92        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_93        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_94        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_95        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_96        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_97        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_98        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_99        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_100       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_101       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_102       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_103       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_104       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_105       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_106       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_107       | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U725           |     |        | dres_108       | dadd   | fabric   | 6       |
+|       + twoNormSquared_5_Pipeline_accum_loop       | 24  |        |                |        |          |         |
+|         add_ln120_fu_828_p2                        |     |        | add_ln120      | add    | fabric   | 0       |
+|         icmp_ln120_fu_838_p2                       |     |        | icmp_ln120     | setlt  | auto     | 0       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U691         | 6   |        | mul            | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U692         | 6   |        | mul_1          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U688          |     |        | new_val_10     | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U693         | 6   |        | mul_2          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U689          |     |        | new_val_11     | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U694         | 6   |        | mul_3          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U690          |     |        | new_val_12     | dadd   | fabric   | 6       |
+|      + twoNormSquared_6                            | 24  |        |                |        |          |         |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres           | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_55        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_56        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_57        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_58        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_59        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_60        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_61        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_62        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_63        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_64        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_65        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_66        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_67        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_68        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_69        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_70        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_71        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_72        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_73        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_74        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_75        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_76        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_77        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_78        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_79        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_80        | dadd   | fabric   | 6       |
+|        dadd_64ns_64ns_64_7_no_dsp_1_U767           |     |        | dres_81        | dadd   | fabric   | 6       |
+|       + twoNormSquared_6_Pipeline_accum_loop       | 24  |        |                |        |          |         |
+|         add_ln120_fu_828_p2                        |     |        | add_ln120      | add    | fabric   | 0       |
+|         icmp_ln120_fu_838_p2                       |     |        | icmp_ln120     | setlt  | auto     | 0       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U733         | 6   |        | mul            | dmul   | meddsp   | 4       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U734         | 6   |        | mul_1          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U730          |     |        | new_val_7      | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U735         | 6   |        | mul_2          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U731          |     |        | new_val_8      | dadd   | fabric   | 6       |
+|         dmul_64ns_64ns_64_5_med_dsp_1_U736         | 6   |        | mul_3          | dmul   | meddsp   | 4       |
+|         dadd_64ns_64ns_64_7_no_dsp_1_U732          |     |        | new_val_9      | dadd   | fabric   | 6       |
+|   + add3_Sqrt                                      | 0   |        |                |        |          |         |
+|     dadd_64ns_64ns_64_7_no_dsp_1_U806              |     |        | add            | dadd   | fabric   | 6       |
+|     dadd_64ns_64ns_64_7_no_dsp_1_U806              |     |        | add1           | dadd   | fabric   | 6       |
+|     dsqrt_64ns_64ns_64_56_no_dsp_1_U807            |     |        | dataout        | dsqrt  | fabric   | 55      |
++----------------------------------------------------+-----+--------+----------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-----------------------------------------------+--------------+-------------+------+------+--------+---------------------------------+------+---------+------------------+
+| Name                                          | Usage        | Type        | BRAM | URAM | Pragma | Variable                        | Impl | Latency | Bitwidth, Depth, |
+|                                               |              |             |      |      |        |                                 |      |         | Banks            |
++-----------------------------------------------+--------------+-------------+------+------+--------+---------------------------------+------+---------+------------------+
+| + Infeasi_Res_S2                              |              |             | 1452 | 0    |        |                                 |      |         |                  |
+|   control_s_axi_U                             | interface    | s_axilite   |      |      |        |                                 |      |         |                  |
+|   gmem0_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem1_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem10_m_axi_U                              | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem2_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem3_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem4_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem5_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem6_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem7_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem8_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   gmem9_m_axi_U                               | interface    | m_axi       | 132  |      |        |                                 |      |         |                  |
+|   nRows_assign_out_tmp_channel_U              | fifo channel | task level  |      |      |        | nRows_assign_out_tmp_channel    | srl  | 0       | 32, 2, 1         |
+|   nCols_assign_out_tmp_channel_U              | fifo channel | task level  |      |      |        | nCols_assign_out_tmp_channel    | srl  | 0       | 32, 2, 1         |
+|   nCols_assign_c3_channel_U                   | fifo channel | task level  |      |      |        | nCols_assign_c3_channel         | srl  | 0       | 32, 2, 1         |
+|   nRows_assign_c2_channel_U                   | fifo channel | task level  |      |      |        | nRows_assign_c2_channel         | srl  | 0       | 32, 2, 1         |
+|   nRows_assign_c_channel_U                    | fifo channel | task level  |      |      |        | nRows_assign_c_channel          | srl  | 0       | 32, 2, 1         |
+|   nCols_assign_c_channel_U                    | fifo channel | task level  |      |      |        | nCols_assign_c_channel          | srl  | 0       | 32, 2, 1         |
+|   dPrimalInfeasRes_U                          | fifo channel | stream      |      |      |        | dPrimalInfeasRes                | srl  | 0       | 64, 2, 1         |
+|   dDualInfeasRes_U                            | fifo channel | stream      |      |      |        | dDualInfeasRes                  | srl  | 0       | 64, 2, 1         |
+|  + Compute_Primal_Infeasibility_stage2        |              |             | 0    | 0    |        |                                 |      |         |                  |
+|    inverse_dScale_c_U                         | fifo channel | scalar prop |      |      |        | inverse_dScale_c                | srl  | 0       | 64, 3, 1         |
+|    inverse_dScale_c5_U                        | fifo channel | scalar prop |      |      |        | inverse_dScale_c5               | srl  | 0       | 64, 3, 1         |
+|    inverse_dScale_c6_U                        | fifo channel | scalar prop |      |      |        | inverse_dScale_c6               | srl  | 0       | 64, 3, 1         |
+|    inverse_dScale_c7_U                        | fifo channel | scalar prop |      |      |        | inverse_dScale_c7               | srl  | 0       | 64, 3, 1         |
+|    dualInfeasRay_fifo_i_U                     | fifo channel | stream      |      |      |        | dualInfeasRay_fifo_i            | srl  | 0       | 512, 2, 1        |
+|    nRows_assign_c1_U                          | fifo channel | scalar prop |      |      |        | nRows_assign_c1                 | srl  | 0       | 32, 2, 1         |
+|    dualInfeasLbRay_fifo_i_U                   | fifo channel | stream      |      |      |        | dualInfeasLbRay_fifo_i          | srl  | 0       | 512, 2, 1        |
+|    nCols_assign_c4_U                          | fifo channel | scalar prop |      |      |        | nCols_assign_c4                 | srl  | 0       | 32, 2, 1         |
+|    dualInfeasUbRay_fifo_i_U                   | fifo channel | stream      |      |      |        | dualInfeasUbRay_fifo_i          | srl  | 0       | 512, 2, 1        |
+|    nCols_assign_c3_U                          | fifo channel | scalar prop |      |      |        | nCols_assign_c3                 | srl  | 0       | 32, 2, 1         |
+|    dualInfeasConstr_fifo_i_U                  | fifo channel | stream      |      |      |        | dualInfeasConstr_fifo_i         | srl  | 0       | 512, 2, 1        |
+|    nCols_assign_c2_U                          | fifo channel | scalar prop |      |      |        | nCols_assign_c2                 | srl  | 0       | 32, 2, 1         |
+|    dualInfeasRay_SVfifo_i_U                   | fifo channel | stream      |      |      |        | dualInfeasRay_SVfifo_i          | srl  | 0       | 512, 2, 1        |
+|    nRows_assign_c_U                           | fifo channel | scalar prop |      |      |        | nRows_assign_c                  | srl  | 0       | 32, 2, 1         |
+|    dualInfeasLbRay_SVfifo_i_U                 | fifo channel | stream      |      |      |        | dualInfeasLbRay_SVfifo_i        | srl  | 0       | 512, 3, 1        |
+|    dualInfeasUbRay_SVfifo_i_U                 | fifo channel | stream      |      |      |        | dualInfeasUbRay_SVfifo_i        | srl  | 0       | 512, 3, 1        |
+|    dualInfeasConstr_SVfifo_i_U                | fifo channel | stream      |      |      |        | dualInfeasConstr_SVfifo_i       | srl  | 0       | 512, 3, 1        |
+|    nCols_assign_c_U                           | fifo channel | scalar prop |      |      |        | nCols_assign_c                  | srl  | 0       | 32, 2, 1         |
+|    dualInfeasConstr_axpyfifo_i_U              | fifo channel | stream      |      |      |        | dualInfeasConstr_axpyfifo_i     | srl  | 0       | 512, 3, 1        |
+|   + scale_and_twoNorm                         |              |             | 0    | 0    |        |                                 |      |         |                  |
+|    + scale_and_twoNorm_Scaled                 |              |             | 0    | 0    |        |                                 |      |         |                  |
+|      colScale_fifo_U                          | fifo channel | stream      |      |      |        | colScale_fifo                   | srl  | 0       | 512, 3, 1        |
+|      n_c1_U                                   | fifo channel | scalar prop |      |      |        | n_c1                            | srl  | 0       | 32, 2, 1         |
+|      temp_U                                   | fifo channel | stream      |      |      |        | temp                            | srl  | 0       | 512, 2, 1        |
+|      n_c_U                                    | fifo channel | scalar prop |      |      |        | n_c                             | srl  | 0       | 32, 2, 1         |
+|  + Compute_Dual_Infeasibility_stage2          |              |             | 0    | 0    |        |                                 |      |         |                  |
+|    inverse_pScale_c_U                         | fifo channel | scalar prop |      |      |        | inverse_pScale_c                | srl  | 0       | 64, 3, 1         |
+|    inverse_pScale_c1_U                        | fifo channel | scalar prop |      |      |        | inverse_pScale_c1               | srl  | 0       | 64, 3, 1         |
+|    primalInfeasRay_fifo_i_U                   | fifo channel | stream      |      |      |        | primalInfeasRay_fifo_i          | srl  | 0       | 512, 2, 1        |
+|    nCols_assign_c_U                           | fifo channel | scalar prop |      |      |        | nCols_assign_c                  | srl  | 0       | 32, 2, 1         |
+|    primalINfeasConstr_fifo_i_U                | fifo channel | stream      |      |      |        | primalINfeasConstr_fifo_i       | srl  | 0       | 512, 2, 1        |
+|    nRows_assign_c_U                           | fifo channel | scalar prop |      |      |        | nRows_assign_c                  | srl  | 0       | 32, 2, 1         |
+|    primalInfeasRay_SVfifo_lb_i_U              | fifo channel | stream      |      |      |        | primalInfeasRay_SVfifo_lb_i     | srl  | 0       | 512, 2, 1        |
+|    primalInfeasRay_SVfifo_ub_i_U              | fifo channel | stream      |      |      |        | primalInfeasRay_SVfifo_ub_i     | srl  | 0       | 512, 2, 1        |
+|    primalInfeasConstr_SVfifo_i_U              | fifo channel | stream      |      |      |        | primalInfeasConstr_SVfifo_i     | srl  | 0       | 512, 2, 1        |
+|    pConstrResSq_U                             | fifo channel | task level  |      |      |        | pConstrResSq                    | srl  | 0       | 64, 2, 1         |
+|    pBoundUbResSq_U                            | fifo channel | task level  |      |      |        | pBoundUbResSq                   | srl  | 0       | 64, 2, 1         |
+|    pBoundLbResSq_U                            | fifo channel | task level  |      |      |        | pBoundLbResSq                   | srl  | 0       | 64, 2, 1         |
+|   + Primal_Constr                             |              |             | 0    | 0    |        |                                 |      |         |                  |
+|     primalInfeasBound_fifo_i_U                | fifo channel | stream      |      |      |        | primalInfeasBound_fifo_i        | srl  | 0       | 512, 3, 1        |
+|    + scale_and_twoNormSquared29               |              |             | 0    | 0    |        |                                 |      |         |                  |
+|     + scale_and_twoNormSquared_Scaled         |              |             | 0    | 0    |        |                                 |      |         |                  |
+|       rowScale_fifo_U                         | fifo channel | stream      |      |      |        | rowScale_fifo                   | srl  | 0       | 512, 3, 1        |
+|       n_c1_U                                  | fifo channel | scalar prop |      |      |        | n_c1                            | srl  | 0       | 32, 2, 1         |
+|       temp_U                                  | fifo channel | stream      |      |      |        | temp                            | srl  | 0       | 512, 3, 1        |
+|       n_c_U                                   | fifo channel | scalar prop |      |      |        | n_c                             | srl  | 0       | 32, 2, 1         |
+|   + Primal_Bound                              |              |             | 0    | 0    |        |                                 |      |         |                  |
+|     primalInfeasBound_fifo_lb_i_U             | fifo channel | stream      |      |      |        | primalInfeasBound_fifo_lb_i     | srl  | 0       | 512, 3, 1        |
+|     nCols_assign_c1_U                         | fifo channel | scalar prop |      |      |        | nCols_assign_c1                 | srl  | 0       | 32, 2, 1         |
+|     primalInfeasBound_fifo_ub_i_U             | fifo channel | stream      |      |      |        | primalInfeasBound_fifo_ub_i     | srl  | 0       | 512, 3, 1        |
+|     nCols_assign_c_U                          | fifo channel | scalar prop |      |      |        | nCols_assign_c                  | srl  | 0       | 32, 2, 1         |
+|     hasLower_fifo_i_U                         | fifo channel | stream      |      |      |        | hasLower_fifo_i                 | srl  | 0       | 512, 3, 1        |
+|     hasUpper_fifo_i_U                         | fifo channel | stream      |      |      |        | hasUpper_fifo_i                 | srl  | 0       | 512, 3, 1        |
+|     primalInfeasBound_edotfifo_lb_i_U         | fifo channel | stream      |      |      |        | primalInfeasBound_edotfifo_lb_i | srl  | 0       | 512, 3, 1        |
+|     primalInfeasBound_edotfifo_ub_i_U         | fifo channel | stream      |      |      |        | primalInfeasBound_edotfifo_ub_i | srl  | 0       | 512, 3, 1        |
+|    + scale_and_twoNormSquared_for_lub27       |              |             | 0    | 0    |        |                                 |      |         |                  |
+|     + scale_and_twoNormSquared_for_lub_Scaled |              |             | 0    | 0    |        |                                 |      |         |                  |
+|       colScale_fifo_lb_U                      | fifo channel | stream      |      |      |        | colScale_fifo_lb                | srl  | 0       | 512, 3, 1        |
+|       colScale_fifo_ub_U                      | fifo channel | stream      |      |      |        | colScale_fifo_ub                | srl  | 0       | 512, 3, 1        |
+|       nCols_c2_U                              | fifo channel | scalar prop |      |      |        | nCols_c2                        | srl  | 0       | 32, 2, 1         |
+|       nCols_c3_U                              | fifo channel | scalar prop |      |      |        | nCols_c3                        | srl  | 0       | 32, 2, 1         |
+|       temp_lb_U                               | fifo channel | stream      |      |      |        | temp_lb                         | srl  | 0       | 512, 3, 1        |
+|       nCols_c1_U                              | fifo channel | scalar prop |      |      |        | nCols_c1                        | srl  | 0       | 32, 2, 1         |
+|       temp_ub_U                               | fifo channel | stream      |      |      |        | temp_ub                         | srl  | 0       | 512, 3, 1        |
+|       nCols_c_U                               | fifo channel | scalar prop |      |      |        | nCols_c                         | srl  | 0       | 32, 2, 1         |
++-----------------------------------------------+--------------+-------------+------+------+--------+---------------------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
+| Type            | Options                                                                                         | Location                                                                         |
++-----------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:16 in consumer                                                |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:59 in loadddr_data                                            |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:74 in loadddr_data_special                                    |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:88 in storeddr_data                                           |
+| inline          | off                                                                                             | ./basic_helper.hpp:100 in twonormsquared                                         |
+| array_partition | variable=shift_reg complete dim=0                                                               | ./basic_helper.hpp:107 in twonormsquared, shift_reg                              |
+| unroll          |                                                                                                 | ./basic_helper.hpp:112 in twonormsquared                                         |
+| unroll          |                                                                                                 | ./basic_helper.hpp:114 in twonormsquared                                         |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:121 in twonormsquared                                         |
+| unroll          |                                                                                                 | ./basic_helper.hpp:126 in twonormsquared                                         |
+| unroll          |                                                                                                 | ./basic_helper.hpp:131 in twonormsquared                                         |
+| unroll          |                                                                                                 | ./basic_helper.hpp:142 in twonormsquared                                         |
+| unroll          |                                                                                                 | ./basic_helper.hpp:144 in twonormsquared                                         |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:161 in scalevector                                            |
+| unroll          |                                                                                                 | ./basic_helper.hpp:165 in scalevector                                            |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:181 in scalevector_2out                                       |
+| unroll          |                                                                                                 | ./basic_helper.hpp:185 in scalevector_2out                                       |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:203 in axpy                                                   |
+| unroll          |                                                                                                 | ./basic_helper.hpp:209 in axpy                                                   |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:225 in twonorm_and_inverse                                    |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:253 in twonorm                                                |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:274 in edot                                                   |
+| unroll          |                                                                                                 | ./basic_helper.hpp:279 in edot                                                   |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:303 in axpy_2fused                                            |
+| unroll          |                                                                                                 | ./basic_helper.hpp:310 in axpy_2fused                                            |
+| dataflow        |                                                                                                 | ./basic_helper.hpp:323 in scale_and_twonorm_noscaled                             |
+| dataflow        |                                                                                                 | ./basic_helper.hpp:333 in scale_and_twonorm_scaled                               |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:370 in projneg                                                |
+| unroll          |                                                                                                 | ./basic_helper.hpp:374 in projneg                                                |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:394 in projpos                                                |
+| unroll          |                                                                                                 | ./basic_helper.hpp:398 in projpos                                                |
+| pipeline        | II=1                                                                                            | ./basic_helper.hpp:417 in ediv                                                   |
+| unroll          |                                                                                                 | ./basic_helper.hpp:423 in ediv                                                   |
+| dataflow        |                                                                                                 | ./basic_helper.hpp:435 in scale_and_twonormsquared_noscaled                      |
+| dataflow        |                                                                                                 | ./basic_helper.hpp:445 in scale_and_twonormsquared_scaled                        |
+| dataflow        |                                                                                                 | ./Compute_Dual_Infeasibility.hpp:14 in primal_constr                             |
+| dataflow        |                                                                                                 | ./Compute_Dual_Infeasibility.hpp:34 in scale_and_twonormsquared_for_lub_scaled   |
+| dataflow        |                                                                                                 | ./Compute_Dual_Infeasibility.hpp:58 in scale_and_twonormsquared_for_lub_noscaled |
+| dataflow        |                                                                                                 | ./Compute_Dual_Infeasibility.hpp:97 in primal_bound                              |
+| dataflow        |                                                                                                 | ./Compute_Dual_Infeasibility.hpp:131 in compute_dual_infeasibility_stage1        |
+| dataflow        |                                                                                                 | ./Compute_Dual_Infeasibility.hpp:157 in compute_dual_infeasibility_stage2        |
+| dataflow        |                                                                                                 | ./Compute_Primal_Infeasibility.hpp:15 in compute_primal_infeasibility_stage1     |
+| dataflow        |                                                                                                 | ./Compute_Primal_Infeasibility.hpp:54 in compute_primal_infeasibility_stage2     |
+| array_partition | variable=param complete                                                                         | Infeasi_Res_S2.cpp:11 in storeparam, param                                       |
+| interface       | m_axi offset=slave bundle=gmem0 port=y max_read_burst_length=64 num_read_outstanding=64         | Infeasi_Res_S2.cpp:52 in infeasi_res_s2, y                                       |
+| interface       | m_axi offset=slave bundle=gmem1 port=dSlackPos max_read_burst_length=64 num_read_outstanding=64 | Infeasi_Res_S2.cpp:53 in infeasi_res_s2, dSlackPos                               |
+| interface       | m_axi offset=slave bundle=gmem2 port=dSlackNeg max_read_burst_length=64 num_read_outstanding=64 | Infeasi_Res_S2.cpp:54 in infeasi_res_s2, dSlackNeg                               |
+| interface       | m_axi offset=slave bundle=gmem3 port=aty max_read_burst_length=64 num_read_outstanding=64       | Infeasi_Res_S2.cpp:55 in infeasi_res_s2, aty                                     |
+| interface       | m_axi offset=slave bundle=gmem4 port=colScale0 max_read_burst_length=64 num_read_outstanding=64 | Infeasi_Res_S2.cpp:56 in infeasi_res_s2, colScale0                               |
+| interface       | m_axi offset=slave bundle=gmem5 port=x max_read_burst_length=64 num_read_outstanding=64         | Infeasi_Res_S2.cpp:57 in infeasi_res_s2, x                                       |
+| interface       | m_axi offset=slave bundle=gmem6 port=ax max_read_burst_length=64 num_read_outstanding=64        | Infeasi_Res_S2.cpp:58 in infeasi_res_s2, ax                                      |
+| interface       | m_axi offset=slave bundle=gmem7 port=colScale1 max_read_burst_length=64 num_read_outstanding=64 | Infeasi_Res_S2.cpp:59 in infeasi_res_s2, colScale1                               |
+| interface       | m_axi offset=slave bundle=gmem8 port=rowScale max_read_burst_length=64 num_read_outstanding=64  | Infeasi_Res_S2.cpp:60 in infeasi_res_s2, rowScale                                |
+| interface       | m_axi offset=slave bundle=gmem9 port=hasLower max_read_burst_length=64 num_read_outstanding=64  | Infeasi_Res_S2.cpp:61 in infeasi_res_s2, hasLower                                |
+| interface       | m_axi offset=slave bundle=gmem10 port=hasUpper max_read_burst_length=64 num_read_outstanding=64 | Infeasi_Res_S2.cpp:62 in infeasi_res_s2, hasUpper                                |
+| interface       | s_axilite bundle=control port=y                                                                 | Infeasi_Res_S2.cpp:64 in infeasi_res_s2, y                                       |
+| interface       | s_axilite bundle=control port=dSlackPos                                                         | Infeasi_Res_S2.cpp:65 in infeasi_res_s2, dSlackPos                               |
+| interface       | s_axilite bundle=control port=dSlackNeg                                                         | Infeasi_Res_S2.cpp:66 in infeasi_res_s2, dSlackNeg                               |
+| interface       | s_axilite bundle=control port=aty                                                               | Infeasi_Res_S2.cpp:67 in infeasi_res_s2, aty                                     |
+| interface       | s_axilite bundle=control port=colScale0                                                         | Infeasi_Res_S2.cpp:68 in infeasi_res_s2, colScale0                               |
+| interface       | s_axilite bundle=control port=x                                                                 | Infeasi_Res_S2.cpp:69 in infeasi_res_s2, x                                       |
+| interface       | s_axilite bundle=control port=ax                                                                | Infeasi_Res_S2.cpp:70 in infeasi_res_s2, ax                                      |
+| interface       | s_axilite bundle=control port=colScale1                                                         | Infeasi_Res_S2.cpp:71 in infeasi_res_s2, colScale1                               |
+| interface       | s_axilite bundle=control port=rowScale                                                          | Infeasi_Res_S2.cpp:72 in infeasi_res_s2, rowScale                                |
+| interface       | s_axilite bundle=control port=hasLower                                                          | Infeasi_Res_S2.cpp:73 in infeasi_res_s2, hasLower                                |
+| interface       | s_axilite bundle=control port=hasUpper                                                          | Infeasi_Res_S2.cpp:74 in infeasi_res_s2, hasUpper                                |
+| interface       | s_axilite bundle=control port=nRows                                                             | Infeasi_Res_S2.cpp:76 in infeasi_res_s2, nRows                                   |
+| interface       | s_axilite bundle=control port=nCols                                                             | Infeasi_Res_S2.cpp:77 in infeasi_res_s2, nCols                                   |
+| interface       | s_axilite bundle=control port=problem_nEqs                                                      | Infeasi_Res_S2.cpp:78 in infeasi_res_s2, problem_nEqs                            |
+| interface       | s_axilite bundle=control port=ifScaled                                                          | Infeasi_Res_S2.cpp:79 in infeasi_res_s2, ifScaled                                |
+| interface       | s_axilite bundle=control port=inverse_dScale                                                    | Infeasi_Res_S2.cpp:80 in infeasi_res_s2, inverse_dScale                          |
+| interface       | s_axilite bundle=control port=inverse_pScale                                                    | Infeasi_Res_S2.cpp:81 in infeasi_res_s2, inverse_pScale                          |
+| interface       | s_axilite bundle=control port=dPrimalInfeasRes_val                                              | Infeasi_Res_S2.cpp:83 in infeasi_res_s2, dPrimalInfeasRes_val                    |
+| interface       | s_axilite bundle=control port=dDualInfeasRes_val                                                | Infeasi_Res_S2.cpp:84 in infeasi_res_s2, dDualInfeasRes_val                      |
+| interface       | mode=s_axilite port=return bundle=control                                                       | Infeasi_Res_S2.cpp:86 in infeasi_res_s2, return                                  |
+| dataflow        |                                                                                                 | Infeasi_Res_S2.cpp:87 in infeasi_res_s2                                          |
++-----------------+-------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
+
+

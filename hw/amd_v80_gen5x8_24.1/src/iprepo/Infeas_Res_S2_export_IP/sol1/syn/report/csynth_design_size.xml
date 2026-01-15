@@ -1,0 +1,100 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 3718, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll, 7710, user unroll pragmas are applied</column>
+            <column name="">(2) simplification, 6242, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline, 4838, user inline pragmas are applied</column>
+            <column name="">(4) simplification, 3077, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition, 1798, user array partition pragmas are applied</column>
+            <column name="">(2) simplification, 1798, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate , 1860, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape, 4364, apply array reshape pragmas</column>
+            <column name="">(5) access patterns, 4549, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification, 4635, loop and instruction simplification</column>
+            <column name="">(2) parallelization, 4347, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition, 4322, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification, 4322, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering, 4415, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations, 4779, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="Infeasi_Res_S2" col1="Infeasi_Res_S2.cpp:28" col2="3718" col3="3077" col4="4549" col5="4322" col6="4779">
+                    <row id="16" col0="Process_N" col1="Infeasi_Res_S2.cpp:20" col2="9" col3="9" col4="9" col5="9" col6="9"/>
+                    <row id="25" col0="Compute_Primal_Infeasibility_stage2" col1="Compute_Primal_Infeasibility.hpp:39" col2="1302" col3="621" col4="1461" col5="1439" col6="1643">
+                        <row id="24" col0="loadDDR_data" col1="basic_helper.hpp:51" col2="96" col2_disp="  96 (4 calls)" col3="56" col3_disp="  56 (4 calls)" col4="364" col4_disp=" 364 (4 calls)" col5="364" col5_disp=" 364 (4 calls)" col6="340" col6_disp=" 340 (4 calls)"/>
+                        <row id="15" col0="scaleVector" col1="basic_helper.hpp:153" col2="280" col2_disp=" 280 (4 calls)" col3="188" col3_disp=" 188 (4 calls)" col4="444" col4_disp=" 444 (4 calls)" col5="436" col5_disp=" 436 (4 calls)" col6="532" col6_disp=" 532 (4 calls)"/>
+                        <row id="26" col0="consumer" col1="basic_helper.hpp:11" col2="22" col3="11" col4="10" col5="9" col6="11"/>
+                        <row id="1" col0="axpy_2fused" col1="basic_helper.hpp:289" col2="124" col3="85" col4="205" col5="201" col6="251"/>
+                        <row id="14" col0="scale_and_twoNorm" col1="basic_helper.hpp:344" col2="677" col3="223" col4="408" col5="399" col6="468">
+                            <row id="27" col0="scale_and_twoNorm_Scaled" col1="basic_helper.hpp:327" col2="407" col3="153" col4="326" col5="320" col6="371">
+                                <row id="24" col0="loadDDR_data" col1="basic_helper.hpp:51" col2="24" col3="14" col4="91" col5="91" col6="85"/>
+                                <row id="13" col0="edot" col1="basic_helper.hpp:265" col2="96" col3="62" col4="154" col5="151" col6="188"/>
+                                <row id="3" col0="twoNorm" col1="basic_helper.hpp:244" col2="259" col3="59" col4="73" col5="70" col6="86"/>
+                            </row>
+                            <row id="10" col0="scale_and_twoNorm_noScaled" col1="basic_helper.hpp:318" col2="263" col3="63" col4="75" col5="72" col6="90">
+                                <row id="3" col0="twoNorm" col1="basic_helper.hpp:244" col2="259" col3="59" col4="73" col5="70" col6="86"/>
+                            </row>
+                        </row>
+                    </row>
+                    <row id="9" col0="Compute_Dual_Infeasibility_stage2" col1="Compute_Dual_Infeasibility.hpp:141" col2="2297" col3="2373" col4="3030" col5="2825" col6="3031">
+                        <row id="24" col0="loadDDR_data" col1="basic_helper.hpp:51" col2="48" col2_disp="  48 (2 calls)" col3="28" col3_disp="  28 (2 calls)" col4="182" col4_disp=" 182 (2 calls)" col5="182" col5_disp=" 182 (2 calls)" col6="170" col6_disp=" 170 (2 calls)"/>
+                        <row id="6" col0="scaleVector_2out" col1="basic_helper.hpp:172" col2="75" col3="49" col4="112" col5="110" col6="136"/>
+                        <row id="15" col0="scaleVector" col1="basic_helper.hpp:153" col2="70" col3="47" col4="111" col5="109" col6="133"/>
+                        <row id="2" col0="Primal_Constr" col1="Compute_Dual_Infeasibility.hpp:6" col2="602" col3="697" col4="748" col5="683" col6="713">
+                            <row id="7" col0="projNeg" col1="basic_helper.hpp:361" col2="95" col3="173" col4="143" col5="141" col6="165"/>
+                            <row id="19" col0="scale_and_twoNormSquared" col1="basic_helper.hpp:457" col2="482" col3="511" col4="600" col5="537" col6="540">
+                                <row id="22" col0="scale_and_twoNormSquared_Scaled" col1="basic_helper.hpp:439" col2="299" col3="297" col4="422" col5="389" col6="407">
+                                    <row id="24" col0="loadDDR_data" col1="basic_helper.hpp:51" col2="24" col3="14" col4="91" col5="91" col6="85"/>
+                                    <row id="13" col0="edot" col1="basic_helper.hpp:265" col2="96" col3="62" col4="154" col5="151" col6="188"/>
+                                    <row id="21" col0="twoNormSquared" col1="basic_helper.hpp:93" col2="151" col3="203" col4="169" col5="139" col6="122"/>
+                                </row>
+                                <row id="17" col0="scale_and_twoNormSquared_noScaled" col1="basic_helper.hpp:430" col2="155" col3="207" col4="171" col5="141" col6="126">
+                                    <row id="21" col0="twoNormSquared" col1="basic_helper.hpp:93" col2="151" col3="203" col4="169" col5="139" col6="122"/>
+                                </row>
+                            </row>
+                        </row>
+                        <row id="8" col0="Primal_Bound" col1="Compute_Dual_Infeasibility.hpp:86" col2="1402" col3="1499" col4="1848" col5="1712" col6="1840">
+                            <row id="7" col0="projNeg" col1="basic_helper.hpp:361" col2="95" col3="173" col4="119" col5="117" col6="141"/>
+                            <row id="5" col0="projPos" col1="basic_helper.hpp:384" col2="95" col3="132" col4="119" col5="117" col6="141"/>
+                            <row id="24" col0="loadDDR_data" col1="basic_helper.hpp:51" col2="48" col2_disp="  48 (2 calls)" col3="28" col3_disp="  28 (2 calls)" col4="182" col4_disp=" 182 (2 calls)" col5="182" col5_disp=" 182 (2 calls)" col6="170" col6_disp=" 170 (2 calls)"/>
+                            <row id="13" col0="edot" col1="basic_helper.hpp:265" col2="192" col2_disp=" 192 (2 calls)" col3="124" col3_disp=" 124 (2 calls)" col4="308" col4_disp=" 308 (2 calls)" col5="302" col5_disp=" 302 (2 calls)" col6="376" col6_disp=" 376 (2 calls)"/>
+                            <row id="20" col0="scale_and_twoNormSquared_for_lub" col1="Compute_Dual_Infeasibility.hpp:65" col2="887" col3="994" col4="1100" col5="974" col6="984">
+                                <row id="23" col0="scale_and_twoNormSquared_for_lub_Scaled" col1="Compute_Dual_Infeasibility.hpp:24" col2="571" col3="574" col4="752" col5="686" col6="728">
+                                    <row id="4" col0="loadDDR_data_special" col1="basic_helper.hpp:65" col2="29" col3="16" col4="92" col5="92" col6="88"/>
+                                    <row id="12" col0="ediv" col1="basic_helper.hpp:409" col2="192" col2_disp=" 192 (2 calls)" col3="124" col3_disp=" 124 (2 calls)" col4="308" col4_disp=" 308 (2 calls)" col5="302" col5_disp=" 302 (2 calls)" col6="376" col6_disp=" 376 (2 calls)"/>
+                                    <row id="21" col0="twoNormSquared" col1="basic_helper.hpp:93" col2="302" col2_disp=" 302 (2 calls)" col3="406" col3_disp=" 406 (2 calls)" col4="338" col4_disp=" 338 (2 calls)" col5="278" col5_disp=" 278 (2 calls)" col6="244" col6_disp=" 244 (2 calls)"/>
+                                </row>
+                                <row id="18" col0="scale_and_twoNormSquared_for_lub_noScaled" col1="Compute_Dual_Infeasibility.hpp:49" col2="309" col3="413" col4="341" col5="281" col6="249">
+                                    <row id="21" col0="twoNormSquared" col1="basic_helper.hpp:93" col2="302" col2_disp=" 302 (2 calls)" col3="406" col3_disp=" 406 (2 calls)" col4="338" col4_disp=" 338 (2 calls)" col5="278" col5_disp=" 278 (2 calls)" col6="244" col6_disp=" 244 (2 calls)"/>
+                                </row>
+                            </row>
+                        </row>
+                        <row id="11" col0="add3_Sqrt" col1="basic_helper.hpp:22" col2="18" col3="8" col4="8" col5="8" col6="11"/>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

@@ -1,0 +1,643 @@
+
+
+================================================================
+== Vitis HLS Report for 'twoNorm'
+================================================================
+* Date:           Fri Jan  9 14:23:18 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.190 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 59
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%muxLogicCE_to_n_read = muxlogic"   --->   Operation 60 'muxlogic' 'muxLogicCE_to_n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%n_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %n"   --->   Operation 61 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%nrm_loc = alloca i64 1"   --->   Operation 62 'alloca' 'nrm_loc' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.06>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 63 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [2/2] (1.06ns)   --->   "%call_ln0 = call void @twoNorm_Pipeline_twoNorm, i32 %n_read, i512 %dualInfeasConstr_axpyfifo, i64 %nrm_loc"   --->   Operation 64 'call' 'call_ln0' <Predicate = true> <Delay = 1.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 65 [1/2] (0.00ns)   --->   "%call_ln0 = call void @twoNorm_Pipeline_twoNorm, i32 %n_read, i512 %dualInfeasConstr_axpyfifo, i64 %nrm_loc"   --->   Operation 65 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.91>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%MuxLogicAddr_to_nrm_loc_load = muxlogic i64 %nrm_loc"   --->   Operation 66 'muxlogic' 'MuxLogicAddr_to_nrm_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%nrm_loc_load = load i64 %nrm_loc"   --->   Operation 67 'load' 'nrm_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%empty_225 = wait i32 @_ssdm_op_Wait"   --->   Operation 68 'wait' 'empty_225' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%muxLogicI0_to_res = muxlogic i64 %nrm_loc_load"   --->   Operation 69 'muxlogic' 'muxLogicI0_to_res' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 70 [56/56] (0.91ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 70 'dsqrt' 'res' <Predicate = true> <Delay = 0.91> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 1.41>
+ST_5 : Operation 71 [55/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 71 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 1.41>
+ST_6 : Operation 72 [54/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 72 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.41>
+ST_7 : Operation 73 [53/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 73 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 1.41>
+ST_8 : Operation 74 [52/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 74 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 1.41>
+ST_9 : Operation 75 [51/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 75 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 1.41>
+ST_10 : Operation 76 [50/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 76 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 1.41>
+ST_11 : Operation 77 [49/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 77 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 1.41>
+ST_12 : Operation 78 [48/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 78 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 1.41>
+ST_13 : Operation 79 [47/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 79 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 1.41>
+ST_14 : Operation 80 [46/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 80 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 1.41>
+ST_15 : Operation 81 [45/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 81 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 1.41>
+ST_16 : Operation 82 [44/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 82 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 1.41>
+ST_17 : Operation 83 [43/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 83 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 1.41>
+ST_18 : Operation 84 [42/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 84 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 1.41>
+ST_19 : Operation 85 [41/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 85 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 1.41>
+ST_20 : Operation 86 [40/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 86 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 1.41>
+ST_21 : Operation 87 [39/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 87 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 1.41>
+ST_22 : Operation 88 [38/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 88 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 1.41>
+ST_23 : Operation 89 [37/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 89 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 1.41>
+ST_24 : Operation 90 [36/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 90 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 1.41>
+ST_25 : Operation 91 [35/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 91 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 1.41>
+ST_26 : Operation 92 [34/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 92 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 1.41>
+ST_27 : Operation 93 [33/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 93 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 1.41>
+ST_28 : Operation 94 [32/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 94 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 1.41>
+ST_29 : Operation 95 [31/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 95 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 1.41>
+ST_30 : Operation 96 [30/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 96 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 1.41>
+ST_31 : Operation 97 [29/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 97 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 1.41>
+ST_32 : Operation 98 [28/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 98 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 1.41>
+ST_33 : Operation 99 [27/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 99 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 1.41>
+ST_34 : Operation 100 [26/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 100 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 1.41>
+ST_35 : Operation 101 [25/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 101 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 1.41>
+ST_36 : Operation 102 [24/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 102 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 1.41>
+ST_37 : Operation 103 [23/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 103 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 1.41>
+ST_38 : Operation 104 [22/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 104 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 1.41>
+ST_39 : Operation 105 [21/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 105 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 1.41>
+ST_40 : Operation 106 [20/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 106 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 41 <SV = 40> <Delay = 1.41>
+ST_41 : Operation 107 [19/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 107 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 42 <SV = 41> <Delay = 1.41>
+ST_42 : Operation 108 [18/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 108 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 43 <SV = 42> <Delay = 1.41>
+ST_43 : Operation 109 [17/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 109 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 44 <SV = 43> <Delay = 1.41>
+ST_44 : Operation 110 [16/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 110 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 45 <SV = 44> <Delay = 1.41>
+ST_45 : Operation 111 [15/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 111 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 46 <SV = 45> <Delay = 1.41>
+ST_46 : Operation 112 [14/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 112 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 47 <SV = 46> <Delay = 1.41>
+ST_47 : Operation 113 [13/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 113 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 48 <SV = 47> <Delay = 1.41>
+ST_48 : Operation 114 [12/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 114 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 49 <SV = 48> <Delay = 1.41>
+ST_49 : Operation 115 [11/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 115 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 50 <SV = 49> <Delay = 1.41>
+ST_50 : Operation 116 [10/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 116 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 51 <SV = 50> <Delay = 1.41>
+ST_51 : Operation 117 [9/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 117 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 52 <SV = 51> <Delay = 1.41>
+ST_52 : Operation 118 [8/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 118 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 53 <SV = 52> <Delay = 1.41>
+ST_53 : Operation 119 [7/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 119 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 54 <SV = 53> <Delay = 1.41>
+ST_54 : Operation 120 [6/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 120 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 55 <SV = 54> <Delay = 1.41>
+ST_55 : Operation 121 [5/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 121 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 56 <SV = 55> <Delay = 1.41>
+ST_56 : Operation 122 [4/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 122 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 57 <SV = 56> <Delay = 1.41>
+ST_57 : Operation 123 [3/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 123 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 58 <SV = 57> <Delay = 1.41>
+ST_58 : Operation 124 [2/56] (1.41ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 124 'dsqrt' 'res' <Predicate = true> <Delay = 1.41> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 59 <SV = 58> <Delay = 1.22>
+ST_59 : Operation 125 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasConstr_axpyfifo, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 125 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 126 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %dPrimalInfeasRes, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 126 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 127 [1/56] (0.09ns)   --->   "%res = dsqrt i64 @llvm.sqrt.f64, i64 %nrm_loc_load" [./basic_helper.hpp:260]   --->   Operation 127 'dsqrt' 'res' <Predicate = true> <Delay = 0.09> <CoreInst = "DSqrt">   --->   Core 56 'DSqrt' <Latency = 55> <II = 1> <Delay = 1.41> <FuncUnit> <Opcode : 'dsqrt'> <InPorts = 1> <OutPorts = 1>
+ST_59 : Operation 128 [1/1] (0.00ns)   --->   "%bitcast_ln262 = bitcast i64 %res" [./basic_helper.hpp:262]   --->   Operation 128 'bitcast' 'bitcast_ln262' <Predicate = true> <Delay = 0.00>
+ST_59 : Operation 129 [1/1] (0.38ns) (share mux size 2)   --->   "%muxLogicData_to_write_ln262 = muxlogic i64 %bitcast_ln262"   --->   Operation 129 'muxlogic' 'muxLogicData_to_write_ln262' <Predicate = true> <Delay = 0.38>
+ST_59 : Operation 130 [1/1] (0.74ns) (share mux size 2)   --->   "%write_ln262 = write void @_ssdm_op_Write.ap_fifo.volatile.i64P0A, i64 %dPrimalInfeasRes, i64 %bitcast_ln262" [./basic_helper.hpp:262]   --->   Operation 130 'write' 'write_ln262' <Predicate = true> <Delay = 0.74> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.88> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_59 : Operation 131 [1/1] (0.00ns)   --->   "%ret_ln263 = ret" [./basic_helper.hpp:263]   --->   Operation 131 'ret' 'ret_ln263' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 1.061ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'twoNorm_Pipeline_twoNorm' [10]  (1.061 ns)
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.915ns
+The critical path consists of the following:
+	'muxlogic' operation 64 bit ('MuxLogicAddr_to_nrm_loc_load') [11]  (0.000 ns)
+	'load' operation 64 bit ('nrm_loc_load') on local variable 'nrm_loc' [12]  (0.000 ns)
+	'muxlogic' operation 64 bit ('muxLogicI0_to_res') [14]  (0.000 ns)
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (0.915 ns)
+
+ <State 5>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 6>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 7>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 8>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 9>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 10>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 11>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 12>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 13>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 14>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 15>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 16>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 17>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 18>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 19>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 20>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 21>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 22>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 23>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 24>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 25>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 26>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 27>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 28>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 29>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 30>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 31>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 32>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 33>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 34>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 35>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 36>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 37>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 38>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 39>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 40>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 41>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 42>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 43>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 44>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 45>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 46>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 47>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 48>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 49>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 50>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 51>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 52>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 53>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 54>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 55>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 56>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 57>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 58>: 1.411ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (1.411 ns)
+
+ <State 59>: 1.221ns
+The critical path consists of the following:
+	'dsqrt' operation 64 bit ('res', ./basic_helper.hpp:260) [15]  (0.092 ns)
+	'muxlogic' operation 0 bit ('muxLogicData_to_write_ln262') [17]  (0.382 ns)
+	fifo write operation ('write_ln262', ./basic_helper.hpp:262) on port 'dPrimalInfeasRes' (./basic_helper.hpp:262) [18]  (0.747 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

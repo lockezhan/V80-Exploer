@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'Primal_Bound'" level="0">
+<item name = "Date">Fri Jan  9 14:26:36 2026
+</item>
+<item name = "Version">2024.1.2 (Build 5096458 on Sep  5 2024)</item>
+<item name = "Project">build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S</item>
+<item name = "Solution">sol1 (Vivado IP Flow Target)</item>
+<item name = "Product family">versalhbm</item>
+<item name = "Target device">xcv80-lsva4737-2MHP-e-S</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.509 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_projNeg_221_fu_158">projNeg_221, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_projPos22_fu_168">projPos22, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_loadDDR_data_2023_fu_178">loadDDR_data_2023, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_loadDDR_data_2124_fu_189">loadDDR_data_2124, ?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+<column name="grp_edot_325_fu_200">edot_325, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_edot_426_fu_208">edot_426, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_scale_and_twoNormSquared_for_lub27_fu_216">scale_and_twoNormSquared_for_lub27, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

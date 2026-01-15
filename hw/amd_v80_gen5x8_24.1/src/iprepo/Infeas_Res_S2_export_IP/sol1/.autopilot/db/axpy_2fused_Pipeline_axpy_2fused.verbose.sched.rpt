@@ -1,0 +1,509 @@
+
+
+================================================================
+== Vitis HLS Report for 'axpy_2fused_Pipeline_axpy_2fused'
+================================================================
+* Date:           Fri Jan  9 14:22:53 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.190 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- axpy_2fused  |        ?|        ?|        16|          1|          1|     ?|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 16
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 16, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 19 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasLbRay_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasUbRay_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasConstr_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasConstr_axpyfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%muxLogicCE_to_nCols_assign_load_read = muxlogic"   --->   Operation 24 'muxlogic' 'muxLogicCE_to_nCols_assign_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%nCols_assign_load_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %nCols_assign_load"   --->   Operation 25 'read' 'nCols_assign_load_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%muxLogicData_to_store_ln0 = muxlogic i31 0"   --->   Operation 26 'muxlogic' 'muxLogicData_to_store_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%muxLogicAddr_to_store_ln0 = muxlogic i31 %i"   --->   Operation 27 'muxlogic' 'muxLogicAddr_to_store_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.40ns)   --->   "%store_ln0 = store i31 0, i31 %i"   --->   Operation 28 'store' 'store_ln0' <Predicate = true> <Delay = 0.40>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln302 = br void %VITIS_LOOP_309_1.i" [./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 29 'br' 'br_ln302' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%MuxLogicAddr_to_i_load = muxlogic i31 %i"   --->   Operation 30 'muxlogic' 'MuxLogicAddr_to_i_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%i_load = load i31 %i" [./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 31 'load' 'i_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%i_cast = zext i31 %i_load" [./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 32 'zext' 'i_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.66ns)   --->   "%icmp_ln302 = icmp_slt  i32 %i_cast, i32 %nCols_assign_load_read" [./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 33 'icmp' 'icmp_ln302' <Predicate = true> <Delay = 0.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln302 = br i1 %icmp_ln302, void %axpy_2fused.exit.exitStub, void %VITIS_LOOP_309_1.split.i" [./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 34 'br' 'br_ln302' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.86ns)   --->   "%add_ln302 = add i31 %i_load, i31 1" [./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 35 'add' 'add_ln302' <Predicate = (icmp_ln302)> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%muxLogicData_to_store_ln302 = muxlogic i31 %add_ln302"   --->   Operation 36 'muxlogic' 'muxLogicData_to_store_ln302' <Predicate = (icmp_ln302)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%muxLogicAddr_to_store_ln302 = muxlogic i31 %i"   --->   Operation 37 'muxlogic' 'muxLogicAddr_to_store_ln302' <Predicate = (icmp_ln302)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.40ns)   --->   "%store_ln302 = store i31 %add_ln302, i31 %i" [./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 38 'store' 'store_ln302' <Predicate = (icmp_ln302)> <Delay = 0.40>
+
+State 2 <SV = 1> <Delay = 1.59>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%muxLogicCE_to_dualInfeasConstr_SVfifo_i_read = muxlogic"   --->   Operation 39 'muxlogic' 'muxLogicCE_to_dualInfeasConstr_SVfifo_i_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.75ns)   --->   "%dualInfeasConstr_SVfifo_i_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %dualInfeasConstr_SVfifo_i" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 40 'read' 'dualInfeasConstr_SVfifo_i_read' <Predicate = true> <Delay = 0.75> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln304 = trunc i512 %dualInfeasConstr_SVfifo_i_read" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 41 'trunc' 'trunc_ln304' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%trunc_ln304_7 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasConstr_SVfifo_i_read, i32 64, i32 127" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 42 'partselect' 'trunc_ln304_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%trunc_ln304_8 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasConstr_SVfifo_i_read, i32 128, i32 191" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 43 'partselect' 'trunc_ln304_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%trunc_ln304_9 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasConstr_SVfifo_i_read, i32 192, i32 255" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 44 'partselect' 'trunc_ln304_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln304_s = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasConstr_SVfifo_i_read, i32 256, i32 319" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 45 'partselect' 'trunc_ln304_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%trunc_ln304_1 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasConstr_SVfifo_i_read, i32 320, i32 383" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 46 'partselect' 'trunc_ln304_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%trunc_ln304_2 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasConstr_SVfifo_i_read, i32 384, i32 447" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 47 'partselect' 'trunc_ln304_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%trunc_ln304_3 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasConstr_SVfifo_i_read, i32 448, i32 511" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 48 'partselect' 'trunc_ln304_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%muxLogicCE_to_dualInfeasLbRay_SVfifo_i_read = muxlogic"   --->   Operation 49 'muxlogic' 'muxLogicCE_to_dualInfeasLbRay_SVfifo_i_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.75ns)   --->   "%dualInfeasLbRay_SVfifo_i_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %dualInfeasLbRay_SVfifo_i" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 50 'read' 'dualInfeasLbRay_SVfifo_i_read' <Predicate = true> <Delay = 0.75> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%trunc_ln305 = trunc i512 %dualInfeasLbRay_SVfifo_i_read" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 51 'trunc' 'trunc_ln305' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%trunc_ln305_7 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasLbRay_SVfifo_i_read, i32 64, i32 127" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 52 'partselect' 'trunc_ln305_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln305_8 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasLbRay_SVfifo_i_read, i32 128, i32 191" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 53 'partselect' 'trunc_ln305_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%trunc_ln305_9 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasLbRay_SVfifo_i_read, i32 192, i32 255" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 54 'partselect' 'trunc_ln305_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%trunc_ln305_s = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasLbRay_SVfifo_i_read, i32 256, i32 319" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 55 'partselect' 'trunc_ln305_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%trunc_ln305_1 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasLbRay_SVfifo_i_read, i32 320, i32 383" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 56 'partselect' 'trunc_ln305_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%trunc_ln305_2 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasLbRay_SVfifo_i_read, i32 384, i32 447" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 57 'partselect' 'trunc_ln305_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%trunc_ln305_3 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasLbRay_SVfifo_i_read, i32 448, i32 511" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 58 'partselect' 'trunc_ln305_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%bitcast_ln305 = bitcast i64 %trunc_ln305" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 59 'bitcast' 'bitcast_ln305' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%bitcast_ln305_1 = bitcast i64 %trunc_ln305_7" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 60 'bitcast' 'bitcast_ln305_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%bitcast_ln305_2 = bitcast i64 %trunc_ln305_8" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 61 'bitcast' 'bitcast_ln305_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%bitcast_ln305_3 = bitcast i64 %trunc_ln305_9" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 62 'bitcast' 'bitcast_ln305_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%bitcast_ln305_4 = bitcast i64 %trunc_ln305_s" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 63 'bitcast' 'bitcast_ln305_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%bitcast_ln305_5 = bitcast i64 %trunc_ln305_1" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 64 'bitcast' 'bitcast_ln305_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%bitcast_ln305_6 = bitcast i64 %trunc_ln305_2" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 65 'bitcast' 'bitcast_ln305_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%bitcast_ln305_7 = bitcast i64 %trunc_ln305_3" [./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 66 'bitcast' 'bitcast_ln305_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%muxLogicCE_to_dualInfeasUbRay_SVfifo_i_read = muxlogic"   --->   Operation 67 'muxlogic' 'muxLogicCE_to_dualInfeasUbRay_SVfifo_i_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.75ns)   --->   "%dualInfeasUbRay_SVfifo_i_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %dualInfeasUbRay_SVfifo_i" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 68 'read' 'dualInfeasUbRay_SVfifo_i_read' <Predicate = true> <Delay = 0.75> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%trunc_ln306 = trunc i512 %dualInfeasUbRay_SVfifo_i_read" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 69 'trunc' 'trunc_ln306' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%trunc_ln306_7 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasUbRay_SVfifo_i_read, i32 64, i32 127" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 70 'partselect' 'trunc_ln306_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%trunc_ln306_8 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasUbRay_SVfifo_i_read, i32 128, i32 191" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 71 'partselect' 'trunc_ln306_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%trunc_ln306_9 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasUbRay_SVfifo_i_read, i32 192, i32 255" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 72 'partselect' 'trunc_ln306_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%trunc_ln306_s = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasUbRay_SVfifo_i_read, i32 256, i32 319" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 73 'partselect' 'trunc_ln306_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 74 [1/1] (0.00ns)   --->   "%trunc_ln306_1 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasUbRay_SVfifo_i_read, i32 320, i32 383" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 74 'partselect' 'trunc_ln306_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%trunc_ln306_2 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasUbRay_SVfifo_i_read, i32 384, i32 447" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 75 'partselect' 'trunc_ln306_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (0.00ns)   --->   "%trunc_ln306_3 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %dualInfeasUbRay_SVfifo_i_read, i32 448, i32 511" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 76 'partselect' 'trunc_ln306_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "%bitcast_ln306 = bitcast i64 %trunc_ln306" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 77 'bitcast' 'bitcast_ln306' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%bitcast_ln306_1 = bitcast i64 %trunc_ln306_7" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 78 'bitcast' 'bitcast_ln306_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%bitcast_ln306_2 = bitcast i64 %trunc_ln306_8" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 79 'bitcast' 'bitcast_ln306_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%bitcast_ln306_3 = bitcast i64 %trunc_ln306_9" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 80 'bitcast' 'bitcast_ln306_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%bitcast_ln306_4 = bitcast i64 %trunc_ln306_s" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 81 'bitcast' 'bitcast_ln306_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%bitcast_ln306_5 = bitcast i64 %trunc_ln306_1" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 82 'bitcast' 'bitcast_ln306_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%bitcast_ln306_6 = bitcast i64 %trunc_ln306_2" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 83 'bitcast' 'bitcast_ln306_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%bitcast_ln306_7 = bitcast i64 %trunc_ln306_3" [./basic_helper.hpp:306->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 84 'bitcast' 'bitcast_ln306_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 85 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_i = muxlogic i64 %bitcast_ln305"   --->   Operation 85 'muxlogic' 'muxLogicI0_to_sub_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 86 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_i = muxlogic i64 %bitcast_ln306"   --->   Operation 86 'muxlogic' 'muxLogicI1_to_sub_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 87 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_1_i = muxlogic i64 %bitcast_ln305_1"   --->   Operation 87 'muxlogic' 'muxLogicI0_to_sub_1_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 88 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_1_i = muxlogic i64 %bitcast_ln306_1"   --->   Operation 88 'muxlogic' 'muxLogicI1_to_sub_1_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 89 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_2_i = muxlogic i64 %bitcast_ln305_2"   --->   Operation 89 'muxlogic' 'muxLogicI0_to_sub_2_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 90 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_2_i = muxlogic i64 %bitcast_ln306_2"   --->   Operation 90 'muxlogic' 'muxLogicI1_to_sub_2_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 91 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_3_i = muxlogic i64 %bitcast_ln305_3"   --->   Operation 91 'muxlogic' 'muxLogicI0_to_sub_3_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 92 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_3_i = muxlogic i64 %bitcast_ln306_3"   --->   Operation 92 'muxlogic' 'muxLogicI1_to_sub_3_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 93 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_4_i = muxlogic i64 %bitcast_ln305_4"   --->   Operation 93 'muxlogic' 'muxLogicI0_to_sub_4_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 94 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_4_i = muxlogic i64 %bitcast_ln306_4"   --->   Operation 94 'muxlogic' 'muxLogicI1_to_sub_4_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 95 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_5_i = muxlogic i64 %bitcast_ln305_5"   --->   Operation 95 'muxlogic' 'muxLogicI0_to_sub_5_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 96 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_5_i = muxlogic i64 %bitcast_ln306_5"   --->   Operation 96 'muxlogic' 'muxLogicI1_to_sub_5_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 97 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_6_i = muxlogic i64 %bitcast_ln305_6"   --->   Operation 97 'muxlogic' 'muxLogicI0_to_sub_6_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 98 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_6_i = muxlogic i64 %bitcast_ln306_6"   --->   Operation 98 'muxlogic' 'muxLogicI1_to_sub_6_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 99 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_7_i = muxlogic i64 %bitcast_ln305_7"   --->   Operation 99 'muxlogic' 'muxLogicI0_to_sub_7_i' <Predicate = true> <Delay = 0.83>
+ST_2 : Operation 100 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_7_i = muxlogic i64 %bitcast_ln306_7"   --->   Operation 100 'muxlogic' 'muxLogicI1_to_sub_7_i' <Predicate = true> <Delay = 0.83>
+
+State 3 <SV = 2> <Delay = 2.02>
+ST_3 : Operation 101 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_i = muxlogic i64 %bitcast_ln305"   --->   Operation 101 'muxlogic' 'muxLogicI0_to_sub_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 102 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_i = muxlogic i64 %bitcast_ln306"   --->   Operation 102 'muxlogic' 'muxLogicI1_to_sub_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 103 [7/7] (2.02ns)   --->   "%sub_i = dsub i64 %bitcast_ln305, i64 %bitcast_ln306" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 103 'dsub' 'sub_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 104 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_1_i = muxlogic i64 %bitcast_ln305_1"   --->   Operation 104 'muxlogic' 'muxLogicI0_to_sub_1_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 105 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_1_i = muxlogic i64 %bitcast_ln306_1"   --->   Operation 105 'muxlogic' 'muxLogicI1_to_sub_1_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 106 [7/7] (2.02ns)   --->   "%sub_1_i = dsub i64 %bitcast_ln305_1, i64 %bitcast_ln306_1" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 106 'dsub' 'sub_1_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 107 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_2_i = muxlogic i64 %bitcast_ln305_2"   --->   Operation 107 'muxlogic' 'muxLogicI0_to_sub_2_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 108 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_2_i = muxlogic i64 %bitcast_ln306_2"   --->   Operation 108 'muxlogic' 'muxLogicI1_to_sub_2_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 109 [7/7] (2.02ns)   --->   "%sub_2_i = dsub i64 %bitcast_ln305_2, i64 %bitcast_ln306_2" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 109 'dsub' 'sub_2_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 110 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_3_i = muxlogic i64 %bitcast_ln305_3"   --->   Operation 110 'muxlogic' 'muxLogicI0_to_sub_3_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 111 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_3_i = muxlogic i64 %bitcast_ln306_3"   --->   Operation 111 'muxlogic' 'muxLogicI1_to_sub_3_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 112 [7/7] (2.02ns)   --->   "%sub_3_i = dsub i64 %bitcast_ln305_3, i64 %bitcast_ln306_3" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 112 'dsub' 'sub_3_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 113 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_4_i = muxlogic i64 %bitcast_ln305_4"   --->   Operation 113 'muxlogic' 'muxLogicI0_to_sub_4_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 114 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_4_i = muxlogic i64 %bitcast_ln306_4"   --->   Operation 114 'muxlogic' 'muxLogicI1_to_sub_4_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 115 [7/7] (2.02ns)   --->   "%sub_4_i = dsub i64 %bitcast_ln305_4, i64 %bitcast_ln306_4" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 115 'dsub' 'sub_4_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 116 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_5_i = muxlogic i64 %bitcast_ln305_5"   --->   Operation 116 'muxlogic' 'muxLogicI0_to_sub_5_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 117 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_5_i = muxlogic i64 %bitcast_ln306_5"   --->   Operation 117 'muxlogic' 'muxLogicI1_to_sub_5_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 118 [7/7] (2.02ns)   --->   "%sub_5_i = dsub i64 %bitcast_ln305_5, i64 %bitcast_ln306_5" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 118 'dsub' 'sub_5_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 119 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_6_i = muxlogic i64 %bitcast_ln305_6"   --->   Operation 119 'muxlogic' 'muxLogicI0_to_sub_6_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 120 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_6_i = muxlogic i64 %bitcast_ln306_6"   --->   Operation 120 'muxlogic' 'muxLogicI1_to_sub_6_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 121 [7/7] (2.02ns)   --->   "%sub_6_i = dsub i64 %bitcast_ln305_6, i64 %bitcast_ln306_6" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 121 'dsub' 'sub_6_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 122 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_sub_7_i = muxlogic i64 %bitcast_ln305_7"   --->   Operation 122 'muxlogic' 'muxLogicI0_to_sub_7_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 123 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_sub_7_i = muxlogic i64 %bitcast_ln306_7"   --->   Operation 123 'muxlogic' 'muxLogicI1_to_sub_7_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 124 [7/7] (2.02ns)   --->   "%sub_7_i = dsub i64 %bitcast_ln305_7, i64 %bitcast_ln306_7" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 124 'dsub' 'sub_7_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.19>
+ST_4 : Operation 125 [6/7] (2.19ns)   --->   "%sub_i = dsub i64 %bitcast_ln305, i64 %bitcast_ln306" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 125 'dsub' 'sub_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 126 [6/7] (2.19ns)   --->   "%sub_1_i = dsub i64 %bitcast_ln305_1, i64 %bitcast_ln306_1" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 126 'dsub' 'sub_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 127 [6/7] (2.19ns)   --->   "%sub_2_i = dsub i64 %bitcast_ln305_2, i64 %bitcast_ln306_2" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 127 'dsub' 'sub_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 128 [6/7] (2.19ns)   --->   "%sub_3_i = dsub i64 %bitcast_ln305_3, i64 %bitcast_ln306_3" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 128 'dsub' 'sub_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 129 [6/7] (2.19ns)   --->   "%sub_4_i = dsub i64 %bitcast_ln305_4, i64 %bitcast_ln306_4" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 129 'dsub' 'sub_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 130 [6/7] (2.19ns)   --->   "%sub_5_i = dsub i64 %bitcast_ln305_5, i64 %bitcast_ln306_5" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 130 'dsub' 'sub_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 131 [6/7] (2.19ns)   --->   "%sub_6_i = dsub i64 %bitcast_ln305_6, i64 %bitcast_ln306_6" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 131 'dsub' 'sub_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 132 [6/7] (2.19ns)   --->   "%sub_7_i = dsub i64 %bitcast_ln305_7, i64 %bitcast_ln306_7" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 132 'dsub' 'sub_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 2.19>
+ST_5 : Operation 133 [5/7] (2.19ns)   --->   "%sub_i = dsub i64 %bitcast_ln305, i64 %bitcast_ln306" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 133 'dsub' 'sub_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 134 [5/7] (2.19ns)   --->   "%sub_1_i = dsub i64 %bitcast_ln305_1, i64 %bitcast_ln306_1" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 134 'dsub' 'sub_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 135 [5/7] (2.19ns)   --->   "%sub_2_i = dsub i64 %bitcast_ln305_2, i64 %bitcast_ln306_2" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 135 'dsub' 'sub_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 136 [5/7] (2.19ns)   --->   "%sub_3_i = dsub i64 %bitcast_ln305_3, i64 %bitcast_ln306_3" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 136 'dsub' 'sub_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 137 [5/7] (2.19ns)   --->   "%sub_4_i = dsub i64 %bitcast_ln305_4, i64 %bitcast_ln306_4" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 137 'dsub' 'sub_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 138 [5/7] (2.19ns)   --->   "%sub_5_i = dsub i64 %bitcast_ln305_5, i64 %bitcast_ln306_5" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 138 'dsub' 'sub_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 139 [5/7] (2.19ns)   --->   "%sub_6_i = dsub i64 %bitcast_ln305_6, i64 %bitcast_ln306_6" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 139 'dsub' 'sub_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 140 [5/7] (2.19ns)   --->   "%sub_7_i = dsub i64 %bitcast_ln305_7, i64 %bitcast_ln306_7" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 140 'dsub' 'sub_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 2.19>
+ST_6 : Operation 141 [4/7] (2.19ns)   --->   "%sub_i = dsub i64 %bitcast_ln305, i64 %bitcast_ln306" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 141 'dsub' 'sub_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 142 [4/7] (2.19ns)   --->   "%sub_1_i = dsub i64 %bitcast_ln305_1, i64 %bitcast_ln306_1" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 142 'dsub' 'sub_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 143 [4/7] (2.19ns)   --->   "%sub_2_i = dsub i64 %bitcast_ln305_2, i64 %bitcast_ln306_2" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 143 'dsub' 'sub_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 144 [4/7] (2.19ns)   --->   "%sub_3_i = dsub i64 %bitcast_ln305_3, i64 %bitcast_ln306_3" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 144 'dsub' 'sub_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 145 [4/7] (2.19ns)   --->   "%sub_4_i = dsub i64 %bitcast_ln305_4, i64 %bitcast_ln306_4" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 145 'dsub' 'sub_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 146 [4/7] (2.19ns)   --->   "%sub_5_i = dsub i64 %bitcast_ln305_5, i64 %bitcast_ln306_5" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 146 'dsub' 'sub_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 147 [4/7] (2.19ns)   --->   "%sub_6_i = dsub i64 %bitcast_ln305_6, i64 %bitcast_ln306_6" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 147 'dsub' 'sub_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 148 [4/7] (2.19ns)   --->   "%sub_7_i = dsub i64 %bitcast_ln305_7, i64 %bitcast_ln306_7" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 148 'dsub' 'sub_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 2.19>
+ST_7 : Operation 149 [3/7] (2.19ns)   --->   "%sub_i = dsub i64 %bitcast_ln305, i64 %bitcast_ln306" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 149 'dsub' 'sub_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 150 [3/7] (2.19ns)   --->   "%sub_1_i = dsub i64 %bitcast_ln305_1, i64 %bitcast_ln306_1" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 150 'dsub' 'sub_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 151 [3/7] (2.19ns)   --->   "%sub_2_i = dsub i64 %bitcast_ln305_2, i64 %bitcast_ln306_2" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 151 'dsub' 'sub_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 152 [3/7] (2.19ns)   --->   "%sub_3_i = dsub i64 %bitcast_ln305_3, i64 %bitcast_ln306_3" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 152 'dsub' 'sub_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 153 [3/7] (2.19ns)   --->   "%sub_4_i = dsub i64 %bitcast_ln305_4, i64 %bitcast_ln306_4" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 153 'dsub' 'sub_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 154 [3/7] (2.19ns)   --->   "%sub_5_i = dsub i64 %bitcast_ln305_5, i64 %bitcast_ln306_5" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 154 'dsub' 'sub_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 155 [3/7] (2.19ns)   --->   "%sub_6_i = dsub i64 %bitcast_ln305_6, i64 %bitcast_ln306_6" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 155 'dsub' 'sub_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 156 [3/7] (2.19ns)   --->   "%sub_7_i = dsub i64 %bitcast_ln305_7, i64 %bitcast_ln306_7" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 156 'dsub' 'sub_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.19>
+ST_8 : Operation 157 [2/7] (2.19ns)   --->   "%sub_i = dsub i64 %bitcast_ln305, i64 %bitcast_ln306" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 157 'dsub' 'sub_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 158 [2/7] (2.19ns)   --->   "%sub_1_i = dsub i64 %bitcast_ln305_1, i64 %bitcast_ln306_1" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 158 'dsub' 'sub_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 159 [2/7] (2.19ns)   --->   "%sub_2_i = dsub i64 %bitcast_ln305_2, i64 %bitcast_ln306_2" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 159 'dsub' 'sub_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 160 [2/7] (2.19ns)   --->   "%sub_3_i = dsub i64 %bitcast_ln305_3, i64 %bitcast_ln306_3" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 160 'dsub' 'sub_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 161 [2/7] (2.19ns)   --->   "%sub_4_i = dsub i64 %bitcast_ln305_4, i64 %bitcast_ln306_4" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 161 'dsub' 'sub_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 162 [2/7] (2.19ns)   --->   "%sub_5_i = dsub i64 %bitcast_ln305_5, i64 %bitcast_ln306_5" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 162 'dsub' 'sub_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 163 [2/7] (2.19ns)   --->   "%sub_6_i = dsub i64 %bitcast_ln305_6, i64 %bitcast_ln306_6" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 163 'dsub' 'sub_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 164 [2/7] (2.19ns)   --->   "%sub_7_i = dsub i64 %bitcast_ln305_7, i64 %bitcast_ln306_7" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 164 'dsub' 'sub_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 0.93>
+ST_9 : Operation 165 [1/1] (0.00ns)   --->   "%bitcast_ln304 = bitcast i64 %trunc_ln304" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 165 'bitcast' 'bitcast_ln304' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 166 [1/1] (0.00ns)   --->   "%bitcast_ln304_1 = bitcast i64 %trunc_ln304_7" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 166 'bitcast' 'bitcast_ln304_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 167 [1/1] (0.00ns)   --->   "%bitcast_ln304_2 = bitcast i64 %trunc_ln304_8" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 167 'bitcast' 'bitcast_ln304_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 168 [1/1] (0.00ns)   --->   "%bitcast_ln304_3 = bitcast i64 %trunc_ln304_9" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 168 'bitcast' 'bitcast_ln304_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 169 [1/1] (0.00ns)   --->   "%bitcast_ln304_4 = bitcast i64 %trunc_ln304_s" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 169 'bitcast' 'bitcast_ln304_4' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 170 [1/1] (0.00ns)   --->   "%bitcast_ln304_5 = bitcast i64 %trunc_ln304_1" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 170 'bitcast' 'bitcast_ln304_5' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 171 [1/1] (0.00ns)   --->   "%bitcast_ln304_6 = bitcast i64 %trunc_ln304_2" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 171 'bitcast' 'bitcast_ln304_6' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 172 [1/1] (0.00ns)   --->   "%bitcast_ln304_7 = bitcast i64 %trunc_ln304_3" [./basic_helper.hpp:304->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 172 'bitcast' 'bitcast_ln304_7' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 173 [1/7] (0.09ns)   --->   "%sub_i = dsub i64 %bitcast_ln305, i64 %bitcast_ln306" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 173 'dsub' 'sub_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 174 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_add_i = muxlogic i64 %bitcast_ln304"   --->   Operation 174 'muxlogic' 'muxLogicI0_to_add_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 175 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_add_i = muxlogic i64 %sub_i"   --->   Operation 175 'muxlogic' 'muxLogicI1_to_add_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 176 [1/7] (0.09ns)   --->   "%sub_1_i = dsub i64 %bitcast_ln305_1, i64 %bitcast_ln306_1" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 176 'dsub' 'sub_1_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 177 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_add_1_i = muxlogic i64 %bitcast_ln304_1"   --->   Operation 177 'muxlogic' 'muxLogicI0_to_add_1_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 178 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_add_1_i = muxlogic i64 %sub_1_i"   --->   Operation 178 'muxlogic' 'muxLogicI1_to_add_1_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 179 [1/7] (0.09ns)   --->   "%sub_2_i = dsub i64 %bitcast_ln305_2, i64 %bitcast_ln306_2" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 179 'dsub' 'sub_2_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 180 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_add_2_i = muxlogic i64 %bitcast_ln304_2"   --->   Operation 180 'muxlogic' 'muxLogicI0_to_add_2_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 181 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_add_2_i = muxlogic i64 %sub_2_i"   --->   Operation 181 'muxlogic' 'muxLogicI1_to_add_2_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 182 [1/7] (0.09ns)   --->   "%sub_3_i = dsub i64 %bitcast_ln305_3, i64 %bitcast_ln306_3" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 182 'dsub' 'sub_3_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 183 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_add_3_i = muxlogic i64 %bitcast_ln304_3"   --->   Operation 183 'muxlogic' 'muxLogicI0_to_add_3_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 184 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_add_3_i = muxlogic i64 %sub_3_i"   --->   Operation 184 'muxlogic' 'muxLogicI1_to_add_3_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 185 [1/7] (0.09ns)   --->   "%sub_4_i = dsub i64 %bitcast_ln305_4, i64 %bitcast_ln306_4" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 185 'dsub' 'sub_4_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 186 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_add_4_i = muxlogic i64 %bitcast_ln304_4"   --->   Operation 186 'muxlogic' 'muxLogicI0_to_add_4_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 187 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_add_4_i = muxlogic i64 %sub_4_i"   --->   Operation 187 'muxlogic' 'muxLogicI1_to_add_4_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 188 [1/7] (0.09ns)   --->   "%sub_5_i = dsub i64 %bitcast_ln305_5, i64 %bitcast_ln306_5" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 188 'dsub' 'sub_5_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 189 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_add_5_i = muxlogic i64 %bitcast_ln304_5"   --->   Operation 189 'muxlogic' 'muxLogicI0_to_add_5_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 190 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_add_5_i = muxlogic i64 %sub_5_i"   --->   Operation 190 'muxlogic' 'muxLogicI1_to_add_5_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 191 [1/7] (0.09ns)   --->   "%sub_6_i = dsub i64 %bitcast_ln305_6, i64 %bitcast_ln306_6" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 191 'dsub' 'sub_6_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 192 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_add_6_i = muxlogic i64 %bitcast_ln304_6"   --->   Operation 192 'muxlogic' 'muxLogicI0_to_add_6_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 193 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_add_6_i = muxlogic i64 %sub_6_i"   --->   Operation 193 'muxlogic' 'muxLogicI1_to_add_6_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 194 [1/7] (0.09ns)   --->   "%sub_7_i = dsub i64 %bitcast_ln305_7, i64 %bitcast_ln306_7" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 194 'dsub' 'sub_7_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 195 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI0_to_add_7_i = muxlogic i64 %bitcast_ln304_7"   --->   Operation 195 'muxlogic' 'muxLogicI0_to_add_7_i' <Predicate = true> <Delay = 0.83>
+ST_9 : Operation 196 [2/2] (0.83ns) (share mux size 16)   --->   "%muxLogicI1_to_add_7_i = muxlogic i64 %sub_7_i"   --->   Operation 196 'muxlogic' 'muxLogicI1_to_add_7_i' <Predicate = true> <Delay = 0.83>
+
+State 10 <SV = 9> <Delay = 2.02>
+ST_10 : Operation 197 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_add_i = muxlogic i64 %bitcast_ln304"   --->   Operation 197 'muxlogic' 'muxLogicI0_to_add_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 198 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_add_i = muxlogic i64 %sub_i"   --->   Operation 198 'muxlogic' 'muxLogicI1_to_add_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 199 [7/7] (2.02ns)   --->   "%add_i = dadd i64 %bitcast_ln304, i64 %sub_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 199 'dadd' 'add_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 200 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_add_1_i = muxlogic i64 %bitcast_ln304_1"   --->   Operation 200 'muxlogic' 'muxLogicI0_to_add_1_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 201 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_add_1_i = muxlogic i64 %sub_1_i"   --->   Operation 201 'muxlogic' 'muxLogicI1_to_add_1_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 202 [7/7] (2.02ns)   --->   "%add_1_i = dadd i64 %bitcast_ln304_1, i64 %sub_1_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 202 'dadd' 'add_1_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 203 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_add_2_i = muxlogic i64 %bitcast_ln304_2"   --->   Operation 203 'muxlogic' 'muxLogicI0_to_add_2_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 204 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_add_2_i = muxlogic i64 %sub_2_i"   --->   Operation 204 'muxlogic' 'muxLogicI1_to_add_2_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 205 [7/7] (2.02ns)   --->   "%add_2_i = dadd i64 %bitcast_ln304_2, i64 %sub_2_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 205 'dadd' 'add_2_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 206 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_add_3_i = muxlogic i64 %bitcast_ln304_3"   --->   Operation 206 'muxlogic' 'muxLogicI0_to_add_3_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 207 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_add_3_i = muxlogic i64 %sub_3_i"   --->   Operation 207 'muxlogic' 'muxLogicI1_to_add_3_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 208 [7/7] (2.02ns)   --->   "%add_3_i = dadd i64 %bitcast_ln304_3, i64 %sub_3_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 208 'dadd' 'add_3_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 209 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_add_4_i = muxlogic i64 %bitcast_ln304_4"   --->   Operation 209 'muxlogic' 'muxLogicI0_to_add_4_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 210 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_add_4_i = muxlogic i64 %sub_4_i"   --->   Operation 210 'muxlogic' 'muxLogicI1_to_add_4_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 211 [7/7] (2.02ns)   --->   "%add_4_i = dadd i64 %bitcast_ln304_4, i64 %sub_4_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 211 'dadd' 'add_4_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 212 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_add_5_i = muxlogic i64 %bitcast_ln304_5"   --->   Operation 212 'muxlogic' 'muxLogicI0_to_add_5_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 213 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_add_5_i = muxlogic i64 %sub_5_i"   --->   Operation 213 'muxlogic' 'muxLogicI1_to_add_5_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 214 [7/7] (2.02ns)   --->   "%add_5_i = dadd i64 %bitcast_ln304_5, i64 %sub_5_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 214 'dadd' 'add_5_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 215 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_add_6_i = muxlogic i64 %bitcast_ln304_6"   --->   Operation 215 'muxlogic' 'muxLogicI0_to_add_6_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 216 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_add_6_i = muxlogic i64 %sub_6_i"   --->   Operation 216 'muxlogic' 'muxLogicI1_to_add_6_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 217 [7/7] (2.02ns)   --->   "%add_6_i = dadd i64 %bitcast_ln304_6, i64 %sub_6_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 217 'dadd' 'add_6_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 218 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI0_to_add_7_i = muxlogic i64 %bitcast_ln304_7"   --->   Operation 218 'muxlogic' 'muxLogicI0_to_add_7_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 219 [1/2] (0.00ns) (share mux size 16)   --->   "%muxLogicI1_to_add_7_i = muxlogic i64 %sub_7_i"   --->   Operation 219 'muxlogic' 'muxLogicI1_to_add_7_i' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 220 [7/7] (2.02ns)   --->   "%add_7_i = dadd i64 %bitcast_ln304_7, i64 %sub_7_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 220 'dadd' 'add_7_i' <Predicate = true> <Delay = 2.02> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.19>
+ST_11 : Operation 221 [6/7] (2.19ns)   --->   "%add_i = dadd i64 %bitcast_ln304, i64 %sub_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 221 'dadd' 'add_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 222 [6/7] (2.19ns)   --->   "%add_1_i = dadd i64 %bitcast_ln304_1, i64 %sub_1_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 222 'dadd' 'add_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 223 [6/7] (2.19ns)   --->   "%add_2_i = dadd i64 %bitcast_ln304_2, i64 %sub_2_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 223 'dadd' 'add_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 224 [6/7] (2.19ns)   --->   "%add_3_i = dadd i64 %bitcast_ln304_3, i64 %sub_3_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 224 'dadd' 'add_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 225 [6/7] (2.19ns)   --->   "%add_4_i = dadd i64 %bitcast_ln304_4, i64 %sub_4_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 225 'dadd' 'add_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 226 [6/7] (2.19ns)   --->   "%add_5_i = dadd i64 %bitcast_ln304_5, i64 %sub_5_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 226 'dadd' 'add_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 227 [6/7] (2.19ns)   --->   "%add_6_i = dadd i64 %bitcast_ln304_6, i64 %sub_6_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 227 'dadd' 'add_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 228 [6/7] (2.19ns)   --->   "%add_7_i = dadd i64 %bitcast_ln304_7, i64 %sub_7_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 228 'dadd' 'add_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 2.19>
+ST_12 : Operation 229 [5/7] (2.19ns)   --->   "%add_i = dadd i64 %bitcast_ln304, i64 %sub_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 229 'dadd' 'add_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 230 [5/7] (2.19ns)   --->   "%add_1_i = dadd i64 %bitcast_ln304_1, i64 %sub_1_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 230 'dadd' 'add_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 231 [5/7] (2.19ns)   --->   "%add_2_i = dadd i64 %bitcast_ln304_2, i64 %sub_2_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 231 'dadd' 'add_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 232 [5/7] (2.19ns)   --->   "%add_3_i = dadd i64 %bitcast_ln304_3, i64 %sub_3_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 232 'dadd' 'add_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 233 [5/7] (2.19ns)   --->   "%add_4_i = dadd i64 %bitcast_ln304_4, i64 %sub_4_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 233 'dadd' 'add_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 234 [5/7] (2.19ns)   --->   "%add_5_i = dadd i64 %bitcast_ln304_5, i64 %sub_5_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 234 'dadd' 'add_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 235 [5/7] (2.19ns)   --->   "%add_6_i = dadd i64 %bitcast_ln304_6, i64 %sub_6_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 235 'dadd' 'add_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 236 [5/7] (2.19ns)   --->   "%add_7_i = dadd i64 %bitcast_ln304_7, i64 %sub_7_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 236 'dadd' 'add_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 2.19>
+ST_13 : Operation 237 [4/7] (2.19ns)   --->   "%add_i = dadd i64 %bitcast_ln304, i64 %sub_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 237 'dadd' 'add_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 238 [4/7] (2.19ns)   --->   "%add_1_i = dadd i64 %bitcast_ln304_1, i64 %sub_1_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 238 'dadd' 'add_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 239 [4/7] (2.19ns)   --->   "%add_2_i = dadd i64 %bitcast_ln304_2, i64 %sub_2_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 239 'dadd' 'add_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 240 [4/7] (2.19ns)   --->   "%add_3_i = dadd i64 %bitcast_ln304_3, i64 %sub_3_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 240 'dadd' 'add_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 241 [4/7] (2.19ns)   --->   "%add_4_i = dadd i64 %bitcast_ln304_4, i64 %sub_4_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 241 'dadd' 'add_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 242 [4/7] (2.19ns)   --->   "%add_5_i = dadd i64 %bitcast_ln304_5, i64 %sub_5_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 242 'dadd' 'add_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 243 [4/7] (2.19ns)   --->   "%add_6_i = dadd i64 %bitcast_ln304_6, i64 %sub_6_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 243 'dadd' 'add_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 244 [4/7] (2.19ns)   --->   "%add_7_i = dadd i64 %bitcast_ln304_7, i64 %sub_7_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 244 'dadd' 'add_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 2.19>
+ST_14 : Operation 245 [3/7] (2.19ns)   --->   "%add_i = dadd i64 %bitcast_ln304, i64 %sub_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 245 'dadd' 'add_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 246 [3/7] (2.19ns)   --->   "%add_1_i = dadd i64 %bitcast_ln304_1, i64 %sub_1_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 246 'dadd' 'add_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 247 [3/7] (2.19ns)   --->   "%add_2_i = dadd i64 %bitcast_ln304_2, i64 %sub_2_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 247 'dadd' 'add_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 248 [3/7] (2.19ns)   --->   "%add_3_i = dadd i64 %bitcast_ln304_3, i64 %sub_3_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 248 'dadd' 'add_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 249 [3/7] (2.19ns)   --->   "%add_4_i = dadd i64 %bitcast_ln304_4, i64 %sub_4_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 249 'dadd' 'add_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 250 [3/7] (2.19ns)   --->   "%add_5_i = dadd i64 %bitcast_ln304_5, i64 %sub_5_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 250 'dadd' 'add_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 251 [3/7] (2.19ns)   --->   "%add_6_i = dadd i64 %bitcast_ln304_6, i64 %sub_6_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 251 'dadd' 'add_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 252 [3/7] (2.19ns)   --->   "%add_7_i = dadd i64 %bitcast_ln304_7, i64 %sub_7_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 252 'dadd' 'add_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 2.19>
+ST_15 : Operation 253 [2/7] (2.19ns)   --->   "%add_i = dadd i64 %bitcast_ln304, i64 %sub_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 253 'dadd' 'add_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 254 [2/7] (2.19ns)   --->   "%add_1_i = dadd i64 %bitcast_ln304_1, i64 %sub_1_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 254 'dadd' 'add_1_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 255 [2/7] (2.19ns)   --->   "%add_2_i = dadd i64 %bitcast_ln304_2, i64 %sub_2_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 255 'dadd' 'add_2_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 256 [2/7] (2.19ns)   --->   "%add_3_i = dadd i64 %bitcast_ln304_3, i64 %sub_3_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 256 'dadd' 'add_3_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 257 [2/7] (2.19ns)   --->   "%add_4_i = dadd i64 %bitcast_ln304_4, i64 %sub_4_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 257 'dadd' 'add_4_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 258 [2/7] (2.19ns)   --->   "%add_5_i = dadd i64 %bitcast_ln304_5, i64 %sub_5_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 258 'dadd' 'add_5_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 259 [2/7] (2.19ns)   --->   "%add_6_i = dadd i64 %bitcast_ln304_6, i64 %sub_6_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 259 'dadd' 'add_6_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 260 [2/7] (2.19ns)   --->   "%add_7_i = dadd i64 %bitcast_ln304_7, i64 %sub_7_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 260 'dadd' 'add_7_i' <Predicate = true> <Delay = 2.19> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 283 [1/1] (0.38ns)   --->   "%ret_ln0 = ret"   --->   Operation 283 'ret' 'ret_ln0' <Predicate = (!icmp_ln302)> <Delay = 0.38>
+
+State 16 <SV = 15> <Delay = 1.00>
+ST_16 : Operation 261 [1/1] (0.00ns)   --->   "%specpipeline_ln303 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [./basic_helper.hpp:303->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 261 'specpipeline' 'specpipeline_ln303' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 262 [1/1] (0.00ns)   --->   "%specloopname_ln302 = specloopname void @_ssdm_op_SpecLoopName, void @empty_35" [./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 262 'specloopname' 'specloopname_ln302' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 263 [1/7] (0.09ns)   --->   "%add_i = dadd i64 %bitcast_ln304, i64 %sub_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 263 'dadd' 'add_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 264 [1/7] (0.09ns)   --->   "%add_1_i = dadd i64 %bitcast_ln304_1, i64 %sub_1_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 264 'dadd' 'add_1_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 265 [1/7] (0.09ns)   --->   "%add_2_i = dadd i64 %bitcast_ln304_2, i64 %sub_2_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 265 'dadd' 'add_2_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 266 [1/7] (0.09ns)   --->   "%add_3_i = dadd i64 %bitcast_ln304_3, i64 %sub_3_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 266 'dadd' 'add_3_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 267 [1/7] (0.09ns)   --->   "%add_4_i = dadd i64 %bitcast_ln304_4, i64 %sub_4_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 267 'dadd' 'add_4_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 268 [1/7] (0.09ns)   --->   "%add_5_i = dadd i64 %bitcast_ln304_5, i64 %sub_5_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 268 'dadd' 'add_5_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 269 [1/7] (0.09ns)   --->   "%add_6_i = dadd i64 %bitcast_ln304_6, i64 %sub_6_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 269 'dadd' 'add_6_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 270 [1/7] (0.09ns)   --->   "%add_7_i = dadd i64 %bitcast_ln304_7, i64 %sub_7_i" [./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 270 'dadd' 'add_7_i' <Predicate = true> <Delay = 0.09> <CoreInst = "DAddSub_nodsp">   --->   Core 40 'DAddSub_nodsp' <Latency = 6> <II = 1> <Delay = 2.19> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 271 [1/1] (0.00ns)   --->   "%bitcast_ln313 = bitcast i64 %add_i" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 271 'bitcast' 'bitcast_ln313' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 272 [1/1] (0.00ns)   --->   "%bitcast_ln313_1 = bitcast i64 %add_1_i" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 272 'bitcast' 'bitcast_ln313_1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 273 [1/1] (0.00ns)   --->   "%bitcast_ln313_2 = bitcast i64 %add_2_i" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 273 'bitcast' 'bitcast_ln313_2' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 274 [1/1] (0.00ns)   --->   "%bitcast_ln313_3 = bitcast i64 %add_3_i" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 274 'bitcast' 'bitcast_ln313_3' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 275 [1/1] (0.00ns)   --->   "%bitcast_ln313_4 = bitcast i64 %add_4_i" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 275 'bitcast' 'bitcast_ln313_4' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 276 [1/1] (0.00ns)   --->   "%bitcast_ln313_5 = bitcast i64 %add_5_i" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 276 'bitcast' 'bitcast_ln313_5' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 277 [1/1] (0.00ns)   --->   "%bitcast_ln313_6 = bitcast i64 %add_6_i" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 277 'bitcast' 'bitcast_ln313_6' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 278 [1/1] (0.00ns)   --->   "%bitcast_ln313_7 = bitcast i64 %add_7_i" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 278 'bitcast' 'bitcast_ln313_7' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 279 [1/1] (0.00ns)   --->   "%or_ln313_i = bitconcatenate i512 @_ssdm_op_BitConcatenate.i512.i64.i64.i64.i64.i64.i64.i64.i64, i64 %bitcast_ln313_7, i64 %bitcast_ln313_6, i64 %bitcast_ln313_5, i64 %bitcast_ln313_4, i64 %bitcast_ln313_3, i64 %bitcast_ln313_2, i64 %bitcast_ln313_1, i64 %bitcast_ln313" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 279 'bitconcatenate' 'or_ln313_i' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 280 [1/1] (0.00ns)   --->   "%muxLogicData_to_write_ln313 = muxlogic i512 %or_ln313_i"   --->   Operation 280 'muxlogic' 'muxLogicData_to_write_ln313' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 281 [1/1] (0.91ns)   --->   "%write_ln313 = write void @_ssdm_op_Write.ap_fifo.volatile.i512P0A, i512 %dualInfeasConstr_axpyfifo_i, i512 %or_ln313_i" [./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 281 'write' 'write_ln313' <Predicate = true> <Delay = 0.91> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_16 : Operation 282 [1/1] (0.00ns)   --->   "%br_ln302 = br void %VITIS_LOOP_309_1.i" [./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 282 'br' 'br_ln302' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 1.665ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'i' [15]  (0.400 ns)
+	'load' operation 31 bit ('i_load', ./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) on local variable 'i' [19]  (0.000 ns)
+	'add' operation 31 bit ('add_ln302', ./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [24]  (0.865 ns)
+	'muxlogic' operation 0 bit ('muxLogicData_to_store_ln302') [140]  (0.000 ns)
+	'store' operation 0 bit ('store_ln302', ./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) of variable 'add_ln302', ./basic_helper.hpp:302->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95 on local variable 'i' [142]  (0.400 ns)
+
+ <State 2>: 1.592ns
+The critical path consists of the following:
+	'muxlogic' operation 512 bit ('muxLogicCE_to_dualInfeasLbRay_SVfifo_i_read') [45]  (0.000 ns)
+	fifo read operation ('dualInfeasLbRay_SVfifo_i_read', ./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) on port 'dualInfeasLbRay_SVfifo_i' (./basic_helper.hpp:305->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [46]  (0.753 ns)
+	'muxlogic' operation 64 bit ('muxLogicI0_to_sub_i') [81]  (0.839 ns)
+
+ <State 3>: 2.029ns
+The critical path consists of the following:
+	'muxlogic' operation 64 bit ('muxLogicI0_to_sub_i') [81]  (0.000 ns)
+	'dsub' operation 64 bit ('sub_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [83]  (2.029 ns)
+
+ <State 4>: 2.190ns
+The critical path consists of the following:
+	'dsub' operation 64 bit ('sub_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [83]  (2.190 ns)
+
+ <State 5>: 2.190ns
+The critical path consists of the following:
+	'dsub' operation 64 bit ('sub_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [83]  (2.190 ns)
+
+ <State 6>: 2.190ns
+The critical path consists of the following:
+	'dsub' operation 64 bit ('sub_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [83]  (2.190 ns)
+
+ <State 7>: 2.190ns
+The critical path consists of the following:
+	'dsub' operation 64 bit ('sub_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [83]  (2.190 ns)
+
+ <State 8>: 2.190ns
+The critical path consists of the following:
+	'dsub' operation 64 bit ('sub_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [83]  (2.190 ns)
+
+ <State 9>: 0.930ns
+The critical path consists of the following:
+	'dsub' operation 64 bit ('sub_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [83]  (0.091 ns)
+	'muxlogic' operation 64 bit ('muxLogicI1_to_add_i') [85]  (0.839 ns)
+
+ <State 10>: 2.029ns
+The critical path consists of the following:
+	'muxlogic' operation 64 bit ('muxLogicI0_to_add_i') [84]  (0.000 ns)
+	'dadd' operation 64 bit ('add_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [86]  (2.029 ns)
+
+ <State 11>: 2.190ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('add_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [86]  (2.190 ns)
+
+ <State 12>: 2.190ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('add_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [86]  (2.190 ns)
+
+ <State 13>: 2.190ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('add_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [86]  (2.190 ns)
+
+ <State 14>: 2.190ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('add_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [86]  (2.190 ns)
+
+ <State 15>: 2.190ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('add_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [86]  (2.190 ns)
+
+ <State 16>: 1.008ns
+The critical path consists of the following:
+	'dadd' operation 64 bit ('add_i', ./basic_helper.hpp:311->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [86]  (0.091 ns)
+	'muxlogic' operation 0 bit ('muxLogicData_to_write_ln313') [138]  (0.000 ns)
+	fifo write operation ('write_ln313', ./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) on port 'dualInfeasConstr_axpyfifo_i' (./basic_helper.hpp:313->./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95) [139]  (0.917 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,357 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "25 7 18",
+    "file": "Infeasi_Res_S2.cpp",
+    "fileloc": 28,
+    "instructions": 84,
+    "loads": {
+      "L": 4
+    },
+    "name": "Infeasi_Res_S2",
+    "stores": {
+      "L": 2,
+      "T": 2
+    },
+    "total_instructions": 3718
+  },
+  "1": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 289,
+    "instructions": 58,
+    "loads": {
+      "L": 3
+    },
+    "name": "axpy_2fused",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 124
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "19",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "16 28",
+    "file": "Compute_Dual_Infeasibility.hpp",
+    "fileloc": 6,
+    "instructions": 23,
+    "name": "Primal_Constr",
+    "total_instructions": 602
+  },
+  "12": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 244,
+    "instructions": 73,
+    "loads": {
+      "L": 16
+    },
+    "name": "twoNorm",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 259
+  },
+  "13": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 65,
+    "instructions": 21,
+    "loads": {
+      "L": 1
+    },
+    "name": "loadDDR_data_special",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 29
+  },
+  "14": {
+    "basicblocks": 18,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 384,
+    "instructions": 52,
+    "loads": {
+      "L": 3
+    },
+    "name": "projPos",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 95
+  },
+  "15": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 172,
+    "instructions": 39,
+    "loads": {
+      "L": 1
+    },
+    "name": "scaleVector_2out",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 75
+  },
+  "16": {
+    "basicblocks": 18,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 361,
+    "instructions": 52,
+    "loads": {
+      "L": 3
+    },
+    "name": "projNeg",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 95
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "16 14 6 6 22 22 29",
+    "file": "Compute_Dual_Infeasibility.hpp",
+    "fileloc": 86,
+    "instructions": 78,
+    "name": "Primal_Bound",
+    "total_instructions": 1402
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "6 6 15 24 11 17 20",
+    "file": "Compute_Dual_Infeasibility.hpp",
+    "fileloc": 141,
+    "instructions": 77,
+    "name": "Compute_Dual_Infeasibility_stage2",
+    "total_instructions": 2297
+  },
+  "19": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "12",
+    "file": "basic_helper.hpp",
+    "fileloc": 318,
+    "instructions": 4,
+    "name": "scale_and_twoNorm_noScaled",
+    "total_instructions": 263
+  },
+  "20": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 22,
+    "instructions": 14,
+    "loads": {
+      "L": 3
+    },
+    "name": "add3_Sqrt",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 18
+  },
+  "21": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 409,
+    "instructions": 47,
+    "loads": {
+      "L": 2
+    },
+    "name": "ediv",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 96
+  },
+  "22": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 265,
+    "instructions": 47,
+    "loads": {
+      "L": 2
+    },
+    "name": "edot",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 96
+  },
+  "23": {
+    "basicblocks": 4,
+    "calls": "9 2",
+    "file": "basic_helper.hpp",
+    "fileloc": 344,
+    "instructions": 7,
+    "name": "scale_and_twoNorm",
+    "total_instructions": 677
+  },
+  "24": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 153,
+    "instructions": 38,
+    "loads": {
+      "L": 1
+    },
+    "name": "scaleVector",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 70
+  },
+  "25": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "Infeasi_Res_S2.cpp",
+    "fileloc": 20,
+    "instructions": 9,
+    "loads": {
+      "L": 2
+    },
+    "name": "Process_N",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 9
+  },
+  "26": {
+    "basicblocks": 1,
+    "calls": "3",
+    "file": "basic_helper.hpp",
+    "fileloc": 430,
+    "instructions": 4,
+    "name": "scale_and_twoNormSquared_noScaled",
+    "total_instructions": 155
+  },
+  "27": {
+    "basicblocks": 1,
+    "calls": "3 3",
+    "file": "Compute_Dual_Infeasibility.hpp",
+    "fileloc": 49,
+    "instructions": 7,
+    "name": "scale_and_twoNormSquared_for_lub_noScaled",
+    "total_instructions": 309
+  },
+  "28": {
+    "basicblocks": 4,
+    "calls": "4 26",
+    "file": "basic_helper.hpp",
+    "fileloc": 457,
+    "instructions": 25,
+    "name": "scale_and_twoNormSquared",
+    "total_instructions": 482
+  },
+  "29": {
+    "basicblocks": 4,
+    "calls": "5 27",
+    "file": "Compute_Dual_Infeasibility.hpp",
+    "fileloc": 65,
+    "instructions": 7,
+    "name": "scale_and_twoNormSquared_for_lub",
+    "total_instructions": 887
+  },
+  "3": {
+    "basicblocks": 45,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 93,
+    "instructions": 123,
+    "loads": {
+      "L": 5
+    },
+    "name": "twoNormSquared",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 151
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "6 22 3",
+    "file": "basic_helper.hpp",
+    "fileloc": 439,
+    "instructions": 26,
+    "name": "scale_and_twoNormSquared_Scaled",
+    "total_instructions": 299
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "13 21 21 3 3",
+    "file": "Compute_Dual_Infeasibility.hpp",
+    "fileloc": 24,
+    "instructions": 44,
+    "name": "scale_and_twoNormSquared_for_lub_Scaled",
+    "total_instructions": 571
+  },
+  "6": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 51,
+    "instructions": 20,
+    "loads": {
+      "L": 1
+    },
+    "name": "loadDDR_data",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 24
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "6 6 6 6 24 24 24 24 8 1 23",
+    "file": "Compute_Primal_Infeasibility.hpp",
+    "fileloc": 39,
+    "instructions": 94,
+    "name": "Compute_Primal_Infeasibility_stage2",
+    "total_instructions": 1302
+  },
+  "8": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "basic_helper.hpp",
+    "fileloc": 11,
+    "instructions": 16,
+    "name": "consumer",
+    "total_instructions": 22
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "6 22 12",
+    "file": "basic_helper.hpp",
+    "fileloc": 327,
+    "instructions": 26,
+    "name": "scale_and_twoNorm_Scaled",
+    "total_instructions": 407
+  }
+}

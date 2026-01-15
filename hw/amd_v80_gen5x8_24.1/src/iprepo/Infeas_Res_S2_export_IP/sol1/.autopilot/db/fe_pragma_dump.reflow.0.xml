@@ -1,0 +1,93 @@
+<pragmas>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<double, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<hls::vector<double, 8ul>, 0>::stream()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="./basic_helper.hpp" line="370" pragmaType="pipeline" parentfunction="projNeg" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="374" pragmaType="unroll" parentfunction="projNeg" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="16" pragmaType="pipeline" parentfunction="consumer" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="87" pragmaType="dataflow" parentfunction="Infeasi_Res_S2" disable_start_propagation="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="52" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="y"/>
+<pragma file="Infeasi_Res_S2.cpp" line="54" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="dSlackPos"/>
+<pragma file="Infeasi_Res_S2.cpp" line="56" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="dSlackNeg"/>
+<pragma file="Infeasi_Res_S2.cpp" line="58" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="aty"/>
+<pragma file="Infeasi_Res_S2.cpp" line="60" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="colScale0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="62" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="x"/>
+<pragma file="Infeasi_Res_S2.cpp" line="64" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="ax"/>
+<pragma file="Infeasi_Res_S2.cpp" line="66" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="colScale1"/>
+<pragma file="Infeasi_Res_S2.cpp" line="68" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="rowScale"/>
+<pragma file="Infeasi_Res_S2.cpp" line="70" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="hasLower"/>
+<pragma file="Infeasi_Res_S2.cpp" line="72" pragmaType="aggregate" parentfunction="Infeasi_Res_S2" compact="3" variable="hasUpper"/>
+<pragma file="Infeasi_Res_S2.cpp" line="52" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="y" bundle="gmem0" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="53" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="dSlackPos" bundle="gmem1" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="54" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="dSlackNeg" bundle="gmem2" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="55" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="aty" bundle="gmem3" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="56" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="colScale0" bundle="gmem4" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="57" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="x" bundle="gmem5" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="58" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="ax" bundle="gmem6" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="59" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="colScale1" bundle="gmem7" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="60" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="rowScale" bundle="gmem8" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="61" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="hasLower" bundle="gmem9" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="62" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="m_axi" port="hasUpper" bundle="gmem10" offset="slave" name="" depth="-1" num_read_outstanding="64" num_write_outstanding="-1" max_burst_read_length="64" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="Infeasi_Res_S2.cpp" line="64" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="y" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="65" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="dSlackPos" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="66" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="dSlackNeg" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="67" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="aty" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="68" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="colScale0" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="69" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="x" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="70" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="ax" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="71" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="colScale1" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="72" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="rowScale" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="73" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="hasLower" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="74" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="hasUpper" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="76" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="nRows" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="77" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="nCols" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="78" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="problem_nEqs" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="79" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="ifScaled" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="80" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="inverse_dScale" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="81" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="inverse_pScale" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="83" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="dPrimalInfeasRes_val" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="84" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="dDualInfeasRes_val" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="Infeasi_Res_S2.cpp" line="86" pragmaType="interface" parentfunction="Infeasi_Res_S2" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="./Compute_Dual_Infeasibility.hpp" line="97" pragmaType="dataflow" parentfunction="Primal_Bound" disable_start_propagation="0"/>
+<pragma file="./Compute_Dual_Infeasibility.hpp" line="157" pragmaType="dataflow" parentfunction="Compute_Dual_Infeasibility_stage2" disable_start_propagation="0"/>
+<pragma file="./Compute_Dual_Infeasibility.hpp" line="34" pragmaType="dataflow" parentfunction="scale_and_twoNormSquared_for_lub_Scaled" disable_start_propagation="0"/>
+<pragma file="./Compute_Dual_Infeasibility.hpp" line="58" pragmaType="dataflow" parentfunction="scale_and_twoNormSquared_for_lub_noScaled" disable_start_propagation="0"/>
+<pragma file="./Compute_Primal_Infeasibility.hpp" line="54" pragmaType="dataflow" parentfunction="Compute_Primal_Infeasibility_stage2" disable_start_propagation="0"/>
+<pragma file="./Compute_Dual_Infeasibility.hpp" line="14" pragmaType="dataflow" parentfunction="Primal_Constr" disable_start_propagation="0"/>
+<pragma file="./basic_helper.hpp" line="394" pragmaType="pipeline" parentfunction="projPos" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="398" pragmaType="unroll" parentfunction="projPos" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="417" pragmaType="pipeline" parentfunction="ediv" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="423" pragmaType="unroll" parentfunction="ediv" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="435" pragmaType="dataflow" parentfunction="scale_and_twoNormSquared_noScaled" disable_start_propagation="0"/>
+<pragma file="./basic_helper.hpp" line="445" pragmaType="dataflow" parentfunction="scale_and_twoNormSquared_Scaled" disable_start_propagation="0"/>
+<pragma file="./basic_helper.hpp" line="333" pragmaType="dataflow" parentfunction="scale_and_twoNorm_Scaled" disable_start_propagation="0"/>
+<pragma file="./basic_helper.hpp" line="181" pragmaType="pipeline" parentfunction="scaleVector_2out" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="185" pragmaType="unroll" parentfunction="scaleVector_2out" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="323" pragmaType="dataflow" parentfunction="scale_and_twoNorm_noScaled" disable_start_propagation="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="pragma" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="aggregate" parentfunction="pragma" compact="3" variable="this"/>
+<pragma file="./basic_helper.hpp" line="161" pragmaType="pipeline" parentfunction="scaleVector" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="165" pragmaType="unroll" parentfunction="scaleVector" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="303" pragmaType="pipeline" parentfunction="axpy_2fused" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="310" pragmaType="unroll" parentfunction="axpy_2fused" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::vector<double, 8ul>::operator[](unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="./basic_helper.hpp" line="74" pragmaType="pipeline" parentfunction="loadDDR_data_special" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="100" pragmaType="inline" parentfunction="twoNormSquared" off="1" region="0" recursive="0"/>
+<pragma file="./basic_helper.hpp" line="142" pragmaType="unroll" parentfunction="twoNormSquared" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="144" pragmaType="unroll" parentfunction="twoNormSquared" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="121" pragmaType="pipeline" parentfunction="twoNormSquared" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="126" pragmaType="unroll" parentfunction="twoNormSquared" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="131" pragmaType="unroll" parentfunction="twoNormSquared" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="112" pragmaType="unroll" parentfunction="twoNormSquared" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="114" pragmaType="unroll" parentfunction="twoNormSquared" factor="-1" skip_exit_check="0"/>
+<pragma file="./basic_helper.hpp" line="107" pragmaType="array_partition" parentfunction="twoNormSquared" dim="0" factor="0" mode="complete" dynamic="0" variable="shift_reg"/>
+<pragma file="./basic_helper.hpp" line="59" pragmaType="pipeline" parentfunction="loadDDR_data" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="253" pragmaType="pipeline" parentfunction="twoNorm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="274" pragmaType="pipeline" parentfunction="edot" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./basic_helper.hpp" line="279" pragmaType="unroll" parentfunction="edot" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+</pragmas>

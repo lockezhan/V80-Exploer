@@ -1,0 +1,194 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'edot_11_Pipeline_edot'" level="0">
+<item name = "Date">Fri Jan  9 14:29:49 2026
+</item>
+<item name = "Version">2024.1.2 (Build 5096458 on Sep  5 2024)</item>
+<item name = "Project">build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S</item>
+<item name = "Solution">sol1 (Vivado IP Flow Target)</item>
+<item name = "Product family">versalhbm</item>
+<item name = "Target device">xcv80-lsva4737-2MHP-e-S</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.154 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, 0, 0, loop auto-rewind stp(delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- edot">?, ?, 7, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 46, 83, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 48, 1392, 1720, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 592, -</column>
+<column name="Register">-, -, 1580, -, -</column>
+<specialColumn name="Available SLR">2494, 3616, 1716138, 858069, 641</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 1, ~0, ~0, 0</specialColumn>
+<specialColumn name="Available">7482, 10848, 5148416, 2574208, 1925</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="dmul_64ns_64ns_64_5_med_dsp_1_U333">dmul_64ns_64ns_64_5_med_dsp_1, 0, 6, 174, 215, 0</column>
+<column name="dmul_64ns_64ns_64_5_med_dsp_1_U334">dmul_64ns_64ns_64_5_med_dsp_1, 0, 6, 174, 215, 0</column>
+<column name="dmul_64ns_64ns_64_5_med_dsp_1_U335">dmul_64ns_64ns_64_5_med_dsp_1, 0, 6, 174, 215, 0</column>
+<column name="dmul_64ns_64ns_64_5_med_dsp_1_U336">dmul_64ns_64ns_64_5_med_dsp_1, 0, 6, 174, 215, 0</column>
+<column name="dmul_64ns_64ns_64_5_med_dsp_1_U337">dmul_64ns_64ns_64_5_med_dsp_1, 0, 6, 174, 215, 0</column>
+<column name="dmul_64ns_64ns_64_5_med_dsp_1_U338">dmul_64ns_64ns_64_5_med_dsp_1, 0, 6, 174, 215, 0</column>
+<column name="dmul_64ns_64ns_64_5_med_dsp_1_U339">dmul_64ns_64ns_64_5_med_dsp_1, 0, 6, 174, 215, 0</column>
+<column name="dmul_64ns_64ns_64_5_med_dsp_1_U340">dmul_64ns_64ns_64_5_med_dsp_1, 0, 6, 174, 215, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln273_fu_149_p2">+, 0, 0, 31, 31, 1</column>
+<column name="ap_frp_data_req_primalInfeasBound_fifo">-, 0, 23, 15, 3, 1</column>
+<column name="ap_frp_data_req_rowScale_fifo">-, 0, 23, 15, 3, 1</column>
+<column name="ap_condition_frp_pvb_pf_start">and, 0, 0, 2, 1, 1</column>
+<column name="pf_all_done">and, 0, 0, 2, 1, 0</column>
+<column name="icmp_ln273_fu_159_p2">icmp, 0, 0, 16, 32, 32</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_frp_data_req_primalInfeasBound_fifo">8, 2, 3, 6</column>
+<column name="ap_frp_data_req_rowScale_fifo">8, 2, 3, 6</column>
+<column name="ap_sig_allocacmp_i_load">32, 2, 31, 62</column>
+<column name="grp_fu_101_p2">64, 2, 64, 128</column>
+<column name="grp_fu_105_p2">64, 2, 64, 128</column>
+<column name="grp_fu_109_p2">64, 2, 64, 128</column>
+<column name="grp_fu_113_p2">64, 2, 64, 128</column>
+<column name="grp_fu_117_p2">64, 2, 64, 128</column>
+<column name="grp_fu_121_p2">64, 2, 64, 128</column>
+<column name="grp_fu_125_p2">64, 2, 64, 128</column>
+<column name="grp_fu_97_p2">64, 2, 64, 128</column>
+<column name="i_fu_68">32, 2, 31, 62</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1, 0, 1, 0</column>
+<column name="ap_frp_data_req_primalInfeasBound_fifo">3, 0, 3, 0</column>
+<column name="ap_frp_data_req_rowScale_fifo">3, 0, 3, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter2_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter3_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter4_reg">1, 0, 1, 0</column>
+<column name="ap_loop_exit_ready_pp0_iter5_reg">1, 0, 1, 0</column>
+<column name="grp_fu_101_ce">0, 0, 1, 1</column>
+<column name="grp_fu_101_p0">64, 0, 64, 0</column>
+<column name="grp_fu_101_p1">64, 0, 64, 0</column>
+<column name="grp_fu_105_ce">0, 0, 1, 1</column>
+<column name="grp_fu_105_p0">64, 0, 64, 0</column>
+<column name="grp_fu_105_p1">64, 0, 64, 0</column>
+<column name="grp_fu_109_ce">0, 0, 1, 1</column>
+<column name="grp_fu_109_p0">64, 0, 64, 0</column>
+<column name="grp_fu_109_p1">64, 0, 64, 0</column>
+<column name="grp_fu_113_ce">0, 0, 1, 1</column>
+<column name="grp_fu_113_p0">64, 0, 64, 0</column>
+<column name="grp_fu_113_p1">64, 0, 64, 0</column>
+<column name="grp_fu_117_ce">0, 0, 1, 1</column>
+<column name="grp_fu_117_p0">64, 0, 64, 0</column>
+<column name="grp_fu_117_p1">64, 0, 64, 0</column>
+<column name="grp_fu_121_ce">0, 0, 1, 1</column>
+<column name="grp_fu_121_p0">64, 0, 64, 0</column>
+<column name="grp_fu_121_p1">64, 0, 64, 0</column>
+<column name="grp_fu_125_ce">0, 0, 1, 1</column>
+<column name="grp_fu_125_p0">64, 0, 64, 0</column>
+<column name="grp_fu_125_p1">64, 0, 64, 0</column>
+<column name="grp_fu_97_ce">0, 0, 1, 1</column>
+<column name="grp_fu_97_p0">64, 0, 64, 0</column>
+<column name="grp_fu_97_p1">64, 0, 64, 0</column>
+<column name="i_fu_68">31, 0, 31, 0</column>
+<column name="pf_all_done">1, 0, 1, 0</column>
+<column name="pre_grp_fu_101_p2_reg">64, 0, 64, 0</column>
+<column name="pre_grp_fu_105_p2_reg">64, 0, 64, 0</column>
+<column name="pre_grp_fu_109_p2_reg">64, 0, 64, 0</column>
+<column name="pre_grp_fu_113_p2_reg">64, 0, 64, 0</column>
+<column name="pre_grp_fu_117_p2_reg">64, 0, 64, 0</column>
+<column name="pre_grp_fu_121_p2_reg">64, 0, 64, 0</column>
+<column name="pre_grp_fu_125_p2_reg">64, 0, 64, 0</column>
+<column name="pre_grp_fu_97_p2_reg">64, 0, 64, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, edot.11_Pipeline_edot, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, edot.11_Pipeline_edot, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, edot.11_Pipeline_edot, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, edot.11_Pipeline_edot, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, edot.11_Pipeline_edot, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, edot.11_Pipeline_edot, return value</column>
+<column name="primalInfeasBound_fifo_dout">in, 512, ap_fifo, primalInfeasBound_fifo, pointer</column>
+<column name="primalInfeasBound_fifo_num_data_valid">in, 3, ap_fifo, primalInfeasBound_fifo, pointer</column>
+<column name="primalInfeasBound_fifo_fifo_cap">in, 3, ap_fifo, primalInfeasBound_fifo, pointer</column>
+<column name="primalInfeasBound_fifo_empty_n">in, 1, ap_fifo, primalInfeasBound_fifo, pointer</column>
+<column name="primalInfeasBound_fifo_read">out, 1, ap_fifo, primalInfeasBound_fifo, pointer</column>
+<column name="rowScale_fifo_dout">in, 512, ap_fifo, rowScale_fifo, pointer</column>
+<column name="rowScale_fifo_num_data_valid">in, 3, ap_fifo, rowScale_fifo, pointer</column>
+<column name="rowScale_fifo_fifo_cap">in, 3, ap_fifo, rowScale_fifo, pointer</column>
+<column name="rowScale_fifo_empty_n">in, 1, ap_fifo, rowScale_fifo, pointer</column>
+<column name="rowScale_fifo_read">out, 1, ap_fifo, rowScale_fifo, pointer</column>
+<column name="temp_din">out, 512, ap_fifo, temp, pointer</column>
+<column name="temp_num_data_valid">in, 3, ap_fifo, temp, pointer</column>
+<column name="temp_fifo_cap">in, 3, ap_fifo, temp, pointer</column>
+<column name="temp_full_n">in, 1, ap_fifo, temp, pointer</column>
+<column name="temp_write">out, 1, ap_fifo, temp, pointer</column>
+<column name="n_4">in, 32, ap_none, n_4, scalar</column>
+</table>
+</item>
+</section>
+</profile>

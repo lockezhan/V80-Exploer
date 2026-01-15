@@ -1,0 +1,271 @@
+
+
+================================================================
+== Vitis HLS Report for 'projNeg_221_Pipeline_projNeg'
+================================================================
+* Date:           Fri Jan  9 14:24:46 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.235 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- projNeg  |        ?|        ?|         4|          1|          1|     ?|       yes|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 7 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %primalInfeasRay_SVfifo_lb_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %primalInfeasBound_fifo_lb_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%muxLogicCE_to_p_read_6 = muxlogic"   --->   Operation 10 'muxlogic' 'muxLogicCE_to_p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_read_6 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read" [./basic_helper.hpp:365->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 11 'read' 'p_read_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%muxLogicData_to_store_ln0 = muxlogic i31 0"   --->   Operation 12 'muxlogic' 'muxLogicData_to_store_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%muxLogicAddr_to_store_ln0 = muxlogic i31 %i"   --->   Operation 13 'muxlogic' 'muxLogicAddr_to_store_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.40ns)   --->   "%store_ln0 = store i31 0, i31 %i"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 0.40>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln369 = br void %VITIS_LOOP_373_1.i" [./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 15 'br' 'br_ln369' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%MuxLogicAddr_to_i_load = muxlogic i31 %i"   --->   Operation 16 'muxlogic' 'MuxLogicAddr_to_i_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%i_load = load i31 %i" [./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 17 'load' 'i_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln365 = zext i31 %i_load" [./basic_helper.hpp:365->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 18 'zext' 'zext_ln365' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.66ns)   --->   "%icmp_ln369 = icmp_slt  i32 %zext_ln365, i32 %p_read_6" [./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 19 'icmp' 'icmp_ln369' <Predicate = true> <Delay = 0.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln369 = br i1 %icmp_ln369, void %projNeg.2.exit.exitStub, void %VITIS_LOOP_373_1.split.i" [./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 20 'br' 'br_ln369' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.86ns)   --->   "%add_ln369 = add i31 %i_load, i31 1" [./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 21 'add' 'add_ln369' <Predicate = (icmp_ln369)> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%muxLogicData_to_store_ln369 = muxlogic i31 %add_ln369"   --->   Operation 22 'muxlogic' 'muxLogicData_to_store_ln369' <Predicate = (icmp_ln369)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%muxLogicAddr_to_store_ln369 = muxlogic i31 %i"   --->   Operation 23 'muxlogic' 'muxLogicAddr_to_store_ln369' <Predicate = (icmp_ln369)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.40ns)   --->   "%store_ln369 = store i31 %add_ln369, i31 %i" [./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 24 'store' 'store_ln369' <Predicate = (icmp_ln369)> <Delay = 0.40>
+
+State 2 <SV = 1> <Delay = 1.49>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%muxLogicCE_to_primalInfeasRay_SVfifo_lb_i_read = muxlogic"   --->   Operation 25 'muxlogic' 'muxLogicCE_to_primalInfeasRay_SVfifo_lb_i_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.75ns)   --->   "%primalInfeasRay_SVfifo_lb_i_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %primalInfeasRay_SVfifo_lb_i" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 26 'read' 'primalInfeasRay_SVfifo_lb_i_read' <Predicate = true> <Delay = 0.75> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln371 = trunc i512 %primalInfeasRay_SVfifo_lb_i_read" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 27 'trunc' 'trunc_ln371' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%trunc_ln371_4 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 64, i32 127" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 28 'partselect' 'trunc_ln371_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%trunc_ln371_5 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 128, i32 191" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 29 'partselect' 'trunc_ln371_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%trunc_ln371_6 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 192, i32 255" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 30 'partselect' 'trunc_ln371_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln371_7 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 256, i32 319" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 31 'partselect' 'trunc_ln371_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln371_8 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 320, i32 383" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 32 'partselect' 'trunc_ln371_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%trunc_ln371_9 = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 384, i32 447" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 33 'partselect' 'trunc_ln371_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%trunc_ln371_s = partselect i64 @_ssdm_op_PartSelect.i64.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 448, i32 511" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 34 'partselect' 'trunc_ln371_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp = partselect i11 @_ssdm_op_PartSelect.i11.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 52, i32 62" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 35 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%trunc_ln377 = trunc i512 %primalInfeasRay_SVfifo_lb_i_read" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 36 'trunc' 'trunc_ln377' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.61ns)   --->   "%icmp_ln377 = icmp_ne  i11 %tmp, i11 2047" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 37 'icmp' 'icmp_ln377' <Predicate = true> <Delay = 0.61> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.73ns)   --->   "%icmp_ln377_16 = icmp_eq  i52 %trunc_ln377, i52 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 38 'icmp' 'icmp_ln377_16' <Predicate = true> <Delay = 0.73> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_29 = partselect i11 @_ssdm_op_PartSelect.i11.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 116, i32 126" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 39 'partselect' 'tmp_29' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%trunc_ln377_8 = partselect i52 @_ssdm_op_PartSelect.i52.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 64, i32 115" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 40 'partselect' 'trunc_ln377_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.61ns)   --->   "%icmp_ln377_17 = icmp_ne  i11 %tmp_29, i11 2047" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 41 'icmp' 'icmp_ln377_17' <Predicate = true> <Delay = 0.61> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 42 [1/1] (0.73ns)   --->   "%icmp_ln377_18 = icmp_eq  i52 %trunc_ln377_8, i52 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 42 'icmp' 'icmp_ln377_18' <Predicate = true> <Delay = 0.73> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_31 = partselect i11 @_ssdm_op_PartSelect.i11.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 180, i32 190" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 43 'partselect' 'tmp_31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%trunc_ln377_9 = partselect i52 @_ssdm_op_PartSelect.i52.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 128, i32 179" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 44 'partselect' 'trunc_ln377_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.61ns)   --->   "%icmp_ln377_19 = icmp_ne  i11 %tmp_31, i11 2047" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 45 'icmp' 'icmp_ln377_19' <Predicate = true> <Delay = 0.61> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [1/1] (0.73ns)   --->   "%icmp_ln377_20 = icmp_eq  i52 %trunc_ln377_9, i52 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 46 'icmp' 'icmp_ln377_20' <Predicate = true> <Delay = 0.73> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_33 = partselect i11 @_ssdm_op_PartSelect.i11.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 244, i32 254" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 47 'partselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%trunc_ln377_s = partselect i52 @_ssdm_op_PartSelect.i52.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 192, i32 243" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 48 'partselect' 'trunc_ln377_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.61ns)   --->   "%icmp_ln377_21 = icmp_ne  i11 %tmp_33, i11 2047" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 49 'icmp' 'icmp_ln377_21' <Predicate = true> <Delay = 0.61> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 50 [1/1] (0.73ns)   --->   "%icmp_ln377_22 = icmp_eq  i52 %trunc_ln377_s, i52 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 50 'icmp' 'icmp_ln377_22' <Predicate = true> <Delay = 0.73> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%tmp_35 = partselect i11 @_ssdm_op_PartSelect.i11.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 308, i32 318" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 51 'partselect' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%trunc_ln377_1 = partselect i52 @_ssdm_op_PartSelect.i52.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 256, i32 307" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 52 'partselect' 'trunc_ln377_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.61ns)   --->   "%icmp_ln377_23 = icmp_ne  i11 %tmp_35, i11 2047" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 53 'icmp' 'icmp_ln377_23' <Predicate = true> <Delay = 0.61> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 54 [1/1] (0.73ns)   --->   "%icmp_ln377_24 = icmp_eq  i52 %trunc_ln377_1, i52 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 54 'icmp' 'icmp_ln377_24' <Predicate = true> <Delay = 0.73> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_37 = partselect i11 @_ssdm_op_PartSelect.i11.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 372, i32 382" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 55 'partselect' 'tmp_37' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%trunc_ln377_2 = partselect i52 @_ssdm_op_PartSelect.i52.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 320, i32 371" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 56 'partselect' 'trunc_ln377_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (0.61ns)   --->   "%icmp_ln377_25 = icmp_ne  i11 %tmp_37, i11 2047" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 57 'icmp' 'icmp_ln377_25' <Predicate = true> <Delay = 0.61> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.73ns)   --->   "%icmp_ln377_26 = icmp_eq  i52 %trunc_ln377_2, i52 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 58 'icmp' 'icmp_ln377_26' <Predicate = true> <Delay = 0.73> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_39 = partselect i11 @_ssdm_op_PartSelect.i11.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 436, i32 446" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 59 'partselect' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%trunc_ln377_3 = partselect i52 @_ssdm_op_PartSelect.i52.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 384, i32 435" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 60 'partselect' 'trunc_ln377_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.61ns)   --->   "%icmp_ln377_27 = icmp_ne  i11 %tmp_39, i11 2047" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 61 'icmp' 'icmp_ln377_27' <Predicate = true> <Delay = 0.61> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (0.73ns)   --->   "%icmp_ln377_28 = icmp_eq  i52 %trunc_ln377_3, i52 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 62 'icmp' 'icmp_ln377_28' <Predicate = true> <Delay = 0.73> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_41 = partselect i11 @_ssdm_op_PartSelect.i11.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 500, i32 510" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 63 'partselect' 'tmp_41' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%trunc_ln377_4 = partselect i52 @_ssdm_op_PartSelect.i52.i512.i32.i32, i512 %primalInfeasRay_SVfifo_lb_i_read, i32 448, i32 499" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 64 'partselect' 'trunc_ln377_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.61ns)   --->   "%icmp_ln377_29 = icmp_ne  i11 %tmp_41, i11 2047" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 65 'icmp' 'icmp_ln377_29' <Predicate = true> <Delay = 0.61> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [1/1] (0.73ns)   --->   "%icmp_ln377_30 = icmp_eq  i52 %trunc_ln377_4, i52 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 66 'icmp' 'icmp_ln377_30' <Predicate = true> <Delay = 0.73> <CoreInst = "ICmp_EQ">   --->   Core 156 'ICmp_EQ' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'seteq' 'setne'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.23>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%bitcast_ln371 = bitcast i64 %trunc_ln371" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 67 'bitcast' 'bitcast_ln371' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 68 [1/1] (0.00ns)   --->   "%bitcast_ln371_8 = bitcast i64 %trunc_ln371_4" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 68 'bitcast' 'bitcast_ln371_8' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%bitcast_ln371_9 = bitcast i64 %trunc_ln371_5" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 69 'bitcast' 'bitcast_ln371_9' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%bitcast_ln371_10 = bitcast i64 %trunc_ln371_6" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 70 'bitcast' 'bitcast_ln371_10' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%bitcast_ln371_11 = bitcast i64 %trunc_ln371_7" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 71 'bitcast' 'bitcast_ln371_11' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%bitcast_ln371_12 = bitcast i64 %trunc_ln371_8" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 72 'bitcast' 'bitcast_ln371_12' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%bitcast_ln371_13 = bitcast i64 %trunc_ln371_9" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 73 'bitcast' 'bitcast_ln371_13' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%bitcast_ln371_14 = bitcast i64 %trunc_ln371_s" [./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 74 'bitcast' 'bitcast_ln371_14' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 75 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI0_to_tmp_s = muxlogic i64 %bitcast_ln371"   --->   Operation 75 'muxlogic' 'muxLogicI0_to_tmp_s' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 76 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI1_to_tmp_s = muxlogic i64 0"   --->   Operation 76 'muxlogic' 'muxLogicI1_to_tmp_s' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 77 [1/1] (1.58ns)   --->   "%tmp_s = fcmp_ogt  i64 %bitcast_ln371, i64 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 77 'dcmp' 'tmp_s' <Predicate = true> <Delay = 1.58> <CoreInst = "DCompare">   --->   Core 42 'DCompare' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI0_to_tmp_30 = muxlogic i64 %bitcast_ln371_8"   --->   Operation 78 'muxlogic' 'muxLogicI0_to_tmp_30' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 79 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI1_to_tmp_30 = muxlogic i64 0"   --->   Operation 79 'muxlogic' 'muxLogicI1_to_tmp_30' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 80 [1/1] (1.58ns)   --->   "%tmp_30 = fcmp_ogt  i64 %bitcast_ln371_8, i64 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 80 'dcmp' 'tmp_30' <Predicate = true> <Delay = 1.58> <CoreInst = "DCompare">   --->   Core 42 'DCompare' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI0_to_tmp_32 = muxlogic i64 %bitcast_ln371_9"   --->   Operation 81 'muxlogic' 'muxLogicI0_to_tmp_32' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 82 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI1_to_tmp_32 = muxlogic i64 0"   --->   Operation 82 'muxlogic' 'muxLogicI1_to_tmp_32' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 83 [1/1] (1.58ns)   --->   "%tmp_32 = fcmp_ogt  i64 %bitcast_ln371_9, i64 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 83 'dcmp' 'tmp_32' <Predicate = true> <Delay = 1.58> <CoreInst = "DCompare">   --->   Core 42 'DCompare' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 84 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI0_to_tmp_34 = muxlogic i64 %bitcast_ln371_10"   --->   Operation 84 'muxlogic' 'muxLogicI0_to_tmp_34' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 85 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI1_to_tmp_34 = muxlogic i64 0"   --->   Operation 85 'muxlogic' 'muxLogicI1_to_tmp_34' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 86 [1/1] (1.58ns)   --->   "%tmp_34 = fcmp_ogt  i64 %bitcast_ln371_10, i64 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 86 'dcmp' 'tmp_34' <Predicate = true> <Delay = 1.58> <CoreInst = "DCompare">   --->   Core 42 'DCompare' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 87 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI0_to_tmp_36 = muxlogic i64 %bitcast_ln371_11"   --->   Operation 87 'muxlogic' 'muxLogicI0_to_tmp_36' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 88 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI1_to_tmp_36 = muxlogic i64 0"   --->   Operation 88 'muxlogic' 'muxLogicI1_to_tmp_36' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 89 [1/1] (1.58ns)   --->   "%tmp_36 = fcmp_ogt  i64 %bitcast_ln371_11, i64 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 89 'dcmp' 'tmp_36' <Predicate = true> <Delay = 1.58> <CoreInst = "DCompare">   --->   Core 42 'DCompare' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 90 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI0_to_tmp_38 = muxlogic i64 %bitcast_ln371_12"   --->   Operation 90 'muxlogic' 'muxLogicI0_to_tmp_38' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 91 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI1_to_tmp_38 = muxlogic i64 0"   --->   Operation 91 'muxlogic' 'muxLogicI1_to_tmp_38' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 92 [1/1] (1.58ns)   --->   "%tmp_38 = fcmp_ogt  i64 %bitcast_ln371_12, i64 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 92 'dcmp' 'tmp_38' <Predicate = true> <Delay = 1.58> <CoreInst = "DCompare">   --->   Core 42 'DCompare' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 93 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI0_to_tmp_40 = muxlogic i64 %bitcast_ln371_13"   --->   Operation 93 'muxlogic' 'muxLogicI0_to_tmp_40' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 94 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI1_to_tmp_40 = muxlogic i64 0"   --->   Operation 94 'muxlogic' 'muxLogicI1_to_tmp_40' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 95 [1/1] (1.58ns)   --->   "%tmp_40 = fcmp_ogt  i64 %bitcast_ln371_13, i64 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 95 'dcmp' 'tmp_40' <Predicate = true> <Delay = 1.58> <CoreInst = "DCompare">   --->   Core 42 'DCompare' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 96 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI0_to_tmp_42 = muxlogic i64 %bitcast_ln371_14"   --->   Operation 96 'muxlogic' 'muxLogicI0_to_tmp_42' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 97 [1/1] (0.65ns) (share mux size 8)   --->   "%muxLogicI1_to_tmp_42 = muxlogic i64 0"   --->   Operation 97 'muxlogic' 'muxLogicI1_to_tmp_42' <Predicate = true> <Delay = 0.65>
+ST_3 : Operation 98 [1/1] (1.58ns)   --->   "%tmp_42 = fcmp_ogt  i64 %bitcast_ln371_14, i64 0" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 98 'dcmp' 'tmp_42' <Predicate = true> <Delay = 1.58> <CoreInst = "DCompare">   --->   Core 42 'DCompare' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 129 [1/1] (0.38ns)   --->   "%ret_ln0 = ret"   --->   Operation 129 'ret' 'ret_ln0' <Predicate = (!icmp_ln369)> <Delay = 0.38>
+
+State 4 <SV = 3> <Delay = 1.35>
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "%specpipeline_ln370 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_3" [./basic_helper.hpp:370->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 99 'specpipeline' 'specpipeline_ln370' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "%specloopname_ln369 = specloopname void @_ssdm_op_SpecLoopName, void @empty_47" [./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 100 'specloopname' 'specloopname_ln369' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 101 [1/1] (0.00ns) (grouped into LUT with out node select_ln380)   --->   "%or_ln377 = or i1 %icmp_ln377_16, i1 %icmp_ln377" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 101 'or' 'or_ln377' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 102 [1/1] (0.00ns) (grouped into LUT with out node select_ln380)   --->   "%and_ln377 = and i1 %or_ln377, i1 %tmp_s" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 102 'and' 'and_ln377' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_1)   --->   "%or_ln377_8 = or i1 %icmp_ln377_18, i1 %icmp_ln377_17" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 103 'or' 'or_ln377_8' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 104 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_1)   --->   "%and_ln377_8 = and i1 %or_ln377_8, i1 %tmp_30" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 104 'and' 'and_ln377_8' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 105 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_2)   --->   "%or_ln377_9 = or i1 %icmp_ln377_20, i1 %icmp_ln377_19" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 105 'or' 'or_ln377_9' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 106 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_2)   --->   "%and_ln377_9 = and i1 %or_ln377_9, i1 %tmp_32" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 106 'and' 'and_ln377_9' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 107 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_3)   --->   "%or_ln377_10 = or i1 %icmp_ln377_22, i1 %icmp_ln377_21" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 107 'or' 'or_ln377_10' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 108 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_3)   --->   "%and_ln377_10 = and i1 %or_ln377_10, i1 %tmp_34" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 108 'and' 'and_ln377_10' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 109 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_4)   --->   "%or_ln377_11 = or i1 %icmp_ln377_24, i1 %icmp_ln377_23" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 109 'or' 'or_ln377_11' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 110 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_4)   --->   "%and_ln377_11 = and i1 %or_ln377_11, i1 %tmp_36" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 110 'and' 'and_ln377_11' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 111 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_5)   --->   "%or_ln377_12 = or i1 %icmp_ln377_26, i1 %icmp_ln377_25" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 111 'or' 'or_ln377_12' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 112 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_5)   --->   "%and_ln377_12 = and i1 %or_ln377_12, i1 %tmp_38" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 112 'and' 'and_ln377_12' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 113 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_6)   --->   "%or_ln377_13 = or i1 %icmp_ln377_28, i1 %icmp_ln377_27" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 113 'or' 'or_ln377_13' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_6)   --->   "%and_ln377_13 = and i1 %or_ln377_13, i1 %tmp_40" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 114 'and' 'and_ln377_13' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 115 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_7)   --->   "%or_ln377_14 = or i1 %icmp_ln377_30, i1 %icmp_ln377_29" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 115 'or' 'or_ln377_14' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 116 [1/1] (0.00ns) (grouped into LUT with out node select_ln380_7)   --->   "%and_ln377_14 = and i1 %or_ln377_14, i1 %tmp_42" [./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 116 'and' 'and_ln377_14' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 78 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 117 [1/1] (0.43ns) (out node of the LUT)   --->   "%select_ln380 = select i1 %and_ln377, i64 0, i64 %trunc_ln371" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 117 'select' 'select_ln380' <Predicate = true> <Delay = 0.43> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 118 [1/1] (0.43ns) (out node of the LUT)   --->   "%select_ln380_1 = select i1 %and_ln377_8, i64 0, i64 %trunc_ln371_4" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 118 'select' 'select_ln380_1' <Predicate = true> <Delay = 0.43> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 119 [1/1] (0.43ns) (out node of the LUT)   --->   "%select_ln380_2 = select i1 %and_ln377_9, i64 0, i64 %trunc_ln371_5" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 119 'select' 'select_ln380_2' <Predicate = true> <Delay = 0.43> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 120 [1/1] (0.43ns) (out node of the LUT)   --->   "%select_ln380_3 = select i1 %and_ln377_10, i64 0, i64 %trunc_ln371_6" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 120 'select' 'select_ln380_3' <Predicate = true> <Delay = 0.43> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 121 [1/1] (0.43ns) (out node of the LUT)   --->   "%select_ln380_4 = select i1 %and_ln377_11, i64 0, i64 %trunc_ln371_7" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 121 'select' 'select_ln380_4' <Predicate = true> <Delay = 0.43> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 122 [1/1] (0.43ns) (out node of the LUT)   --->   "%select_ln380_5 = select i1 %and_ln377_12, i64 0, i64 %trunc_ln371_8" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 122 'select' 'select_ln380_5' <Predicate = true> <Delay = 0.43> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 123 [1/1] (0.43ns) (out node of the LUT)   --->   "%select_ln380_6 = select i1 %and_ln377_13, i64 0, i64 %trunc_ln371_9" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 123 'select' 'select_ln380_6' <Predicate = true> <Delay = 0.43> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 124 [1/1] (0.43ns) (out node of the LUT)   --->   "%select_ln380_7 = select i1 %and_ln377_14, i64 0, i64 %trunc_ln371_s" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 124 'select' 'select_ln380_7' <Predicate = true> <Delay = 0.43> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.43> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 125 [1/1] (0.00ns)   --->   "%or_ln380_i = bitconcatenate i512 @_ssdm_op_BitConcatenate.i512.i64.i64.i64.i64.i64.i64.i64.i64, i64 %select_ln380_7, i64 %select_ln380_6, i64 %select_ln380_5, i64 %select_ln380_4, i64 %select_ln380_3, i64 %select_ln380_2, i64 %select_ln380_1, i64 %select_ln380" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 125 'bitconcatenate' 'or_ln380_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 126 [1/1] (0.00ns)   --->   "%muxLogicData_to_write_ln380 = muxlogic i512 %or_ln380_i"   --->   Operation 126 'muxlogic' 'muxLogicData_to_write_ln380' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 127 [1/1] (0.91ns)   --->   "%write_ln380 = write void @_ssdm_op_Write.ap_fifo.volatile.i512P0A, i512 %primalInfeasBound_fifo_lb_i, i512 %or_ln380_i" [./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 127 'write' 'write_ln380' <Predicate = true> <Delay = 0.91> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_4 : Operation 128 [1/1] (0.00ns)   --->   "%br_ln369 = br void %VITIS_LOOP_373_1.i" [./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111]   --->   Operation 128 'br' 'br_ln369' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 1.665ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln0') of constant 0 on local variable 'i' [11]  (0.400 ns)
+	'load' operation 31 bit ('i_load', ./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) on local variable 'i' [15]  (0.000 ns)
+	'add' operation 31 bit ('add_ln369', ./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) [20]  (0.865 ns)
+	'muxlogic' operation 0 bit ('muxLogicData_to_store_ln369') [124]  (0.000 ns)
+	'store' operation 0 bit ('store_ln369', ./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) of variable 'add_ln369', ./basic_helper.hpp:369->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111 on local variable 'i' [126]  (0.400 ns)
+
+ <State 2>: 1.492ns
+The critical path consists of the following:
+	'muxlogic' operation 512 bit ('muxLogicCE_to_primalInfeasRay_SVfifo_lb_i_read') [23]  (0.000 ns)
+	fifo read operation ('primalInfeasRay_SVfifo_lb_i_read', ./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) on port 'primalInfeasRay_SVfifo_lb_i' (./basic_helper.hpp:371->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) [24]  (0.753 ns)
+	'icmp' operation 1 bit ('icmp_ln377_16', ./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) [44]  (0.739 ns)
+
+ <State 3>: 2.235ns
+The critical path consists of the following:
+	'muxlogic' operation 1 bit ('muxLogicI0_to_tmp_s') [46]  (0.654 ns)
+	'dcmp' operation 1 bit ('tmp_s', ./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) [48]  (1.581 ns)
+
+ <State 4>: 1.355ns
+The critical path consists of the following:
+	'or' operation 1 bit ('or_ln377', ./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) [45]  (0.000 ns)
+	'and' operation 1 bit ('and_ln377', ./basic_helper.hpp:377->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) [49]  (0.000 ns)
+	'select' operation 64 bit ('select_ln380', ./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) [113]  (0.438 ns)
+	'muxlogic' operation 0 bit ('muxLogicData_to_write_ln380') [122]  (0.000 ns)
+	fifo write operation ('write_ln380', ./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) on port 'primalInfeasBound_fifo_lb_i' (./basic_helper.hpp:380->./Compute_Dual_Infeasibility.hpp:109->./Compute_Dual_Infeasibility.hpp:178->Infeasi_Res_S2.cpp:111) [123]  (0.917 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

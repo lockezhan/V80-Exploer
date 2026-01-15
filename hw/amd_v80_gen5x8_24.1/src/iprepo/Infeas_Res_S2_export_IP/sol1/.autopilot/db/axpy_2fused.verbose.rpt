@@ -1,0 +1,563 @@
+
+
+================================================================
+== Vitis HLS Report for 'axpy_2fused'
+================================================================
+* Date:           Fri Jan  9 14:28:22 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.190 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                            |                                  |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |                  Instance                  |              Module              |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +--------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_axpy_2fused_Pipeline_axpy_2fused_fu_42  |axpy_2fused_Pipeline_axpy_2fused  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +--------------------------------------------+----------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|        2|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      0|    12800|    14586|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|       56|     -|
+|Register             |        -|      -|       37|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|    12837|    14644|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|        1|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------+----------------------------------+---------+----+-------+-------+-----+
+    |                  Instance                  |              Module              | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +--------------------------------------------+----------------------------------+---------+----+-------+-------+-----+
+    |grp_axpy_2fused_Pipeline_axpy_2fused_fu_42  |axpy_2fused_Pipeline_axpy_2fused  |        0|   0|  12800|  14586|    0|
+    +--------------------------------------------+----------------------------------+---------+----+-------+-------+-----+
+    |Total                                       |                                  |        0|   0|  12800|  14586|    0|
+    +--------------------------------------------+----------------------------------+---------+----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                          |   8|          4|    1|          4|
+    |ap_done                            |   8|          2|    1|          2|
+    |dualInfeasConstr_SVfifo_i_read     |   8|          2|    1|          2|
+    |dualInfeasConstr_axpyfifo_i_write  |   8|          2|    1|          2|
+    |dualInfeasLbRay_SVfifo_i_read      |   8|          2|    1|          2|
+    |dualInfeasUbRay_SVfifo_i_read      |   8|          2|    1|          2|
+    |nCols_assign_blk_n                 |   8|          2|    1|          2|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              |  56|         16|    7|         16|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |                           Name                          | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                |   3|   0|    3|          0|
+    |ap_done_reg                                              |   1|   0|    1|          0|
+    |grp_axpy_2fused_Pipeline_axpy_2fused_fu_42_ap_start_reg  |   1|   0|    1|          0|
+    |nCols_assign_read_reg_57                                 |  32|   0|   32|          0|
+    +---------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                    |  37|   0|   37|          0|
+    +---------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|                  RTL Ports                 | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++--------------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                                      |   in|    1|  ap_ctrl_hs|                  axpy_2fused|  return value|
+|ap_rst                                      |   in|    1|  ap_ctrl_hs|                  axpy_2fused|  return value|
+|ap_start                                    |   in|    1|  ap_ctrl_hs|                  axpy_2fused|  return value|
+|ap_done                                     |  out|    1|  ap_ctrl_hs|                  axpy_2fused|  return value|
+|ap_continue                                 |   in|    1|  ap_ctrl_hs|                  axpy_2fused|  return value|
+|ap_idle                                     |  out|    1|  ap_ctrl_hs|                  axpy_2fused|  return value|
+|ap_ready                                    |  out|    1|  ap_ctrl_hs|                  axpy_2fused|  return value|
+|dualInfeasConstr_SVfifo_i_dout              |   in|  512|     ap_fifo|    dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasConstr_SVfifo_i_num_data_valid    |   in|    3|     ap_fifo|    dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasConstr_SVfifo_i_fifo_cap          |   in|    3|     ap_fifo|    dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasConstr_SVfifo_i_empty_n           |   in|    1|     ap_fifo|    dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasConstr_SVfifo_i_read              |  out|    1|     ap_fifo|    dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_dout               |   in|  512|     ap_fifo|     dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_num_data_valid     |   in|    3|     ap_fifo|     dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_fifo_cap           |   in|    3|     ap_fifo|     dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_empty_n            |   in|    1|     ap_fifo|     dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_read               |  out|    1|     ap_fifo|     dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_dout               |   in|  512|     ap_fifo|     dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_num_data_valid     |   in|    3|     ap_fifo|     dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_fifo_cap           |   in|    3|     ap_fifo|     dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_empty_n            |   in|    1|     ap_fifo|     dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_read               |  out|    1|     ap_fifo|     dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_din             |  out|  512|     ap_fifo|  dualInfeasConstr_axpyfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_num_data_valid  |   in|    3|     ap_fifo|  dualInfeasConstr_axpyfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_fifo_cap        |   in|    3|     ap_fifo|  dualInfeasConstr_axpyfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_full_n          |   in|    1|     ap_fifo|  dualInfeasConstr_axpyfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_write           |  out|    1|     ap_fifo|  dualInfeasConstr_axpyfifo_i|       pointer|
+|nCols_assign_dout                           |   in|   32|     ap_fifo|                 nCols_assign|       pointer|
+|nCols_assign_num_data_valid                 |   in|    3|     ap_fifo|                 nCols_assign|       pointer|
+|nCols_assign_fifo_cap                       |   in|    3|     ap_fifo|                 nCols_assign|       pointer|
+|nCols_assign_empty_n                        |   in|    1|     ap_fifo|                 nCols_assign|       pointer|
+|nCols_assign_read                           |  out|    1|     ap_fifo|                 nCols_assign|       pointer|
++--------------------------------------------+-----+-----+------------+-----------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.57>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%muxLogicCE_to_nCols_assign_read = muxlogic"   --->   Operation 4 'muxlogic' 'muxLogicCE_to_nCols_assign_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.57ns)   --->   "%nCols_assign_read = read i32 @_ssdm_op_Read.ap_fifo.i32P0A, i32 %nCols_assign"   --->   Operation 5 'read' 'nCols_assign_read' <Predicate = true> <Delay = 0.57> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 1.06>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 6 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [2/2] (1.06ns)   --->   "%call_ln0 = call void @axpy_2fused_Pipeline_axpy_2fused, i32 %nCols_assign_read, i512 %dualInfeasConstr_SVfifo_i, i512 %dualInfeasLbRay_SVfifo_i, i512 %dualInfeasUbRay_SVfifo_i, i512 %dualInfeasConstr_axpyfifo_i"   --->   Operation 7 'call' 'call_ln0' <Predicate = true> <Delay = 1.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nCols_assign, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasConstr_axpyfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasConstr_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasUbRay_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasLbRay_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 13 [1/2] (0.00ns)   --->   "%call_ln0 = call void @axpy_2fused_Pipeline_axpy_2fused, i32 %nCols_assign_read, i512 %dualInfeasConstr_SVfifo_i, i512 %dualInfeasLbRay_SVfifo_i, i512 %dualInfeasUbRay_SVfifo_i, i512 %dualInfeasConstr_axpyfifo_i"   --->   Operation 13 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%ret_ln76 = ret" [./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 14 'ret' 'ret_ln76' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ dualInfeasConstr_SVfifo_i]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ dualInfeasLbRay_SVfifo_i]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ dualInfeasUbRay_SVfifo_i]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ dualInfeasConstr_axpyfifo_i]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ nCols_assign]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+muxLogicCE_to_nCols_assign_read (muxlogic     ) [ 0000]
+nCols_assign_read               (read         ) [ 0011]
+empty                           (wait         ) [ 0000]
+specinterface_ln0               (specinterface) [ 0000]
+specinterface_ln0               (specinterface) [ 0000]
+specinterface_ln0               (specinterface) [ 0000]
+specinterface_ln0               (specinterface) [ 0000]
+specinterface_ln0               (specinterface) [ 0000]
+call_ln0                        (call         ) [ 0000]
+ret_ln76                        (ret          ) [ 0000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="dualInfeasConstr_SVfifo_i">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dualInfeasConstr_SVfifo_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="dualInfeasLbRay_SVfifo_i">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dualInfeasLbRay_SVfifo_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="dualInfeasUbRay_SVfifo_i">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dualInfeasUbRay_SVfifo_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="dualInfeasConstr_axpyfifo_i">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="dualInfeasConstr_axpyfifo_i"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="nCols_assign">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="nCols_assign"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.i32P0A"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Wait"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="axpy_2fused_Pipeline_axpy_2fused"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ScalarProp_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_14"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_3"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1004" name="nCols_assign_read_read_fu_36">
+<pin_list>
+<pin id="37" dir="0" index="0" bw="32" slack="0"/>
+<pin id="38" dir="0" index="1" bw="32" slack="0"/>
+<pin id="39" dir="1" index="2" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="nCols_assign_read/1 "/>
+</bind>
+</comp>
+
+<comp id="42" class="1004" name="grp_axpy_2fused_Pipeline_axpy_2fused_fu_42">
+<pin_list>
+<pin id="43" dir="0" index="0" bw="0" slack="0"/>
+<pin id="44" dir="0" index="1" bw="32" slack="1"/>
+<pin id="45" dir="0" index="2" bw="512" slack="0"/>
+<pin id="46" dir="0" index="3" bw="512" slack="0"/>
+<pin id="47" dir="0" index="4" bw="512" slack="0"/>
+<pin id="48" dir="0" index="5" bw="512" slack="0"/>
+<pin id="49" dir="1" index="6" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln0/2 "/>
+</bind>
+</comp>
+
+<comp id="55" class="1004" name="muxLogicCE_to_nCols_assign_read_fu_55">
+<pin_list>
+<pin id="56" dir="1" index="0" bw="32" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="muxlogic(592) " fcode="muxlogic"/>
+<opset="muxLogicCE_to_nCols_assign_read/1 "/>
+</bind>
+</comp>
+
+<comp id="57" class="1005" name="nCols_assign_read_reg_57">
+<pin_list>
+<pin id="58" dir="0" index="0" bw="32" slack="1"/>
+<pin id="59" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="nCols_assign_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="40"><net_src comp="10" pin="0"/><net_sink comp="36" pin=0"/></net>
+
+<net id="41"><net_src comp="8" pin="0"/><net_sink comp="36" pin=1"/></net>
+
+<net id="50"><net_src comp="14" pin="0"/><net_sink comp="42" pin=0"/></net>
+
+<net id="51"><net_src comp="0" pin="0"/><net_sink comp="42" pin=2"/></net>
+
+<net id="52"><net_src comp="2" pin="0"/><net_sink comp="42" pin=3"/></net>
+
+<net id="53"><net_src comp="4" pin="0"/><net_sink comp="42" pin=4"/></net>
+
+<net id="54"><net_src comp="6" pin="0"/><net_sink comp="42" pin=5"/></net>
+
+<net id="60"><net_src comp="36" pin="2"/><net_sink comp="57" pin=0"/></net>
+
+<net id="61"><net_src comp="57" pin="1"/><net_sink comp="42" pin=1"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: dualInfeasConstr_axpyfifo_i | {2 3 }
+ - Input state : 
+	Port: axpy_2fused : dualInfeasConstr_SVfifo_i | {2 3 }
+	Port: axpy_2fused : dualInfeasLbRay_SVfifo_i | {2 3 }
+	Port: axpy_2fused : dualInfeasUbRay_SVfifo_i | {2 3 }
+	Port: axpy_2fused : nCols_assign | {1 }
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|--------------------------------------------|---------|---------|---------|---------|
+| Operation|               Functional Unit              |   DSP   |  Delay  |    FF   |   LUT   |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+|   call   | grp_axpy_2fused_Pipeline_axpy_2fused_fu_42 |    0    |  14.624 |  11168  |  15215  |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+|   read   |        nCols_assign_read_read_fu_36        |    0    |    0    |    0    |    0    |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+| muxlogic |    muxLogicCE_to_nCols_assign_read_fu_55   |    0    |    0    |    0    |    0    |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+|   Total  |                                            |    0    |  14.624 |  11168  |  15215  |
+|----------|--------------------------------------------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------------+--------+
+|                        |   FF   |
++------------------------+--------+
+|nCols_assign_read_reg_57|   32   |
++------------------------+--------+
+|          Total         |   32   |
++------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|--------|------|------|------|--------|
+|  Comp  |  Pin | Size |  BW  | S x BW |
+|--------|------|------|------|--------|
+|  Total |      |      |      |    0   |
+|--------|------|------|------|--------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    0   |   14   |  11168 |  15215 |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    -   |    -   |
+|  Register |    -   |    -   |   32   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    0   |   14   |  11200 |  15215 |
++-----------+--------+--------+--------+--------+

@@ -1,0 +1,167 @@
+
+
+================================================================
+== Vitis HLS Report for 'scaleVector_1'
+================================================================
+* Date:           Fri Jan  9 14:29:36 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.154 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------+-------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                               |                                     |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |                    Instance                   |                Module               |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +-----------------------------------------------+-------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_scaleVector_1_Pipeline_scale_vector_fu_48  |scaleVector_1_Pipeline_scale_vector  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +-----------------------------------------------+-------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|        2|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|     48|     2980|     2379|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|       48|     -|
+|Register             |        -|      -|      101|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|     48|     3081|     2429|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      1|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|     ~0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------+-------------------------------------+---------+----+------+------+-----+
+    |                    Instance                   |                Module               | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-----------------------------------------------+-------------------------------------+---------+----+------+------+-----+
+    |grp_scaleVector_1_Pipeline_scale_vector_fu_48  |scaleVector_1_Pipeline_scale_vector  |        0|  48|  2980|  2379|    0|
+    +-----------------------------------------------+-------------------------------------+---------+----+------+------+-----+
+    |Total                                          |                                     |        0|  48|  2980|  2379|    0|
+    +-----------------------------------------------+-------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                          |   8|          4|    1|          4|
+    |ap_done                            |   8|          2|    1|          2|
+    |inverse_pScale_blk_n               |   8|          2|    1|          2|
+    |nRows_assign_blk_n                 |   8|          2|    1|          2|
+    |primalINfeasConstr_fifo_i_read     |   8|          2|    1|          2|
+    |primalInfeasConstr_SVfifo_i_write  |   8|          2|    1|          2|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              |  48|         14|    6|         14|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |                            Name                            | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                   |   3|   0|    3|          0|
+    |ap_done_reg                                                 |   1|   0|    1|          0|
+    |grp_scaleVector_1_Pipeline_scale_vector_fu_48_ap_start_reg  |   1|   0|    1|          0|
+    |n_reg_67                                                    |  32|   0|   32|          0|
+    |weight_reg_62                                               |  64|   0|   64|          0|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                       | 101|   0|  101|          0|
+    +------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|                  RTL Ports                 | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++--------------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                                      |   in|    1|  ap_ctrl_hs|                scaleVector.1|  return value|
+|ap_rst                                      |   in|    1|  ap_ctrl_hs|                scaleVector.1|  return value|
+|ap_start                                    |   in|    1|  ap_ctrl_hs|                scaleVector.1|  return value|
+|ap_done                                     |  out|    1|  ap_ctrl_hs|                scaleVector.1|  return value|
+|ap_continue                                 |   in|    1|  ap_ctrl_hs|                scaleVector.1|  return value|
+|ap_idle                                     |  out|    1|  ap_ctrl_hs|                scaleVector.1|  return value|
+|ap_ready                                    |  out|    1|  ap_ctrl_hs|                scaleVector.1|  return value|
+|inverse_pScale_dout                         |   in|   64|     ap_fifo|               inverse_pScale|       pointer|
+|inverse_pScale_num_data_valid               |   in|    3|     ap_fifo|               inverse_pScale|       pointer|
+|inverse_pScale_fifo_cap                     |   in|    3|     ap_fifo|               inverse_pScale|       pointer|
+|inverse_pScale_empty_n                      |   in|    1|     ap_fifo|               inverse_pScale|       pointer|
+|inverse_pScale_read                         |  out|    1|     ap_fifo|               inverse_pScale|       pointer|
+|primalINfeasConstr_fifo_i_dout              |   in|  512|     ap_fifo|    primalINfeasConstr_fifo_i|       pointer|
+|primalINfeasConstr_fifo_i_num_data_valid    |   in|    3|     ap_fifo|    primalINfeasConstr_fifo_i|       pointer|
+|primalINfeasConstr_fifo_i_fifo_cap          |   in|    3|     ap_fifo|    primalINfeasConstr_fifo_i|       pointer|
+|primalINfeasConstr_fifo_i_empty_n           |   in|    1|     ap_fifo|    primalINfeasConstr_fifo_i|       pointer|
+|primalINfeasConstr_fifo_i_read              |  out|    1|     ap_fifo|    primalINfeasConstr_fifo_i|       pointer|
+|primalInfeasConstr_SVfifo_i_din             |  out|  512|     ap_fifo|  primalInfeasConstr_SVfifo_i|       pointer|
+|primalInfeasConstr_SVfifo_i_num_data_valid  |   in|    3|     ap_fifo|  primalInfeasConstr_SVfifo_i|       pointer|
+|primalInfeasConstr_SVfifo_i_fifo_cap        |   in|    3|     ap_fifo|  primalInfeasConstr_SVfifo_i|       pointer|
+|primalInfeasConstr_SVfifo_i_full_n          |   in|    1|     ap_fifo|  primalInfeasConstr_SVfifo_i|       pointer|
+|primalInfeasConstr_SVfifo_i_write           |  out|    1|     ap_fifo|  primalInfeasConstr_SVfifo_i|       pointer|
+|nRows_assign_dout                           |   in|   32|     ap_fifo|                 nRows_assign|       pointer|
+|nRows_assign_num_data_valid                 |   in|    3|     ap_fifo|                 nRows_assign|       pointer|
+|nRows_assign_fifo_cap                       |   in|    3|     ap_fifo|                 nRows_assign|       pointer|
+|nRows_assign_empty_n                        |   in|    1|     ap_fifo|                 nRows_assign|       pointer|
+|nRows_assign_read                           |  out|    1|     ap_fifo|                 nRows_assign|       pointer|
++--------------------------------------------+-----+-----+------------+-----------------------------+--------------+
+

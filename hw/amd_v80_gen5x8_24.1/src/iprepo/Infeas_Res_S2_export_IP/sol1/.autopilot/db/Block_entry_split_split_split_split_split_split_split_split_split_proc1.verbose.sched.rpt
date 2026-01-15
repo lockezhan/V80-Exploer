@@ -1,0 +1,116 @@
+
+
+================================================================
+== Vitis HLS Report for 'Block_entry_split_split_split_split_split_split_split_split_split_proc1'
+================================================================
+* Date:           Fri Jan  9 14:26:57 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  0.626 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    0|    0|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.62>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %dDualInfeasRes, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 2 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %dPrimalInfeasRes, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 3 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%muxLogicCE_to_dPrimalInfeasRes_read = muxlogic"   --->   Operation 4 'muxlogic' 'muxLogicCE_to_dPrimalInfeasRes_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.62ns)   --->   "%dPrimalInfeasRes_read = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %dPrimalInfeasRes" [Infeasi_Res_S2.cpp:127]   --->   Operation 5 'read' 'dPrimalInfeasRes_read' <Predicate = true> <Delay = 0.62> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.88> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%muxLogicData_to_write_ln127 = muxlogic i64 %dPrimalInfeasRes_read"   --->   Operation 6 'muxlogic' 'muxLogicData_to_write_ln127' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%write_ln127 = write void @_ssdm_op_Write.ap_auto.i64P0A, i64 %dPrimalInfeasRes_val, i64 %dPrimalInfeasRes_read" [Infeasi_Res_S2.cpp:127]   --->   Operation 7 'write' 'write_ln127' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%muxLogicCE_to_dDualInfeasRes_read = muxlogic"   --->   Operation 8 'muxlogic' 'muxLogicCE_to_dDualInfeasRes_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.62ns)   --->   "%dDualInfeasRes_read = read i64 @_ssdm_op_Read.ap_fifo.volatile.i64P0A, i64 %dDualInfeasRes" [Infeasi_Res_S2.cpp:128]   --->   Operation 9 'read' 'dDualInfeasRes_read' <Predicate = true> <Delay = 0.62> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.88> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%muxLogicData_to_write_ln128 = muxlogic i64 %dDualInfeasRes_read"   --->   Operation 10 'muxlogic' 'muxLogicData_to_write_ln128' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%write_ln128 = write void @_ssdm_op_Write.ap_auto.i64P0A, i64 %dDualInfeasRes_val, i64 %dDualInfeasRes_read" [Infeasi_Res_S2.cpp:128]   --->   Operation 11 'write' 'write_ln128' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 12 'ret' 'ret_ln0' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 0.626ns
+The critical path consists of the following:
+	'muxlogic' operation 64 bit ('muxLogicCE_to_dPrimalInfeasRes_read') [7]  (0.000 ns)
+	fifo read operation ('dPrimalInfeasRes_read', Infeasi_Res_S2.cpp:127) on port 'dPrimalInfeasRes' (Infeasi_Res_S2.cpp:127) [8]  (0.626 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,165 @@
+
+
+================================================================
+== Vitis HLS Report for 'projPos22'
+================================================================
+* Date:           Fri Jan  9 14:30:17 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.235 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------+----------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                      |                            |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |               Instance               |           Module           |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +--------------------------------------+----------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_projPos22_Pipeline_projPos_fu_50  |projPos22_Pipeline_projPos  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +--------------------------------------+----------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|        2|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|     1102|      883|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|       48|     -|
+|Register             |        -|      -|        6|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|     1108|      933|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+----------------------------+---------+----+------+-----+-----+
+    |               Instance               |           Module           | BRAM_18K| DSP|  FF  | LUT | URAM|
+    +--------------------------------------+----------------------------+---------+----+------+-----+-----+
+    |grp_projPos22_Pipeline_projPos_fu_50  |projPos22_Pipeline_projPos  |        0|   0|  1102|  883|    0|
+    +--------------------------------------+----------------------------+---------+----+------+-----+-----+
+    |Total                                 |                            |        0|   0|  1102|  883|    0|
+    +--------------------------------------+----------------------------+---------+----+------+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+----+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |ap_block_state1  |        or|   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+    |Total            |          |   0|  0|   2|           1|           1|
+    +-----------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                          |   8|          4|    1|          4|
+    |ap_done                            |   8|          2|    1|          2|
+    |nCols_assign_c_blk_n               |   8|          2|    1|          2|
+    |primalInfeasBound_fifo_ub_i_write  |   8|          2|    1|          2|
+    |primalInfeasRay_SVfifo_ub_i_read   |   8|          2|    1|          2|
+    |real_start                         |   8|          2|    1|          2|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              |  48|         14|    6|         14|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------+---+----+-----+-----------+
+    |                        Name                       | FF| LUT| Bits| Const Bits|
+    +---------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                          |  3|   0|    3|          0|
+    |ap_done_reg                                        |  1|   0|    1|          0|
+    |grp_projPos22_Pipeline_projPos_fu_50_ap_start_reg  |  1|   0|    1|          0|
+    |start_once_reg                                     |  1|   0|    1|          0|
+    +---------------------------------------------------+---+----+-----+-----------+
+    |Total                                              |  6|   0|    6|          0|
+    +---------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|                  RTL Ports                 | Dir | Bits|  Protocol  |        Source Object        |    C Type    |
++--------------------------------------------+-----+-----+------------+-----------------------------+--------------+
+|ap_clk                                      |   in|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|ap_rst                                      |   in|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|ap_start                                    |   in|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|start_full_n                                |   in|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|ap_done                                     |  out|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|ap_continue                                 |   in|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|ap_idle                                     |  out|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|ap_ready                                    |  out|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|start_out                                   |  out|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|start_write                                 |  out|    1|  ap_ctrl_hs|                    projPos22|  return value|
+|primalInfeasRay_SVfifo_ub_i_dout            |   in|  512|     ap_fifo|  primalInfeasRay_SVfifo_ub_i|       pointer|
+|primalInfeasRay_SVfifo_ub_i_num_data_valid  |   in|    3|     ap_fifo|  primalInfeasRay_SVfifo_ub_i|       pointer|
+|primalInfeasRay_SVfifo_ub_i_fifo_cap        |   in|    3|     ap_fifo|  primalInfeasRay_SVfifo_ub_i|       pointer|
+|primalInfeasRay_SVfifo_ub_i_empty_n         |   in|    1|     ap_fifo|  primalInfeasRay_SVfifo_ub_i|       pointer|
+|primalInfeasRay_SVfifo_ub_i_read            |  out|    1|     ap_fifo|  primalInfeasRay_SVfifo_ub_i|       pointer|
+|primalInfeasBound_fifo_ub_i_din             |  out|  512|     ap_fifo|  primalInfeasBound_fifo_ub_i|       pointer|
+|primalInfeasBound_fifo_ub_i_num_data_valid  |   in|    3|     ap_fifo|  primalInfeasBound_fifo_ub_i|       pointer|
+|primalInfeasBound_fifo_ub_i_fifo_cap        |   in|    3|     ap_fifo|  primalInfeasBound_fifo_ub_i|       pointer|
+|primalInfeasBound_fifo_ub_i_full_n          |   in|    1|     ap_fifo|  primalInfeasBound_fifo_ub_i|       pointer|
+|primalInfeasBound_fifo_ub_i_write           |  out|    1|     ap_fifo|  primalInfeasBound_fifo_ub_i|       pointer|
+|p_read                                      |   in|   32|     ap_none|                       p_read|        scalar|
+|nCols_assign_c_din                          |  out|   32|     ap_fifo|               nCols_assign_c|       pointer|
+|nCols_assign_c_num_data_valid               |   in|    3|     ap_fifo|               nCols_assign_c|       pointer|
+|nCols_assign_c_fifo_cap                     |   in|    3|     ap_fifo|               nCols_assign_c|       pointer|
+|nCols_assign_c_full_n                       |   in|    1|     ap_fifo|               nCols_assign_c|       pointer|
+|nCols_assign_c_write                        |  out|    1|     ap_fifo|               nCols_assign_c|       pointer|
++--------------------------------------------+-----+-----+------------+-----------------------------+--------------+
+

@@ -1,0 +1,245 @@
+
+
+================================================================
+== Vitis HLS Report for 'loadDDR_data_22'
+================================================================
+* Date:           Fri Jan  9 14:22:54 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.18>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%muxLogicCE_to_len_read = muxlogic"   --->   Operation 15 'muxlogic' 'muxLogicCE_to_len_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%len_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %len"   --->   Operation 16 'read' 'len_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%muxLogicData_to_write_ln0 = muxlogic i32 %len_read"   --->   Operation 17 'muxlogic' 'muxLogicData_to_write_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.71ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_fifo.i32P0A, i32 %n_c1, i32 %len_read"   --->   Operation 18 'write' 'write_ln0' <Predicate = true> <Delay = 0.71> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 19 [1/1] (0.66ns)   --->   "%icmp_ln58 = icmp_sgt  i32 %len_read, i32 0" [./basic_helper.hpp:58]   --->   Operation 19 'icmp' 'icmp_ln58' <Predicate = true> <Delay = 0.66> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln58 = trunc i32 %len_read" [./basic_helper.hpp:58]   --->   Operation 20 'trunc' 'trunc_ln58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.52ns)   --->   "%empty = select i1 %icmp_ln58, i31 %trunc_ln58, i31 0" [./basic_helper.hpp:58]   --->   Operation 21 'select' 'empty' <Predicate = true> <Delay = 0.52> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 1.40>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%muxLogicCE_to_mem_read = muxlogic"   --->   Operation 22 'muxlogic' 'muxLogicCE_to_mem_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%mem_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %mem"   --->   Operation 23 'read' 'mem_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i58 @_ssdm_op_PartSelect.i58.i64.i32.i32, i64 %mem_read, i32 6, i32 63" [./basic_helper.hpp:58]   --->   Operation 24 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%sext_ln58 = sext i58 %trunc_ln" [./basic_helper.hpp:58]   --->   Operation 25 'sext' 'sext_ln58' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%gmem4_addr = getelementptr i512 %gmem4, i64 %sext_ln58" [./basic_helper.hpp:58]   --->   Operation 26 'getelementptr' 'gmem4_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln58 = zext i31 %empty" [./basic_helper.hpp:58]   --->   Operation 27 'zext' 'zext_ln58' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [11/11] (1.40ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 28 'readreq' 'empty_243' <Predicate = true> <Delay = 1.40> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 2.43>
+ST_3 : Operation 29 [10/11] (2.43ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 29 'readreq' 'empty_243' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 2.43>
+ST_4 : Operation 30 [9/11] (2.43ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 30 'readreq' 'empty_243' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 2.43>
+ST_5 : Operation 31 [8/11] (2.43ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 31 'readreq' 'empty_243' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 2.43>
+ST_6 : Operation 32 [7/11] (2.43ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 32 'readreq' 'empty_243' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 2.43>
+ST_7 : Operation 33 [6/11] (2.43ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 33 'readreq' 'empty_243' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 2.43>
+ST_8 : Operation 34 [5/11] (2.43ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 34 'readreq' 'empty_243' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 2.43>
+ST_9 : Operation 35 [4/11] (2.43ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 35 'readreq' 'empty_243' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 2.43>
+ST_10 : Operation 36 [3/11] (2.43ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 36 'readreq' 'empty_243' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 2.43>
+ST_11 : Operation 37 [2/11] (2.43ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 37 'readreq' 'empty_243' <Predicate = true> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 11> <Delay = 1.40>
+ST_12 : Operation 38 [1/11] (1.40ns)   --->   "%empty_243 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i512, i512 %gmem4_addr, i64 %zext_ln58" [./basic_helper.hpp:58]   --->   Operation 38 'readreq' 'empty_243' <Predicate = true> <Delay = 1.40> <CoreInst = "m_axi">   --->   Core 123 'm_axi' <Latency = 9> <II = 1> <Delay = 1.40> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 12> <Delay = 1.06>
+ST_13 : Operation 39 [1/1] (0.00ns)   --->   "%empty_244 = wait i32 @_ssdm_op_Wait"   --->   Operation 39 'wait' 'empty_244' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 40 [2/2] (1.06ns)   --->   "%call_ln58 = call void @loadDDR_data.22_Pipeline_loadDDR_data, i32 %len_read, i512 %gmem4, i58 %trunc_ln, i512 %colScale_fifo" [./basic_helper.hpp:58]   --->   Operation 40 'call' 'call_ln58' <Predicate = true> <Delay = 1.06> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 1.44>
+ST_14 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %n_c1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %colScale_fifo, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem4, void @empty_28, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_32, void @empty_48, void @empty_3, i32 64, i32 16, i32 64, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 44 [1/2] (1.44ns)   --->   "%call_ln58 = call void @loadDDR_data.22_Pipeline_loadDDR_data, i32 %len_read, i512 %gmem4, i58 %trunc_ln, i512 %colScale_fifo" [./basic_helper.hpp:58]   --->   Operation 44 'call' 'call_ln58' <Predicate = true> <Delay = 1.44> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 45 [1/1] (0.00ns)   --->   "%ret_ln63 = ret" [./basic_helper.hpp:63]   --->   Operation 45 'ret' 'ret_ln63' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 1.183ns
+The critical path consists of the following:
+	'muxlogic' operation 32 bit ('muxLogicCE_to_len_read') [7]  (0.000 ns)
+	wire read operation ('len_read') on port 'len' [8]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln58', ./basic_helper.hpp:58) [15]  (0.661 ns)
+	'select' operation 31 bit ('empty', ./basic_helper.hpp:58) [20]  (0.522 ns)
+
+ <State 2>: 1.401ns
+The critical path consists of the following:
+	'muxlogic' operation 64 bit ('muxLogicCE_to_mem_read') [9]  (0.000 ns)
+	wire read operation ('mem_read') on port 'mem' [10]  (0.000 ns)
+	'getelementptr' operation 512 bit ('gmem4_addr', ./basic_helper.hpp:58) [19]  (0.000 ns)
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (1.401 ns)
+
+ <State 3>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (2.433 ns)
+
+ <State 4>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (2.433 ns)
+
+ <State 5>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (2.433 ns)
+
+ <State 6>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (2.433 ns)
+
+ <State 7>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (2.433 ns)
+
+ <State 8>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (2.433 ns)
+
+ <State 9>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (2.433 ns)
+
+ <State 10>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (2.433 ns)
+
+ <State 11>: 2.433ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (2.433 ns)
+
+ <State 12>: 1.401ns
+The critical path consists of the following:
+	bus request operation ('empty_243', ./basic_helper.hpp:58) on port 'gmem4' (./basic_helper.hpp:58) [22]  (1.401 ns)
+
+ <State 13>: 1.061ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln58', ./basic_helper.hpp:58) to 'loadDDR_data.22_Pipeline_loadDDR_data' [24]  (1.061 ns)
+
+ <State 14>: 1.443ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln58', ./basic_helper.hpp:58) to 'loadDDR_data.22_Pipeline_loadDDR_data' [24]  (1.443 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

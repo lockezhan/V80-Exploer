@@ -1,0 +1,219 @@
+
+
+================================================================
+== Vitis HLS Report for 'loadDDR_data_19'
+================================================================
+* Date:           Fri Jan  9 14:29:24 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                                 |                                       |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |                     Instance                    |                 Module                |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_loadDDR_data_19_Pipeline_loadDDR_data_fu_84  |loadDDR_data_19_Pipeline_loadDDR_data  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +-------------------------------------------------+---------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|        0|       47|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      -|       34|      149|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|      256|     -|
+|Register             |        -|      -|      105|        -|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|      139|      452|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+    |                     Instance                    |                 Module                | BRAM_18K| DSP| FF | LUT | URAM|
+    +-------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+    |grp_loadDDR_data_19_Pipeline_loadDDR_data_fu_84  |loadDDR_data_19_Pipeline_loadDDR_data  |        0|   0|  34|  149|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+    |Total                                            |                                       |        0|   0|  34|  149|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |icmp_ln58_fu_100_p2  |      icmp|   0|  0|  16|          32|           1|
+    |ap_block_state1      |        or|   0|  0|   2|           1|           1|
+    |empty_fu_110_p3      |    select|   0|  0|  29|           1|          31|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  47|          34|          33|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                        |  40|         15|    1|         15|
+    |ap_done                          |   8|          2|    1|          2|
+    |gmem6_blk_n_AR                   |   8|          2|    1|          2|
+    |m_axi_gmem6_ARADDR               |  64|          3|   64|        192|
+    |m_axi_gmem6_ARBURST              |   8|          2|    2|          4|
+    |m_axi_gmem6_ARCACHE              |   8|          2|    4|          8|
+    |m_axi_gmem6_ARID                 |   8|          2|    1|          2|
+    |m_axi_gmem6_ARLEN                |  32|          3|   32|         96|
+    |m_axi_gmem6_ARLOCK               |   8|          2|    2|          4|
+    |m_axi_gmem6_ARPROT               |   8|          2|    3|          6|
+    |m_axi_gmem6_ARQOS                |   8|          2|    4|          8|
+    |m_axi_gmem6_ARREGION             |   8|          2|    4|          8|
+    |m_axi_gmem6_ARSIZE               |   8|          2|    3|          6|
+    |m_axi_gmem6_ARUSER               |   8|          2|    1|          2|
+    |m_axi_gmem6_ARVALID              |   8|          3|    1|          3|
+    |m_axi_gmem6_RREADY               |   8|          2|    1|          2|
+    |nRows_assign_c_blk_n             |   8|          2|    1|          2|
+    |primalINfeasConstr_fifo_i_write  |   8|          2|    1|          2|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            | 256|         52|  127|        364|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |                             Name                             | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                     |  14|   0|   14|          0|
+    |ap_done_reg                                                   |   1|   0|    1|          0|
+    |empty_reg_148                                                 |  31|   0|   31|          0|
+    |grp_loadDDR_data_19_Pipeline_loadDDR_data_fu_84_ap_start_reg  |   1|   0|    1|          0|
+    |trunc_ln58_5_reg_153                                          |  58|   0|   58|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                         | 105|   0|  105|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------------------+-----+-----+------------+---------------------------+--------------+
+|                 RTL Ports                | Dir | Bits|  Protocol  |       Source Object       |    C Type    |
++------------------------------------------+-----+-----+------------+---------------------------+--------------+
+|ap_clk                                    |   in|    1|  ap_ctrl_hs|            loadDDR_data.19|  return value|
+|ap_rst                                    |   in|    1|  ap_ctrl_hs|            loadDDR_data.19|  return value|
+|ap_start                                  |   in|    1|  ap_ctrl_hs|            loadDDR_data.19|  return value|
+|ap_done                                   |  out|    1|  ap_ctrl_hs|            loadDDR_data.19|  return value|
+|ap_continue                               |   in|    1|  ap_ctrl_hs|            loadDDR_data.19|  return value|
+|ap_idle                                   |  out|    1|  ap_ctrl_hs|            loadDDR_data.19|  return value|
+|ap_ready                                  |  out|    1|  ap_ctrl_hs|            loadDDR_data.19|  return value|
+|m_axi_gmem6_AWVALID                       |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWREADY                       |   in|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWADDR                        |  out|   64|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWID                          |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWLEN                         |  out|   32|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWSIZE                        |  out|    3|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWBURST                       |  out|    2|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWLOCK                        |  out|    2|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWCACHE                       |  out|    4|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWPROT                        |  out|    3|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWQOS                         |  out|    4|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWREGION                      |  out|    4|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_AWUSER                        |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_WVALID                        |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_WREADY                        |   in|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_WDATA                         |  out|  512|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_WSTRB                         |  out|   64|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_WLAST                         |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_WID                           |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_WUSER                         |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARVALID                       |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARREADY                       |   in|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARADDR                        |  out|   64|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARID                          |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARLEN                         |  out|   32|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARSIZE                        |  out|    3|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARBURST                       |  out|    2|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARLOCK                        |  out|    2|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARCACHE                       |  out|    4|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARPROT                        |  out|    3|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARQOS                         |  out|    4|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARREGION                      |  out|    4|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_ARUSER                        |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_RVALID                        |   in|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_RREADY                        |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_RDATA                         |   in|  512|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_RLAST                         |   in|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_RID                           |   in|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_RFIFONUM                      |   in|   13|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_RUSER                         |   in|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_RRESP                         |   in|    2|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_BVALID                        |   in|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_BREADY                        |  out|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_BRESP                         |   in|    2|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_BID                           |   in|    1|       m_axi|                      gmem6|       pointer|
+|m_axi_gmem6_BUSER                         |   in|    1|       m_axi|                      gmem6|       pointer|
+|ax                                        |   in|   64|     ap_none|                         ax|        scalar|
+|primalINfeasConstr_fifo_i_din             |  out|  512|     ap_fifo|  primalINfeasConstr_fifo_i|       pointer|
+|primalINfeasConstr_fifo_i_num_data_valid  |   in|    3|     ap_fifo|  primalINfeasConstr_fifo_i|       pointer|
+|primalINfeasConstr_fifo_i_fifo_cap        |   in|    3|     ap_fifo|  primalINfeasConstr_fifo_i|       pointer|
+|primalINfeasConstr_fifo_i_full_n          |   in|    1|     ap_fifo|  primalINfeasConstr_fifo_i|       pointer|
+|primalINfeasConstr_fifo_i_write           |  out|    1|     ap_fifo|  primalINfeasConstr_fifo_i|       pointer|
+|p_read                                    |   in|   32|     ap_none|                     p_read|        scalar|
+|nRows_assign_c_din                        |  out|   32|     ap_fifo|             nRows_assign_c|       pointer|
+|nRows_assign_c_num_data_valid             |   in|    3|     ap_fifo|             nRows_assign_c|       pointer|
+|nRows_assign_c_fifo_cap                   |   in|    3|     ap_fifo|             nRows_assign_c|       pointer|
+|nRows_assign_c_full_n                     |   in|    1|     ap_fifo|             nRows_assign_c|       pointer|
+|nRows_assign_c_write                      |  out|    1|     ap_fifo|             nRows_assign_c|       pointer|
++------------------------------------------+-----+-----+------------+---------------------------+--------------+
+

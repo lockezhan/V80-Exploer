@@ -1,0 +1,265 @@
+
+
+================================================================
+== Vitis HLS Report for 'Compute_Primal_Infeasibility_stage2'
+================================================================
+* Date:           Fri Jan  9 14:23:25 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 8, States = { 1 2 3 4 5 6 7 8 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.84>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%muxLogicCE_to_inverse_dScale_read = muxlogic"   --->   Operation 9 'muxlogic' 'muxLogicCE_to_inverse_dScale_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%inverse_dScale_read = read i64 @_ssdm_op_Read.ap_auto.double, i64 %inverse_dScale"   --->   Operation 10 'read' 'inverse_dScale_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%muxLogicCE_to_p_read17 = muxlogic"   --->   Operation 11 'muxlogic' 'muxLogicCE_to_p_read17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.44ns)   --->   "%p_read17 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read1"   --->   Operation 12 'read' 'p_read17' <Predicate = true> <Delay = 0.44> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%muxLogicCE_to_p_read_25 = muxlogic"   --->   Operation 13 'muxlogic' 'muxLogicCE_to_p_read_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.44ns)   --->   "%p_read_25 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read"   --->   Operation 14 'read' 'p_read_25' <Predicate = true> <Delay = 0.44> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%muxLogicCE_to_aty_read = muxlogic"   --->   Operation 15 'muxlogic' 'muxLogicCE_to_aty_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%aty_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %aty"   --->   Operation 16 'read' 'aty_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%muxLogicCE_to_dSlackNeg_read = muxlogic"   --->   Operation 17 'muxlogic' 'muxLogicCE_to_dSlackNeg_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%dSlackNeg_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %dSlackNeg"   --->   Operation 18 'read' 'dSlackNeg_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%muxLogicCE_to_dSlackPos_read = muxlogic"   --->   Operation 19 'muxlogic' 'muxLogicCE_to_dSlackPos_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%dSlackPos_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %dSlackPos"   --->   Operation 20 'read' 'dSlackPos_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%muxLogicCE_to_y_read = muxlogic"   --->   Operation 21 'muxlogic' 'muxLogicCE_to_y_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%y_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %y"   --->   Operation 22 'read' 'y_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%inverse_dScale_c7 = alloca i64 1"   --->   Operation 23 'alloca' 'inverse_dScale_c7' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.76> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 3> <FIFO>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%inverse_dScale_c6 = alloca i64 1"   --->   Operation 24 'alloca' 'inverse_dScale_c6' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.76> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 3> <FIFO>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%inverse_dScale_c5 = alloca i64 1"   --->   Operation 25 'alloca' 'inverse_dScale_c5' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.76> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 3> <FIFO>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%inverse_dScale_c = alloca i64 1"   --->   Operation 26 'alloca' 'inverse_dScale_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.76> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 64> <Depth = 3> <FIFO>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%nCols_assign_c4 = alloca i64 1"   --->   Operation 27 'alloca' 'nCols_assign_c4' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%nCols_assign_c3 = alloca i64 1"   --->   Operation 28 'alloca' 'nCols_assign_c3' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%nCols_assign_c2 = alloca i64 1"   --->   Operation 29 'alloca' 'nCols_assign_c2' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%nCols_assign_c = alloca i64 1"   --->   Operation 30 'alloca' 'nCols_assign_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%nRows_assign_c1 = alloca i64 1"   --->   Operation 31 'alloca' 'nRows_assign_c1' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%nRows_assign_c = alloca i64 1"   --->   Operation 32 'alloca' 'nRows_assign_c' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.71> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 2> <FIFO>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%dualInfeasRay_fifo_i = alloca i64 1"   --->   Operation 33 'alloca' 'dualInfeasRay_fifo_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%dualInfeasLbRay_fifo_i = alloca i64 1"   --->   Operation 34 'alloca' 'dualInfeasLbRay_fifo_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%dualInfeasUbRay_fifo_i = alloca i64 1"   --->   Operation 35 'alloca' 'dualInfeasUbRay_fifo_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%dualInfeasConstr_fifo_i = alloca i64 1"   --->   Operation 36 'alloca' 'dualInfeasConstr_fifo_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%dualInfeasRay_SVfifo_i = alloca i64 1"   --->   Operation 37 'alloca' 'dualInfeasRay_SVfifo_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%dualInfeasLbRay_SVfifo_i = alloca i64 1"   --->   Operation 38 'alloca' 'dualInfeasLbRay_SVfifo_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%dualInfeasUbRay_SVfifo_i = alloca i64 1"   --->   Operation 39 'alloca' 'dualInfeasUbRay_SVfifo_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%dualInfeasConstr_SVfifo_i = alloca i64 1"   --->   Operation 40 'alloca' 'dualInfeasConstr_SVfifo_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%dualInfeasConstr_axpyfifo_i = alloca i64 1"   --->   Operation 41 'alloca' 'dualInfeasConstr_axpyfifo_i' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.91> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 2> <FIFO>
+ST_1 : Operation 42 [1/1] (0.76ns)   --->   "%call_ln0 = call void @entry_proc, i64 %inverse_dScale_read, i64 %inverse_dScale_c, i64 %inverse_dScale_c5, i64 %inverse_dScale_c6, i64 %inverse_dScale_c7"   --->   Operation 42 'call' 'call_ln0' <Predicate = true> <Delay = 0.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 43 [2/2] (1.40ns)   --->   "%call_ln61 = call void @loadDDR_data, i512 %gmem0, i64 %y_read, i512 %dualInfeasRay_fifo_i, i32 %p_read_25, i32 %nRows_assign_c1" [./Compute_Primal_Infeasibility.hpp:61->Infeasi_Res_S2.cpp:95]   --->   Operation 43 'call' 'call_ln61' <Predicate = true> <Delay = 1.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 44 [2/2] (1.40ns)   --->   "%call_ln62 = call void @loadDDR_data.15, i512 %gmem1, i64 %dSlackPos_read, i512 %dualInfeasLbRay_fifo_i, i32 %p_read17, i32 %nCols_assign_c4" [./Compute_Primal_Infeasibility.hpp:62->Infeasi_Res_S2.cpp:95]   --->   Operation 44 'call' 'call_ln62' <Predicate = true> <Delay = 1.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 45 [2/2] (1.40ns)   --->   "%call_ln63 = call void @loadDDR_data.16, i512 %gmem2, i64 %dSlackNeg_read, i512 %dualInfeasUbRay_fifo_i, i32 %p_read17, i32 %nCols_assign_c3" [./Compute_Primal_Infeasibility.hpp:63->Infeasi_Res_S2.cpp:95]   --->   Operation 45 'call' 'call_ln63' <Predicate = true> <Delay = 1.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 46 [2/2] (1.40ns)   --->   "%call_ln64 = call void @loadDDR_data.17, i512 %gmem3, i64 %aty_read, i512 %dualInfeasConstr_fifo_i, i32 %p_read17, i32 %nCols_assign_c2" [./Compute_Primal_Infeasibility.hpp:64->Infeasi_Res_S2.cpp:95]   --->   Operation 46 'call' 'call_ln64' <Predicate = true> <Delay = 1.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 47 [1/2] (0.00ns)   --->   "%call_ln61 = call void @loadDDR_data, i512 %gmem0, i64 %y_read, i512 %dualInfeasRay_fifo_i, i32 %p_read_25, i32 %nRows_assign_c1" [./Compute_Primal_Infeasibility.hpp:61->Infeasi_Res_S2.cpp:95]   --->   Operation 47 'call' 'call_ln61' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 48 [1/2] (0.00ns)   --->   "%call_ln62 = call void @loadDDR_data.15, i512 %gmem1, i64 %dSlackPos_read, i512 %dualInfeasLbRay_fifo_i, i32 %p_read17, i32 %nCols_assign_c4" [./Compute_Primal_Infeasibility.hpp:62->Infeasi_Res_S2.cpp:95]   --->   Operation 48 'call' 'call_ln62' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 49 [1/2] (0.00ns)   --->   "%call_ln63 = call void @loadDDR_data.16, i512 %gmem2, i64 %dSlackNeg_read, i512 %dualInfeasUbRay_fifo_i, i32 %p_read17, i32 %nCols_assign_c3" [./Compute_Primal_Infeasibility.hpp:63->Infeasi_Res_S2.cpp:95]   --->   Operation 49 'call' 'call_ln63' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 50 [1/2] (0.00ns)   --->   "%call_ln64 = call void @loadDDR_data.17, i512 %gmem3, i64 %aty_read, i512 %dualInfeasConstr_fifo_i, i32 %p_read17, i32 %nCols_assign_c2" [./Compute_Primal_Infeasibility.hpp:64->Infeasi_Res_S2.cpp:95]   --->   Operation 50 'call' 'call_ln64' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 51 [2/2] (0.00ns)   --->   "%call_ln66 = call void @scaleVector.12, i64 %inverse_dScale_c7, i512 %dualInfeasRay_fifo_i, i512 %dualInfeasRay_SVfifo_i, i32 %nRows_assign_c1, i32 %nRows_assign_c" [./Compute_Primal_Infeasibility.hpp:66->Infeasi_Res_S2.cpp:95]   --->   Operation 51 'call' 'call_ln66' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 52 [2/2] (0.00ns)   --->   "%call_ln67 = call void @scaleVector.13, i64 %inverse_dScale_c6, i512 %dualInfeasLbRay_fifo_i, i512 %dualInfeasLbRay_SVfifo_i, i32 %nCols_assign_c4" [./Compute_Primal_Infeasibility.hpp:67->Infeasi_Res_S2.cpp:95]   --->   Operation 52 'call' 'call_ln67' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 53 [2/2] (0.00ns)   --->   "%call_ln68 = call void @scaleVector.14, i64 %inverse_dScale_c5, i512 %dualInfeasUbRay_fifo_i, i512 %dualInfeasUbRay_SVfifo_i, i32 %nCols_assign_c3" [./Compute_Primal_Infeasibility.hpp:68->Infeasi_Res_S2.cpp:95]   --->   Operation 53 'call' 'call_ln68' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 54 [2/2] (0.00ns)   --->   "%call_ln69 = call void @scaleVector, i64 %inverse_dScale_c, i512 %dualInfeasConstr_fifo_i, i512 %dualInfeasConstr_SVfifo_i, i32 %nCols_assign_c2, i32 %nCols_assign_c" [./Compute_Primal_Infeasibility.hpp:69->Infeasi_Res_S2.cpp:95]   --->   Operation 54 'call' 'call_ln69' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 55 [1/2] (0.00ns)   --->   "%call_ln66 = call void @scaleVector.12, i64 %inverse_dScale_c7, i512 %dualInfeasRay_fifo_i, i512 %dualInfeasRay_SVfifo_i, i32 %nRows_assign_c1, i32 %nRows_assign_c" [./Compute_Primal_Infeasibility.hpp:66->Infeasi_Res_S2.cpp:95]   --->   Operation 55 'call' 'call_ln66' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 56 [1/2] (0.00ns)   --->   "%call_ln67 = call void @scaleVector.13, i64 %inverse_dScale_c6, i512 %dualInfeasLbRay_fifo_i, i512 %dualInfeasLbRay_SVfifo_i, i32 %nCols_assign_c4" [./Compute_Primal_Infeasibility.hpp:67->Infeasi_Res_S2.cpp:95]   --->   Operation 56 'call' 'call_ln67' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 57 [1/2] (0.00ns)   --->   "%call_ln68 = call void @scaleVector.14, i64 %inverse_dScale_c5, i512 %dualInfeasUbRay_fifo_i, i512 %dualInfeasUbRay_SVfifo_i, i32 %nCols_assign_c3" [./Compute_Primal_Infeasibility.hpp:68->Infeasi_Res_S2.cpp:95]   --->   Operation 57 'call' 'call_ln68' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 58 [1/2] (0.00ns)   --->   "%call_ln69 = call void @scaleVector, i64 %inverse_dScale_c, i512 %dualInfeasConstr_fifo_i, i512 %dualInfeasConstr_SVfifo_i, i32 %nCols_assign_c2, i32 %nCols_assign_c" [./Compute_Primal_Infeasibility.hpp:69->Infeasi_Res_S2.cpp:95]   --->   Operation 58 'call' 'call_ln69' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 59 [2/2] (0.00ns)   --->   "%call_ln71 = call void @consumer, i512 %dualInfeasRay_SVfifo_i, i32 %nRows_assign_c" [./Compute_Primal_Infeasibility.hpp:71->Infeasi_Res_S2.cpp:95]   --->   Operation 59 'call' 'call_ln71' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 60 [2/2] (0.00ns)   --->   "%call_ln76 = call void @axpy_2fused, i512 %dualInfeasConstr_SVfifo_i, i512 %dualInfeasLbRay_SVfifo_i, i512 %dualInfeasUbRay_SVfifo_i, i512 %dualInfeasConstr_axpyfifo_i, i32 %nCols_assign_c" [./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 60 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 61 [1/2] (0.00ns)   --->   "%call_ln71 = call void @consumer, i512 %dualInfeasRay_SVfifo_i, i32 %nRows_assign_c" [./Compute_Primal_Infeasibility.hpp:71->Infeasi_Res_S2.cpp:95]   --->   Operation 61 'call' 'call_ln71' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 62 [1/2] (0.00ns)   --->   "%call_ln76 = call void @axpy_2fused, i512 %dualInfeasConstr_SVfifo_i, i512 %dualInfeasLbRay_SVfifo_i, i512 %dualInfeasUbRay_SVfifo_i, i512 %dualInfeasConstr_axpyfifo_i, i32 %nCols_assign_c" [./Compute_Primal_Infeasibility.hpp:76->Infeasi_Res_S2.cpp:95]   --->   Operation 62 'call' 'call_ln76' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 2.11>
+ST_7 : Operation 63 [1/1] (0.00ns)   --->   "%muxLogicCE_to_ifScaled_read = muxlogic"   --->   Operation 63 'muxlogic' 'muxLogicCE_to_ifScaled_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 64 [1/1] (0.00ns)   --->   "%ifScaled_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %ifScaled"   --->   Operation 64 'read' 'ifScaled_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%muxLogicCE_to_colScale0_read = muxlogic"   --->   Operation 65 'muxlogic' 'muxLogicCE_to_colScale0_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 66 [1/1] (0.00ns)   --->   "%colScale0_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %colScale0"   --->   Operation 66 'read' 'colScale0_read' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 67 [2/2] (2.11ns)   --->   "%call_ln88 = call void @scale_and_twoNorm, i512 %gmem4, i64 %colScale0_read, i512 %dualInfeasConstr_axpyfifo_i, i64 %dPrimalInfeasRes, i32 %p_read17, i32 %ifScaled_read" [./Compute_Primal_Infeasibility.hpp:88->Infeasi_Res_S2.cpp:95]   --->   Operation 67 'call' 'call_ln88' <Predicate = true> <Delay = 2.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @inverse_dScale_c7_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i64 %inverse_dScale_c7, i64 %inverse_dScale_c7"   --->   Operation 68 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inverse_dScale_c7, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 70 [1/1] (0.00ns)   --->   "%empty_304 = specchannel i32 @_ssdm_op_SpecChannel, void @inverse_dScale_c6_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i64 %inverse_dScale_c6, i64 %inverse_dScale_c6"   --->   Operation 70 'specchannel' 'empty_304' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inverse_dScale_c6, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 71 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 72 [1/1] (0.00ns)   --->   "%empty_305 = specchannel i32 @_ssdm_op_SpecChannel, void @inverse_dScale_c5_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i64 %inverse_dScale_c5, i64 %inverse_dScale_c5"   --->   Operation 72 'specchannel' 'empty_305' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inverse_dScale_c5, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 73 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%empty_306 = specchannel i32 @_ssdm_op_SpecChannel, void @inverse_dScale_c_str, i32 1, void @p_str, void @p_str, i32 3, i32 0, i64 %inverse_dScale_c, i64 %inverse_dScale_c"   --->   Operation 74 'specchannel' 'empty_306' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %inverse_dScale_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 75 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 76 [1/1] (0.00ns)   --->   "%empty_307 = specchannel i32 @_ssdm_op_SpecChannel, void @nCols_OC_assign_c4_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %nCols_assign_c4, i32 %nCols_assign_c4"   --->   Operation 76 'specchannel' 'empty_307' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 77 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nCols_assign_c4, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 77 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 78 [1/1] (0.00ns)   --->   "%empty_308 = specchannel i32 @_ssdm_op_SpecChannel, void @nCols_OC_assign_c3_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %nCols_assign_c3, i32 %nCols_assign_c3"   --->   Operation 78 'specchannel' 'empty_308' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nCols_assign_c3, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 79 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%empty_309 = specchannel i32 @_ssdm_op_SpecChannel, void @nCols_OC_assign_c2_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %nCols_assign_c2, i32 %nCols_assign_c2"   --->   Operation 80 'specchannel' 'empty_309' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 81 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nCols_assign_c2, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 81 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 82 [1/1] (0.00ns)   --->   "%empty_310 = specchannel i32 @_ssdm_op_SpecChannel, void @nCols_OC_assign_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %nCols_assign_c, i32 %nCols_assign_c"   --->   Operation 82 'specchannel' 'empty_310' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nCols_assign_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 83 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 84 [1/1] (0.00ns)   --->   "%empty_311 = specchannel i32 @_ssdm_op_SpecChannel, void @nRows_OC_assign_c1_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %nRows_assign_c1, i32 %nRows_assign_c1"   --->   Operation 84 'specchannel' 'empty_311' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 85 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nRows_assign_c1, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 85 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 86 [1/1] (0.00ns)   --->   "%empty_312 = specchannel i32 @_ssdm_op_SpecChannel, void @nRows_OC_assign_c_str, i32 1, void @p_str, void @p_str, i32 2, i32 0, i32 %nRows_assign_c, i32 %nRows_assign_c"   --->   Operation 86 'specchannel' 'empty_312' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nRows_assign_c, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @p_str, i32 4294967295, i32 0, i32 0"   --->   Operation 87 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln54 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_3" [./Compute_Primal_Infeasibility.hpp:54->Infeasi_Res_S2.cpp:95]   --->   Operation 88 'specdataflowpipeline' 'specdataflowpipeline_ln54' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %dPrimalInfeasRes, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 89 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem4, void @empty_28, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_32, void @empty_48, void @empty_3, i32 64, i32 16, i32 64, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 90 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 91 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem3, void @empty_28, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_45, void @empty_48, void @empty_3, i32 64, i32 16, i32 64, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 91 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 92 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem2, void @empty_28, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_46, void @empty_48, void @empty_3, i32 64, i32 16, i32 64, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 92 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 93 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem1, void @empty_28, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_34, void @empty_48, void @empty_3, i32 64, i32 16, i32 64, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 93 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem0, void @empty_28, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_36, void @empty_48, void @empty_3, i32 64, i32 16, i32 64, i32 16, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 94 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 95 [1/1] (0.00ns)   --->   "%empty_313 = specchannel i32 @_ssdm_op_SpecChannel, void @dualInfeasRay_fifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i512 %dualInfeasRay_fifo_i, i512 %dualInfeasRay_fifo_i"   --->   Operation 95 'specchannel' 'empty_313' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasRay_fifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 96 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 97 [1/1] (0.00ns)   --->   "%empty_314 = specchannel i32 @_ssdm_op_SpecChannel, void @dualInfeasLbRay_fifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i512 %dualInfeasLbRay_fifo_i, i512 %dualInfeasLbRay_fifo_i"   --->   Operation 97 'specchannel' 'empty_314' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 98 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasLbRay_fifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 98 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 99 [1/1] (0.00ns)   --->   "%empty_315 = specchannel i32 @_ssdm_op_SpecChannel, void @dualInfeasUbRay_fifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i512 %dualInfeasUbRay_fifo_i, i512 %dualInfeasUbRay_fifo_i"   --->   Operation 99 'specchannel' 'empty_315' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 100 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasUbRay_fifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 100 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 101 [1/1] (0.00ns)   --->   "%empty_316 = specchannel i32 @_ssdm_op_SpecChannel, void @dualInfeasConstr_fifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i512 %dualInfeasConstr_fifo_i, i512 %dualInfeasConstr_fifo_i"   --->   Operation 101 'specchannel' 'empty_316' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 102 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasConstr_fifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 102 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 103 [1/1] (0.00ns)   --->   "%empty_317 = specchannel i32 @_ssdm_op_SpecChannel, void @dualInfeasRay_SVfifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i512 %dualInfeasRay_SVfifo_i, i512 %dualInfeasRay_SVfifo_i"   --->   Operation 103 'specchannel' 'empty_317' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 104 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasRay_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 104 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 105 [1/1] (0.00ns)   --->   "%empty_318 = specchannel i32 @_ssdm_op_SpecChannel, void @dualInfeasLbRay_SVfifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i512 %dualInfeasLbRay_SVfifo_i, i512 %dualInfeasLbRay_SVfifo_i"   --->   Operation 105 'specchannel' 'empty_318' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 106 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasLbRay_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 106 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 107 [1/1] (0.00ns)   --->   "%empty_319 = specchannel i32 @_ssdm_op_SpecChannel, void @dualInfeasUbRay_SVfifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i512 %dualInfeasUbRay_SVfifo_i, i512 %dualInfeasUbRay_SVfifo_i"   --->   Operation 107 'specchannel' 'empty_319' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 108 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasUbRay_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 108 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 109 [1/1] (0.00ns)   --->   "%empty_320 = specchannel i32 @_ssdm_op_SpecChannel, void @dualInfeasConstr_SVfifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i512 %dualInfeasConstr_SVfifo_i, i512 %dualInfeasConstr_SVfifo_i"   --->   Operation 109 'specchannel' 'empty_320' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 110 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasConstr_SVfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 110 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 111 [1/1] (0.00ns)   --->   "%empty_321 = specchannel i32 @_ssdm_op_SpecChannel, void @dualInfeasConstr_axpyfifo_str, i32 1, void @p_str, void @p_str, i32 2, i32 2, i512 %dualInfeasConstr_axpyfifo_i, i512 %dualInfeasConstr_axpyfifo_i"   --->   Operation 111 'specchannel' 'empty_321' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 112 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %dualInfeasConstr_axpyfifo_i, void @empty_14, i32 0, i32 0, void @empty_3, i32 0, i32 0, void @empty_3, void @empty_3, void @empty_3, i32 0, i32 0, i32 0, i32 0, void @empty_3, void @empty_3, i32 4294967295, i32 0, i32 0"   --->   Operation 112 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 113 [1/2] (0.00ns)   --->   "%call_ln88 = call void @scale_and_twoNorm, i512 %gmem4, i64 %colScale0_read, i512 %dualInfeasConstr_axpyfifo_i, i64 %dPrimalInfeasRes, i32 %p_read17, i32 %ifScaled_read" [./Compute_Primal_Infeasibility.hpp:88->Infeasi_Res_S2.cpp:95]   --->   Operation 113 'call' 'call_ln88' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 114 [1/1] (0.00ns)   --->   "%ret_ln95 = ret" [Infeasi_Res_S2.cpp:95]   --->   Operation 114 'ret' 'ret_ln95' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 1.842ns
+The critical path consists of the following:
+	'muxlogic' operation 32 bit ('muxLogicCE_to_p_read_25') [22]  (0.000 ns)
+	wire read operation ('p_read_25') on port 'p_read' [23]  (0.441 ns)
+	'call' operation 0 bit ('call_ln61', ./Compute_Primal_Infeasibility.hpp:61->Infeasi_Res_S2.cpp:95) to 'loadDDR_data' [99]  (1.401 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 0.000ns
+The critical path consists of the following:
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 2.111ns
+The critical path consists of the following:
+	'muxlogic' operation 32 bit ('muxLogicCE_to_ifScaled_read') [18]  (0.000 ns)
+	wire read operation ('ifScaled_read') on port 'ifScaled' [19]  (0.000 ns)
+	'call' operation 0 bit ('call_ln88', ./Compute_Primal_Infeasibility.hpp:88->Infeasi_Res_S2.cpp:95) to 'scale_and_twoNorm' [109]  (2.111 ns)
+
+ <State 8>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

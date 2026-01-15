@@ -1,0 +1,299 @@
+
+
+================================================================
+== Vitis HLS Report for 'axpy_2fused_Pipeline_axpy_2fused'
+================================================================
+* Date:           Fri Jan  9 14:28:19 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.190 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+    |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+    |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- axpy_2fused  |        ?|        ?|        16|          1|          1|     ?|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+------+
+|         Name        | BRAM_18K|  DSP  |    FF   |   LUT   | URAM |
++---------------------+---------+-------+---------+---------+------+
+|DSP                  |        -|      -|        -|        -|     -|
+|Expression           |        -|      -|       69|       98|     -|
+|FIFO                 |        -|      -|        -|        -|     -|
+|Instance             |        -|      0|     8576|    13120|     -|
+|Memory               |        -|      -|        -|        -|     -|
+|Multiplexer          |        -|      -|        0|     1112|     -|
+|Register             |        -|      -|     4155|      256|     -|
++---------------------+---------+-------+---------+---------+------+
+|Total                |        0|      0|    12800|    14586|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available SLR        |     2494|   3616|  1716138|   858069|   641|
++---------------------+---------+-------+---------+---------+------+
+|Utilization SLR (%)  |        0|      0|       ~0|        1|     0|
++---------------------+---------+-------+---------+---------+------+
+|Available            |     7482|  10848|  5148416|  2574208|  1925|
++---------------------+---------+-------+---------+---------+------+
+|Utilization (%)      |        0|      0|       ~0|       ~0|     0|
++---------------------+---------+-------+---------+---------+------+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------+------------------------------+---------+----+-----+-----+-----+
+    |              Instance             |            Module            | BRAM_18K| DSP|  FF | LUT | URAM|
+    +-----------------------------------+------------------------------+---------+----+-----+-----+-----+
+    |dadd_64ns_64ns_64_7_no_dsp_1_U125  |dadd_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dadd_64ns_64ns_64_7_no_dsp_1_U126  |dadd_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dadd_64ns_64ns_64_7_no_dsp_1_U127  |dadd_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dadd_64ns_64ns_64_7_no_dsp_1_U128  |dadd_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dadd_64ns_64ns_64_7_no_dsp_1_U129  |dadd_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dadd_64ns_64ns_64_7_no_dsp_1_U130  |dadd_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dadd_64ns_64ns_64_7_no_dsp_1_U131  |dadd_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dadd_64ns_64ns_64_7_no_dsp_1_U132  |dadd_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dsub_64ns_64ns_64_7_no_dsp_1_U117  |dsub_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dsub_64ns_64ns_64_7_no_dsp_1_U118  |dsub_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dsub_64ns_64ns_64_7_no_dsp_1_U119  |dsub_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dsub_64ns_64ns_64_7_no_dsp_1_U120  |dsub_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dsub_64ns_64ns_64_7_no_dsp_1_U121  |dsub_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dsub_64ns_64ns_64_7_no_dsp_1_U122  |dsub_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dsub_64ns_64ns_64_7_no_dsp_1_U123  |dsub_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    |dsub_64ns_64ns_64_7_no_dsp_1_U124  |dsub_64ns_64ns_64_7_no_dsp_1  |        0|   0|  536|  820|    0|
+    +-----------------------------------+------------------------------+---------+----+-----+-----+-----+
+    |Total                              |                              |        0|   0| 8576|13120|    0|
+    +-----------------------------------+------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------+----------+----+----+----+------------+------------+
+    |               Variable Name               | Operation| DSP| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------+----------+----+----+----+------------+------------+
+    |add_ln302_fu_199_p2                        |         +|   0|   0|  31|          31|           1|
+    |ap_frp_data_req_dualInfeasConstr_SVfifo_i  |         -|   0|  23|  15|           4|           1|
+    |ap_frp_data_req_dualInfeasLbRay_SVfifo_i   |         -|   0|  23|  15|           4|           1|
+    |ap_frp_data_req_dualInfeasUbRay_SVfifo_i   |         -|   0|  23|  15|           4|           1|
+    |ap_condition_frp_pvb_pf_start              |       and|   0|   0|   2|           1|           1|
+    |pf_all_done                                |       and|   0|   0|   2|           1|           0|
+    |icmp_ln302_fu_193_p2                       |      icmp|   0|   0|  16|          32|          32|
+    |ap_enable_pp0                              |       xor|   0|   0|   2|           1|           2|
+    +-------------------------------------------+----------+----+----+----+------------+------------+
+    |Total                                      |          |   0|  69|  98|          78|          39|
+    +-------------------------------------------+----------+----+----+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                   | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |ap_frp_data_req_dualInfeasConstr_SVfifo_i  |   8|          2|    4|          8|
+    |ap_frp_data_req_dualInfeasLbRay_SVfifo_i   |   8|          2|    4|          8|
+    |ap_frp_data_req_dualInfeasUbRay_SVfifo_i   |   8|          2|    4|          8|
+    |ap_sig_allocacmp_i_load                    |  32|          2|   31|         62|
+    |grp_fu_105_p2                              |  64|          2|   64|        128|
+    |grp_fu_109_p2                              |  64|          2|   64|        128|
+    |grp_fu_113_p2                              |  64|          2|   64|        128|
+    |grp_fu_117_p2                              |  64|          2|   64|        128|
+    |grp_fu_121_p2                              |  64|          2|   64|        128|
+    |grp_fu_125_p2                              |  64|          2|   64|        128|
+    |grp_fu_129_p2                              |  64|          2|   64|        128|
+    |grp_fu_133_p2                              |  64|          2|   64|        128|
+    |grp_fu_137_p2                              |  64|          2|   64|        128|
+    |grp_fu_141_p2                              |  64|          2|   64|        128|
+    |grp_fu_145_p2                              |  64|          2|   64|        128|
+    |grp_fu_149_p2                              |  64|          2|   64|        128|
+    |grp_fu_153_p2                              |  64|          2|   64|        128|
+    |grp_fu_157_p2                              |  64|          2|   64|        128|
+    |grp_fu_161_p2                              |  64|          2|   64|        128|
+    |grp_fu_165_p2                              |  64|          2|   64|        128|
+    |i_fu_70                                    |  32|          2|   31|         62|
+    +-------------------------------------------+----+-----------+-----+-----------+
+    |Total                                      |1112|         42| 1098|       2196|
+    +-------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+----+----+-----+-----------+
+    |                    Name                   | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                  |   1|   0|    1|          0|
+    |ap_frp_data_req_dualInfeasConstr_SVfifo_i  |   4|   0|    4|          0|
+    |ap_frp_data_req_dualInfeasLbRay_SVfifo_i   |   4|   0|    4|          0|
+    |ap_frp_data_req_dualInfeasUbRay_SVfifo_i   |   4|   0|    4|          0|
+    |ap_loop_exit_ready_pp0_iter10_reg          |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter11_reg          |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter12_reg          |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter13_reg          |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter14_reg          |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter1_reg           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter3_reg           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter4_reg           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter5_reg           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter6_reg           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter7_reg           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter8_reg           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter9_reg           |   1|   0|    1|          0|
+    |grp_fu_105_ce                              |   0|   0|    1|          1|
+    |grp_fu_105_p0                              |  64|   0|   64|          0|
+    |grp_fu_105_p1                              |  64|   0|   64|          0|
+    |grp_fu_109_ce                              |   0|   0|    1|          1|
+    |grp_fu_109_p0                              |  64|   0|   64|          0|
+    |grp_fu_109_p1                              |  64|   0|   64|          0|
+    |grp_fu_113_ce                              |   0|   0|    1|          1|
+    |grp_fu_113_p0                              |  64|   0|   64|          0|
+    |grp_fu_113_p1                              |  64|   0|   64|          0|
+    |grp_fu_117_ce                              |   0|   0|    1|          1|
+    |grp_fu_117_p0                              |  64|   0|   64|          0|
+    |grp_fu_117_p1                              |  64|   0|   64|          0|
+    |grp_fu_121_ce                              |   0|   0|    1|          1|
+    |grp_fu_121_p0                              |  64|   0|   64|          0|
+    |grp_fu_121_p1                              |  64|   0|   64|          0|
+    |grp_fu_125_ce                              |   0|   0|    1|          1|
+    |grp_fu_125_p0                              |  64|   0|   64|          0|
+    |grp_fu_125_p1                              |  64|   0|   64|          0|
+    |grp_fu_129_ce                              |   0|   0|    1|          1|
+    |grp_fu_129_p0                              |  64|   0|   64|          0|
+    |grp_fu_129_p1                              |  64|   0|   64|          0|
+    |grp_fu_133_ce                              |   0|   0|    1|          1|
+    |grp_fu_133_p0                              |  64|   0|   64|          0|
+    |grp_fu_133_p1                              |  64|   0|   64|          0|
+    |grp_fu_137_ce                              |   0|   0|    1|          1|
+    |grp_fu_137_p0                              |  64|   0|   64|          0|
+    |grp_fu_137_p1                              |  64|   0|   64|          0|
+    |grp_fu_141_ce                              |   0|   0|    1|          1|
+    |grp_fu_141_p0                              |  64|   0|   64|          0|
+    |grp_fu_141_p1                              |  64|   0|   64|          0|
+    |grp_fu_145_ce                              |   0|   0|    1|          1|
+    |grp_fu_145_p0                              |  64|   0|   64|          0|
+    |grp_fu_145_p1                              |  64|   0|   64|          0|
+    |grp_fu_149_ce                              |   0|   0|    1|          1|
+    |grp_fu_149_p0                              |  64|   0|   64|          0|
+    |grp_fu_149_p1                              |  64|   0|   64|          0|
+    |grp_fu_153_ce                              |   0|   0|    1|          1|
+    |grp_fu_153_p0                              |  64|   0|   64|          0|
+    |grp_fu_153_p1                              |  64|   0|   64|          0|
+    |grp_fu_157_ce                              |   0|   0|    1|          1|
+    |grp_fu_157_p0                              |  64|   0|   64|          0|
+    |grp_fu_157_p1                              |  64|   0|   64|          0|
+    |grp_fu_161_ce                              |   0|   0|    1|          1|
+    |grp_fu_161_p0                              |  64|   0|   64|          0|
+    |grp_fu_161_p1                              |  64|   0|   64|          0|
+    |grp_fu_165_ce                              |   0|   0|    1|          1|
+    |grp_fu_165_p0                              |  64|   0|   64|          0|
+    |grp_fu_165_p1                              |  64|   0|   64|          0|
+    |i_fu_70                                    |  31|   0|   31|          0|
+    |pf_all_done                                |   1|   0|    1|          0|
+    |pre_grp_fu_105_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_109_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_113_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_117_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_121_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_125_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_129_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_133_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_137_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_141_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_145_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_149_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_153_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_157_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_161_p2_reg                      |  64|   0|   64|          0|
+    |pre_grp_fu_165_p2_reg                      |  64|   0|   64|          0|
+    |trunc_ln304_1_reg_757                      |  64|   0|   64|          0|
+    |trunc_ln304_2_reg_762                      |  64|   0|   64|          0|
+    |trunc_ln304_3_reg_767                      |  64|   0|   64|          0|
+    |trunc_ln304_7_reg_737                      |  64|   0|   64|          0|
+    |trunc_ln304_8_reg_742                      |  64|   0|   64|          0|
+    |trunc_ln304_9_reg_747                      |  64|   0|   64|          0|
+    |trunc_ln304_reg_732                        |  64|   0|   64|          0|
+    |trunc_ln304_s_reg_752                      |  64|   0|   64|          0|
+    |trunc_ln304_1_reg_757                      |  64|  32|   64|          0|
+    |trunc_ln304_2_reg_762                      |  64|  32|   64|          0|
+    |trunc_ln304_3_reg_767                      |  64|  32|   64|          0|
+    |trunc_ln304_7_reg_737                      |  64|  32|   64|          0|
+    |trunc_ln304_8_reg_742                      |  64|  32|   64|          0|
+    |trunc_ln304_9_reg_747                      |  64|  32|   64|          0|
+    |trunc_ln304_reg_732                        |  64|  32|   64|          0|
+    |trunc_ln304_s_reg_752                      |  64|  32|   64|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+    |Total                                      |4155| 256| 4171|         16|
+    +-------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------------+-----+-----+------------+----------------------------------+--------------+
+|                  RTL Ports                 | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++--------------------------------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk                                      |   in|    1|  ap_ctrl_hs|  axpy_2fused_Pipeline_axpy_2fused|  return value|
+|ap_rst                                      |   in|    1|  ap_ctrl_hs|  axpy_2fused_Pipeline_axpy_2fused|  return value|
+|ap_start                                    |   in|    1|  ap_ctrl_hs|  axpy_2fused_Pipeline_axpy_2fused|  return value|
+|ap_done                                     |  out|    1|  ap_ctrl_hs|  axpy_2fused_Pipeline_axpy_2fused|  return value|
+|ap_idle                                     |  out|    1|  ap_ctrl_hs|  axpy_2fused_Pipeline_axpy_2fused|  return value|
+|ap_ready                                    |  out|    1|  ap_ctrl_hs|  axpy_2fused_Pipeline_axpy_2fused|  return value|
+|dualInfeasConstr_SVfifo_i_dout              |   in|  512|     ap_fifo|         dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasConstr_SVfifo_i_num_data_valid    |   in|    3|     ap_fifo|         dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasConstr_SVfifo_i_fifo_cap          |   in|    3|     ap_fifo|         dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasConstr_SVfifo_i_empty_n           |   in|    1|     ap_fifo|         dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasConstr_SVfifo_i_read              |  out|    1|     ap_fifo|         dualInfeasConstr_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_dout               |   in|  512|     ap_fifo|          dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_num_data_valid     |   in|    3|     ap_fifo|          dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_fifo_cap           |   in|    3|     ap_fifo|          dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_empty_n            |   in|    1|     ap_fifo|          dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasLbRay_SVfifo_i_read               |  out|    1|     ap_fifo|          dualInfeasLbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_dout               |   in|  512|     ap_fifo|          dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_num_data_valid     |   in|    3|     ap_fifo|          dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_fifo_cap           |   in|    3|     ap_fifo|          dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_empty_n            |   in|    1|     ap_fifo|          dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasUbRay_SVfifo_i_read               |  out|    1|     ap_fifo|          dualInfeasUbRay_SVfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_din             |  out|  512|     ap_fifo|       dualInfeasConstr_axpyfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_num_data_valid  |   in|    3|     ap_fifo|       dualInfeasConstr_axpyfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_fifo_cap        |   in|    3|     ap_fifo|       dualInfeasConstr_axpyfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_full_n          |   in|    1|     ap_fifo|       dualInfeasConstr_axpyfifo_i|       pointer|
+|dualInfeasConstr_axpyfifo_i_write           |  out|    1|     ap_fifo|       dualInfeasConstr_axpyfifo_i|       pointer|
+|nCols_assign_load                           |   in|   32|     ap_none|                 nCols_assign_load|        scalar|
++--------------------------------------------+-----+-----+------------+----------------------------------+--------------+
+

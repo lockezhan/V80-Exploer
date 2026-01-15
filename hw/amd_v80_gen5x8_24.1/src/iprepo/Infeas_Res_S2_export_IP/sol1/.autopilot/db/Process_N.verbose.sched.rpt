@@ -1,0 +1,144 @@
+
+
+================================================================
+== Vitis HLS Report for 'Process_N'
+================================================================
+* Date:           Fri Jan  9 14:22:27 2026
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S
+* Solution:       sol1 (Vivado IP Flow Target)
+* Product family: versalhbm
+* Target device:  xcv80-lsva4737-2MHP-e-S
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.242 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1|  3.333 ns|  3.333 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.44>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%muxLogicCE_to_p_read13 = muxlogic"   --->   Operation 3 'muxlogic' 'muxLogicCE_to_p_read13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.44ns)   --->   "%p_read13 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read1" [Infeasi_Res_S2.cpp:24]   --->   Operation 4 'read' 'p_read13' <Predicate = true> <Delay = 0.44> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%muxLogicCE_to_p_read_22 = muxlogic"   --->   Operation 5 'muxlogic' 'muxLogicCE_to_p_read_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.44ns)   --->   "%p_read_22 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %p_read" [Infeasi_Res_S2.cpp:24]   --->   Operation 6 'read' 'p_read_22' <Predicate = true> <Delay = 0.44> <CoreInst = "FIFO_SRL">   --->   Core 84 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 0.61> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = -1> <Depth = -1> <FIFO>
+
+State 2 <SV = 1> <Delay = 2.24>
+ST_2 : Operation 7 [1/1] (0.86ns)   --->   "%add_ln24 = add i32 %p_read_22, i32 7" [Infeasi_Res_S2.cpp:24]   --->   Operation 7 'add' 'add_ln24' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "%tmp_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %add_ln24, i32 31" [Infeasi_Res_S2.cpp:24]   --->   Operation 8 'bitselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.86ns)   --->   "%sub_ln24 = sub i32 4294967289, i32 %p_read_22" [Infeasi_Res_S2.cpp:24]   --->   Operation 9 'sub' 'sub_ln24' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = partselect i29 @_ssdm_op_PartSelect.i29.i32.i32.i32, i32 %sub_ln24, i32 3, i32 31" [Infeasi_Res_S2.cpp:24]   --->   Operation 10 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln24 = zext i29 %tmp" [Infeasi_Res_S2.cpp:24]   --->   Operation 11 'zext' 'zext_ln24' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.86ns)   --->   "%sub_ln24_1 = sub i30 0, i30 %zext_ln24" [Infeasi_Res_S2.cpp:24]   --->   Operation 12 'sub' 'sub_ln24_1' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%tmp_2 = partselect i29 @_ssdm_op_PartSelect.i29.i32.i32.i32, i32 %add_ln24, i32 3, i32 31" [Infeasi_Res_S2.cpp:24]   --->   Operation 13 'partselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%zext_ln24_1 = zext i29 %tmp_2" [Infeasi_Res_S2.cpp:24]   --->   Operation 14 'zext' 'zext_ln24_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.51ns)   --->   "%select_ln24 = select i1 %tmp_1, i30 %sub_ln24_1, i30 %zext_ln24_1" [Infeasi_Res_S2.cpp:24]   --->   Operation 15 'select' 'select_ln24' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%sext_ln24 = sext i30 %select_ln24" [Infeasi_Res_S2.cpp:24]   --->   Operation 16 'sext' 'sext_ln24' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.86ns)   --->   "%add_ln25 = add i32 %p_read13, i32 7" [Infeasi_Res_S2.cpp:25]   --->   Operation 17 'add' 'add_ln25' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_5 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %add_ln25, i32 31" [Infeasi_Res_S2.cpp:25]   --->   Operation 18 'bitselect' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.86ns)   --->   "%sub_ln25 = sub i32 4294967289, i32 %p_read13" [Infeasi_Res_S2.cpp:25]   --->   Operation 19 'sub' 'sub_ln25' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i29 @_ssdm_op_PartSelect.i29.i32.i32.i32, i32 %sub_ln25, i32 3, i32 31" [Infeasi_Res_S2.cpp:25]   --->   Operation 20 'partselect' 'tmp_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%zext_ln25 = zext i29 %tmp_3" [Infeasi_Res_S2.cpp:25]   --->   Operation 21 'zext' 'zext_ln25' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.86ns)   --->   "%sub_ln25_1 = sub i30 0, i30 %zext_ln25" [Infeasi_Res_S2.cpp:25]   --->   Operation 22 'sub' 'sub_ln25_1' <Predicate = true> <Delay = 0.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i29 @_ssdm_op_PartSelect.i29.i32.i32.i32, i32 %add_ln25, i32 3, i32 31" [Infeasi_Res_S2.cpp:25]   --->   Operation 23 'partselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln25_1 = zext i29 %tmp_4" [Infeasi_Res_S2.cpp:25]   --->   Operation 24 'zext' 'zext_ln25_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.51ns)   --->   "%select_ln25 = select i1 %tmp_5, i30 %sub_ln25_1, i30 %zext_ln25_1" [Infeasi_Res_S2.cpp:25]   --->   Operation 25 'select' 'select_ln25' <Predicate = true> <Delay = 0.51> <CoreInst = "Sel">   --->   Core 77 'Sel' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%sext_ln25 = sext i30 %select_ln25" [Infeasi_Res_S2.cpp:25]   --->   Operation 26 'sext' 'sext_ln25' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue i128 <undef>, i32 %sext_ln25" [Infeasi_Res_S2.cpp:26]   --->   Operation 27 'insertvalue' 'mrv_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue i128 %mrv_s, i32 %sext_ln24" [Infeasi_Res_S2.cpp:26]   --->   Operation 28 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue i128 %mrv_1, i32 %sext_ln25" [Infeasi_Res_S2.cpp:26]   --->   Operation 29 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%mrv_3 = insertvalue i128 %mrv_2, i32 %sext_ln24" [Infeasi_Res_S2.cpp:26]   --->   Operation 30 'insertvalue' 'mrv_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%ret_ln26 = ret i128 %mrv_3" [Infeasi_Res_S2.cpp:26]   --->   Operation 31 'ret' 'ret_ln26' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.333ns, clock uncertainty: 0.900ns.
+
+ <State 1>: 0.441ns
+The critical path consists of the following:
+	'muxlogic' operation 32 bit ('muxLogicCE_to_p_read13') [3]  (0.000 ns)
+	wire read operation ('p_read13', Infeasi_Res_S2.cpp:24) on port 'p_read1' (Infeasi_Res_S2.cpp:24) [4]  (0.441 ns)
+
+ <State 2>: 2.242ns
+The critical path consists of the following:
+	'sub' operation 32 bit ('sub_ln24', Infeasi_Res_S2.cpp:24) [9]  (0.865 ns)
+	'sub' operation 30 bit ('sub_ln24_1', Infeasi_Res_S2.cpp:24) [12]  (0.864 ns)
+	'select' operation 30 bit ('select_ln24', Infeasi_Res_S2.cpp:24) [15]  (0.512 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

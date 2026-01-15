@@ -1,0 +1,57 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'Compute_Primal_Infeasibility_stage2'" level="0">
+<item name = "Date">Fri Jan  9 14:23:28 2026
+</item>
+<item name = "Version">2024.1.2 (Build 5096458 on Sep  5 2024)</item>
+<item name = "Project">build_Infeasi_Res_S2.xcv80-lsva4737-2MHP-e-S</item>
+<item name = "Solution">sol1 (Vivado IP Flow Target)</item>
+<item name = "Product family">versalhbm</item>
+<item name = "Target device">xcv80-lsva4737-2MHP-e-S</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.433 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="call_ln0_entry_proc_fu_272">entry_proc, 0, 0, 0 ns, 0 ns, 0, 0, no</column>
+<column name="grp_loadDDR_data_fu_282">loadDDR_data, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_loadDDR_data_15_fu_294">loadDDR_data_15, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_loadDDR_data_16_fu_306">loadDDR_data_16, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_loadDDR_data_17_fu_318">loadDDR_data_17, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_scaleVector_12_fu_330">scaleVector_12, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_scaleVector_13_fu_339">scaleVector_13, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_scaleVector_14_fu_347">scaleVector_14, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_scaleVector_fu_355">scaleVector, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_consumer_fu_364">consumer, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_axpy_2fused_fu_370">axpy_2fused, ?, ?, ?, ?, ?, ?, no</column>
+<column name="grp_scale_and_twoNorm_fu_379">scale_and_twoNorm, ?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

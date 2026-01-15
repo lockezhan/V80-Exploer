@@ -1,0 +1,129 @@
+<stg><name>Block_entry.split_proc</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32">
+<![CDATA[
+newFuncRoot:0 %muxLogicCE_to_nCols_read = muxlogic
+
+]]></Node>
+<StgValue><ssdm name="muxLogicCE_to_nCols_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="1">
+<![CDATA[
+newFuncRoot:1 %nCols_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %nCols
+
+]]></Node>
+<StgValue><ssdm name="nCols_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="32">
+<![CDATA[
+newFuncRoot:2 %muxLogicCE_to_nRows_read = muxlogic
+
+]]></Node>
+<StgValue><ssdm name="muxLogicCE_to_nRows_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="32" op_0_bw="32" op_1_bw="32" op_2_bw="1">
+<![CDATA[
+newFuncRoot:3 %nRows_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %nRows
+
+]]></Node>
+<StgValue><ssdm name="nRows_read"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="64" op_0_bw="64" op_1_bw="32">
+<![CDATA[
+newFuncRoot:4 %mrv = insertvalue i64 <undef>, i32 %nRows_read
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="64" op_0_bw="64" op_1_bw="32">
+<![CDATA[
+newFuncRoot:5 %mrv_1 = insertvalue i64 %mrv, i32 %nCols_read
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0" op_0_bw="64">
+<![CDATA[
+newFuncRoot:6 %ret_ln45 = ret i64 %mrv_1
+
+]]></Node>
+<StgValue><ssdm name="ret_ln45"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>
