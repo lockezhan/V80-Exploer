@@ -1,6 +1,0 @@
-
-Family       : versal
-Device       : xcv80
-Package      : -lsva4737
-Speed Grade  : -2MHP-e-S
-Clock Period : 3.333
