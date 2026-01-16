@@ -71,7 +71,6 @@ typedef struct {
     uint64_t           window_bytes;  // 单窗口大小
 } hbm_window_plan;
 
-// 根据 total（总接口数）推导粒度与容量
 // 成功返回 0，错误返回 -1
 int hbm_window_plan_init(const hbm_topology_t* T, size_t total, hbm_window_plan* plan);
 
@@ -90,14 +89,15 @@ typedef hbm_window_level_t hbm_level_t;
 // 旧结构体名兼容
 typedef hbm_window_plan hbm_plan_info;
 
-// 旧默认构造别名
-static inline hbm_topology_t hbm_default_layout(void) { return hbm_default_topology(); }
-
-// 旧查询 API（needed_interfaces <= 32 用 1GB；33..64 用 512MB；>64 报错）
-int hbm_auto_get(const hbm_topology_t* L, size_t needed_interfaces, size_t idx, hbm_window_t* out);
-
 int hbm_fixed_get(const hbm_topology_t* L, uint32_t ch, uint32_t pc, uint32_t port, hbm_window_t* out);
 
 #ifdef __cplusplus
+}
+#endif
+
+#ifdef __cplusplus
+#include <iostream>
+static inline void Log_Addr(const hbm_window_t* window) {
+    std::cout << "Address: 0x" << std::hex << window->base_addr << std::dec << std::endl;
 }
 #endif

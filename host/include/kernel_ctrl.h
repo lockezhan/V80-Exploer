@@ -1,6 +1,3 @@
-// Unified declaration + inline implementation of Kernel control helper
-// This matches the implementation in `src/Kernel_ctrl.cpp`.
-
 #pragma once
 
 #include <cstdint>
@@ -18,21 +15,48 @@
 #include <unordered_map>
 #include <optional>
 
+#include <ami.h>
+#include <ami_mem_access.h>
+
 namespace fs = std::filesystem;
 
-// 假定由平台提供的 32-bit AMI 寄存器读写接口（这里给出一个占位实现，按需替换）
-static inline void ami_write32(uint32_t addr, uint32_t val) {
-    auto ptr = reinterpret_cast<volatile uint32_t*>(static_cast<uintptr_t>(addr));
-    *ptr = val;
+
+typedef std::vector<std::optional<uint64_t>> ParamVec;
+
+// 由 host 侧提供的 AMI 设备与 BAR 索引（在 host.cpp 中定义）
+extern ami_device* g_ami_dev;
+extern uint8_t     g_ami_bar;
+
+// 使用 AMI 官方内存访问接口实现 32-bit 寄存器读写
+static inline void ami_write32(uint32_t offset, uint32_t val) {
+    if (!g_ami_dev) {
+        throw std::runtime_error("AMI device handle (g_ami_dev) is null");
+    }
+    int ret = ami_mem_bar_write(g_ami_dev, g_ami_bar, static_cast<uint64_t>(offset), val);
+    if (ret != AMI_STATUS_OK) {
+        throw std::runtime_error(std::string("ami_mem_bar_write failed: ") + ami_get_last_error());
+    }
 }
 
-static inline uint32_t ami_read32(uint32_t addr) {
-    auto ptr = reinterpret_cast<volatile uint32_t*>(static_cast<uintptr_t>(addr));
-    return *ptr;
+static inline uint32_t ami_read32(uint32_t offset) {
+    if (!g_ami_dev) {
+        throw std::runtime_error("AMI device handle (g_ami_dev) is null");
+    }
+    uint32_t val = 0;
+    int ret = ami_mem_bar_read(g_ami_dev, g_ami_bar, static_cast<uint64_t>(offset), &val);
+    if (ret != AMI_STATUS_OK) {
+        throw std::runtime_error(std::string("ami_mem_bar_read failed: ") + ami_get_last_error());
+    }
+    return val;
 }
 
 class Kernel {
 public:
+
+    int ParamCount() const {
+        return static_cast<int>(params_.size());
+    }
+
     struct ParamReg {
         std::string name;   // 参数名称（从宏名中提取，如 A, B, RTP_X 等）
         uint32_t    offset; // 起始偏移
@@ -171,6 +195,11 @@ private:
         return s.size() >= prefix.size() && s.compare(0, prefix.size(), prefix) == 0;
     }
 
+    static bool ends_with(const std::string& s, const std::string& suffix) {
+        return s.size() >= suffix.size() &&
+               s.compare(s.size() - suffix.size(), suffix.size(), suffix) == 0;
+    }
+
     std::string find_hw_header() {
         for (const auto& entry : fs::directory_iterator(iprepo_dir_)) {
             if (!entry.is_directory()) continue;
@@ -232,6 +261,12 @@ private:
                 if (name == "IER")     { ier_offset_     = offset; continue; }
                 if (name == "ISR")     { isr_offset_     = offset; continue; }
 
+                // 对带有 _CTRL 后缀的“valid 标志”寄存器（例如 DSCALE_VAL_CTRL 等）
+                // 不作为参数寄存器参与 RTP 写入，直接跳过
+                if (ends_with(name, "_CTRL")) {
+                    continue;
+                }
+
                 ParamReg p;
                 p.name   = name;
                 p.offset = offset;
@@ -290,4 +325,5 @@ private:
     uint32_t isr_offset_     = 0;
     const std::string iprepo_dir_ = "../../hw/amd_v80_gen5x8_24.1/src/iprepo";
 
+    //log ap_ctrl_offset_
 };
